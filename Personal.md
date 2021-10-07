@@ -10,7 +10,7 @@
 The initial-scale=1.0 part sets the initial zoom level when the page is first loaded by the browser. `
 
 ```text
-class="small text-center text-muted"
+class="small text-end text-muted"
 ```
 
 `

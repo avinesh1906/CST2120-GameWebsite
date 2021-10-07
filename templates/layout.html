@@ -6,23 +6,23 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
+        <link href="styles.css" rel="stylesheet">
+
         <!-- Bootstrap CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
 
         <!-- <link href="/static/icon.jpg" rel="icon"> -->
 
-        <link href="/static/stylesheet.css" rel="stylesheet">
-
         <title>The COCOVID: {% block title %} {% endblock %} </title>
-    
+        
     </head>
 
     <body>
         <main>
             {% block main %} {% endblock %}
         </main>
-        <footer class="small text-end text-muted">    
-            Game Website brought by <a href="https://github.com/avinesh1906">Avinesh Culloo</a>
-        </footer>
     </body>
+    <footer class="text-muted">    
+        Game Website brought by <a href="https://github.com/avinesh1906">Avinesh Culloo</a>
+    </footer>
 </html>
