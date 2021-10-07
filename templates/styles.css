@@ -2,8 +2,6 @@ body {
     padding: 1em;
     font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 15px;
-    color: red;
-    background-color:red;
 }
 
 footer {
@@ -13,14 +11,45 @@ footer {
   bottom: 0;
   padding-left: 65%;
   width: 100%;
-  background-color: rgb(241, 213, 213);
-  color: rgb(85, 11, 11);
+  color: #b28c22;;
 }
 
 .login_container {
-  border: 5px solid #B22222;
+  border: 5px solid #b28c22;
   border-radius: 7px;
   margin-top: 36px;
-  margin-bottom: 15px;
+  margin-left: 100px;
+  width: 25%;
+  height: 550px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 5px;
+}
 
+.login_container_header {
+  height: 150px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+}
+
+.login_footer {
+  position: absolute;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  padding-left: 75px;
+  padding-right: 75px;
+  color: #b28c22;
+}
+.logo {
+  width: 90px;
+  height: 100px; 
+  margin-left: auto; 
+  margin-right: auto; 
+  padding-top: 5px;
+  display: block;
+}
+
+.login_signinlogo {
+  padding-top: 25px;
+  padding-bottom: 50px;
 }
