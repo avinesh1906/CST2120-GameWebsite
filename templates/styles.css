@@ -1,0 +1,26 @@
+body {
+    padding: 1em;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    color: red;
+    background-color:red;
+}
+
+footer {
+  position: absolute;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  bottom: 0;
+  padding-left: 65%;
+  width: 100%;
+  background-color: rgb(241, 213, 213);
+  color: rgb(85, 11, 11);
+}
+
+.login_container {
+  border: 5px solid #B22222;
+  border-radius: 7px;
+  margin-top: 36px;
+  margin-bottom: 15px;
+
+}
