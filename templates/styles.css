@@ -1,55 +1,67 @@
 body {
-    padding: 1em;
     font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 15px;
 }
 
-footer {
-  position: absolute;
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 18px;
-  bottom: 0;
-  padding-left: 65%;
-  width: 100%;
-  color: #b28c22;;
-}
 
 .login_container {
-  border: 5px solid #b28c22;
-  border-radius: 7px;
-  margin-top: 36px;
-  margin-left: 100px;
+  position: absolute;
+  margin-left: 130px;
   width: 25%;
   height: 550px;
-  padding-left: 25px;
-  padding-right: 25px;
-  padding-top: 5px;
+  padding-left: 60px;
+  padding-top: 30px;
 }
 
 .login_container_header {
+  color: #cdaada;
   height: 150px;
   padding-left: 15px;
   padding-right: 15px;
   padding-bottom: 15px;
+  margin-bottom: 40px;
+}
+
+.login_form {
+  color: #cdaada;
+  margin-top: 65px;
 }
 
 .login_footer {
-  position: absolute;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  padding-left: 75px;
-  padding-right: 75px;
+  padding-left: 32%;
+  padding-top: 45px;
   color: #b28c22;
 }
 .logo {
-  width: 90px;
-  height: 100px; 
+  width: 130px;
+  height: 130px; 
   margin-left: auto; 
   margin-right: auto; 
   padding-top: 5px;
   display: block;
 }
 
-.login_signinlogo {
-  padding-top: 25px;
-  padding-bottom: 50px;
+.login_image {
+  width: 25%;
+  margin-top: 10%;
+  margin-left: 38%;
+}
+
+.login_side_picture {
+  position: absolute;
+  right: 0px;
+  height: 100%;
+  padding-right: 15%;
+  padding-top: 7%;
+}
+
+.footer_Container {
+  color: #cdaada;
+  text-decoration: none;
+  position: absolute;
+  bottom: 4%;
+  right: 4%;
+  background-color: transparent;
+  font-size: 18px;
 }
