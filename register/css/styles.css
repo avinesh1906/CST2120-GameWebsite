@@ -1,6 +1,21 @@
 .signup_header {
     margin-top: 25px;
-    border-color: aqua;
-    border-style: solid;
+    position: relative;
+    width: auto;
+    height:175px;
 }
 
+#signup_logo {
+    position: absolute;
+    left: 125px;
+    padding-top: 10px;
+}
+.signup_quote {
+    position: absolute;
+    color: #cdaada;
+    text-align: center;
+    left: 42%;
+    padding-top: 35px;
+    width: 25%;
+
+}
