@@ -1,6 +1,6 @@
 body {
-    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 15px;
+    font-family: Georgia, serif;
+    font-size: 45px;
 }
 
 .logo {
@@ -12,3 +12,12 @@ body {
     display: block;
   }
   
+.footer_Container {
+  color: #cdaada;
+  text-decoration: none;
+  position: absolute;
+  bottom: 4%;
+  right: 4%;
+  font-size: 18px;
+  background-color: transparent;
+}

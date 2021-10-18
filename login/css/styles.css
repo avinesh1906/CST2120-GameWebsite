@@ -24,7 +24,7 @@
 
 .login_footer {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  padding-left: 32%;
+  padding-left: 29%;
   padding-top: 45px;
   color: #b28c22;
 }
@@ -43,12 +43,3 @@
   padding-top: 7%;
 }
 
-.footer_Container {
-  color: #cdaada;
-  text-decoration: none;
-  position: absolute;
-  bottom: 4%;
-  right: 4%;
-  background-color: transparent;
-  font-size: 18px;
-}
