@@ -5,7 +5,7 @@
   width: 25%;
   height: 550px;
   padding-left: 60px;
-  padding-top: 30px;
+  padding-top: 5px;
 }
 
 .login_container_header {
@@ -25,7 +25,7 @@
 .login_footer {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   padding-left: 29%;
-  padding-top: 45px;
+  padding-top: 40px;
   color: #b28c22;
 }
 

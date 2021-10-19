@@ -63,3 +63,9 @@
     margin-top: 5px;
     margin-left: 210px;
 }
+
+button {
+    background-color: #cdaada;
+    border-color: white;
+    color: rgb(85, 71, 71);
+}
