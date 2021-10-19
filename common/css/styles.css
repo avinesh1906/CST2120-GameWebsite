@@ -1,6 +1,6 @@
 body,footer {
   font-family: Georgia, serif;
-  font-size: 15px;
+  font-size: 20px;
   background-color: #171523;
 }
 
@@ -23,7 +23,19 @@ body,footer {
   background-color: transparent;
 }
 
+input {
+  width: 250px;
+  height: 40px;
+}
 
+select {
+  width: 210px;
+  height: 30px;
+}
+
+select:hover {
+  background-color: #cdaada;
+}
 input:hover {
   background-color: #cdaada;
 }

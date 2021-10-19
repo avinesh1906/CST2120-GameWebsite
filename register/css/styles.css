@@ -29,39 +29,43 @@
 .form_details {
     position: relative;
     height: 50px;
+    margin-bottom: 5px;
 }
 
 .form-label {
     position: absolute;
     color: #cdaada;
-    width: 150px;
+    width: 250px;
     text-align: center;
     position: absolute;
 }
 
 .form-input {
     position: absolute;
-    margin-left: 150px;
+    margin-left: 250px;
 }
 
-.form-check {
+.checkbox {
     position: absolute;
     color: #cdaada;
+    margin-top: 10px;
+    margin-left: 35px;
 }
 
 .register_footer {
     position: relative;
     height: 35px;
+    margin-top: 65px;
 }
 .register_btn {
     position: absolute;
-    margin-left: 125px;
+    margin-left: 105px;
 }
 
 .register_option {
     position: absolute; 
     margin-top: 5px;
-    margin-left: 210px;
+    margin-left: 220px;
 }
 
 button {
