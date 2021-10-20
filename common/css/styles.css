@@ -39,3 +39,38 @@ select:hover {
 input:hover {
   background-color: #cdaada;
 }
+
+.navbar {
+  padding-left: 25px;
+}
+.navbar-container {
+  list-style-type: none;
+  overflow: hidden;
+  float: right;
+  margin-right: 25px;
+  margin-top: 20px;
+}
+
+.navbar-container li {
+  float: left;
+}
+
+.navbar-container li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar-container li a:hover {
+  background-color: #cdaada;
+  color: black;
+  border-radius: 8px;
+}
+
+.navbar-container li a.active {
+  background-color: white;
+  color: black;
+  border-radius: 8px;
+}
