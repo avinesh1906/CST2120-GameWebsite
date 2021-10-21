@@ -1,31 +1,16 @@
 body,footer {
   font-family: Georgia, serif;
   font-size: 20px;
-  background-color: #171523;
-}
-
-.logo {
-    width: 130px;
-    height: 130px; 
-    margin-left: auto; 
-    margin-right: auto; 
-    padding-top: 5px;
-    display: block;
-  }
-  
-.footer_Container {
-  color: #cdaada;
-  text-decoration: none;
-  position: absolute;
-  bottom: 4%;
-  right: 4%;
-  font-size: 18px;
-  background-color: transparent;
+  position: relative;
 }
 
 input {
   width: 250px;
   height: 40px;
+}
+
+.main-content {
+  width: 100%;
 }
 
 select {
@@ -41,36 +26,57 @@ input:hover {
 }
 
 .navbar {
-  padding-left: 25px;
+  background-color: #674a85;
 }
-.navbar-container {
-  list-style-type: none;
-  overflow: hidden;
-  float: right;
-  margin-right: 25px;
-  margin-top: 20px;
+.navbar-brand {
+  float: left;
+  margin-left: 2%;
 }
 
-.navbar-container li {
+.navbar-brand span {
+  color: white; 
+  margin-left:10px;
+  font-size: 25px;
+}
+
+.navigation-container {
+  float: right;
+}
+.navbar-item {
+  margin-top: 2%;
+  list-style-type: none;
+  overflow: hidden;
+}
+
+.navbar-item li {
   float: left;
 }
 
-.navbar-container li a {
+.navbar-item li a {
   display: block;
   color: white;
   text-align: center;
-  padding: 14px 16px;
   text-decoration: none;
 }
 
-.navbar-container li a:hover {
+.navbar-item li a:hover {
   background-color: #cdaada;
   color: black;
   border-radius: 8px;
 }
 
-.navbar-container li a.active {
+.navbar-item li a.active {
   background-color: white;
   color: black;
   border-radius: 8px;
+}
+
+footer {
+  position: relative;
+  background-color: #cdaada;
+  text-align: center;
+}
+
+footer a {
+  color: black;
 }

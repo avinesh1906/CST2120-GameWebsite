@@ -1,51 +1,61 @@
+.login {
+  position: relative;
+  width: auto;
+}
 
 .login_container {
-  position: absolute;
-  margin-left: 10%;
-  margin-top: 10%;
-  width: 25%;
-  height: 550px;
-  padding-left: 2%;
-  padding-top: 2%;
-  padding-bottom: 2%;
-  padding-right: 2%;
-  border: solid;
-  color: white;
+  position: relative;
+  background-color: #674a85;
+  left: 0px;
+  width: 50%;
+  display: inline-block;
+
 }
 
 .login_container_header {
-  border: solid;
-  color: white;
-  color: #cdaada;
-  height: 150px;
+  position: relative;
+  text-align: center; 
+  padding-top: 5%;
   padding-left: 15px;
   padding-right: 15px;
-  padding-bottom: 15px;
 }
 
 .login_form {
-  color: #cdaada;
-  margin-top: 65px;
+  margin-top: 3%;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-bottom: 5%;
+}
+
+.login_form .username {
+  margin-top: 5px;
+  width: 50%;
+  margin-left: 25%;
+}
+
+.login_form .password {
+  margin-top: 25px;
+  width: 50%;
+  margin-left: 25%;
+}
+
+.login_btn {
+  text-align: center;
 }
 
 .login_footer {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  padding-left: 29%;
-  padding-top: 40px;
-  color: #b28c22;
-}
-
-.login_image {
-  width: 25%;
-  margin-top: 10%;
-  margin-left: 38%;
+  text-align: center;
+  padding-top: 3%;
+  padding-bottom: 3%;
 }
 
 .login_side_picture {
+  display: inline-block;
   position: absolute;
-  right: 0px;
-  height: 100%;
-  padding-right: 15%;
-  padding-top: 7%;
+  background-color: #674a85;
+  width: 50%;
+  height: auto;
+  padding-left: 10%;
+  right: 0;
 }
 
