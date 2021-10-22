@@ -1,19 +1,19 @@
-.login {
-  position: relative;
-  width: auto;
+.main-content {
+  display: flex;
 }
 
 .login_container {
-  position: relative;
-  background-color: #674a85;
-  left: 0px;
   width: 50%;
-  display: inline-block;
+}
+
+.side_picture-container {
+  background-color: #674a85;
+  width: 50%;
+  height: 50%;
 
 }
 
 .login_container_header {
-  position: relative;
   text-align: center; 
   padding-top: 5%;
   padding-left: 15px;
@@ -21,7 +21,7 @@
 }
 
 .login_form {
-  margin-top: 3%;
+  margin-top: 10%;
   margin-left: 15%;
   margin-right: 15%;
   margin-bottom: 5%;
@@ -49,13 +49,13 @@
   padding-bottom: 3%;
 }
 
-.login_side_picture {
-  display: inline-block;
-  position: absolute;
-  background-color: #674a85;
+.side_picture {
+  margin-top: 15%;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-bottom: 15%;
   width: 50%;
-  height: auto;
-  padding-left: 10%;
-  right: 0;
+  height: 50%;
 }
+
 

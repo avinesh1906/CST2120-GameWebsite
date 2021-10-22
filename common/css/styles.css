@@ -1,7 +1,6 @@
 body,footer {
   font-family: Georgia, serif;
   font-size: 20px;
-  position: relative;
 }
 
 input {
@@ -10,6 +9,15 @@ input {
 }
 
 .main-content {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+footer {
+  background-color: #cdaada;
+  text-align: center;
+  position: relative;
   width: 100%;
 }
 
@@ -72,11 +80,6 @@ input:hover {
   border-radius: 8px;
 }
 
-footer {
-  position: relative;
-  background-color: #cdaada;
-  text-align: center;
-}
 
 footer a {
   color: black;

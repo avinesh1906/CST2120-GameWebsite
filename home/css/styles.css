@@ -1,20 +1,47 @@
+.main-content {
+    display: flex;
+}
+
 .playgame {
-    margin-left: 10%;
-    margin-top: 4%;
-    width: 40%;
-    height: 40%;
-    padding-top: 75px;
-    position: absolute;
+    width: 50%;
+    height: 50%;
+    border: solid;
+    color: black;
+}
+
+.carousel-container {
+    width: 50%;
+    height: 50%;
+    border: solid;
+    color: black;
+}
+
+.playgame_header {
+    padding-top: 10%;
+    padding-left: 15%;
+}
+
+.options {
+    padding-top: 3%;
+    font-family: Georgia, serif;
+    font-size: 30px;
+}
+
+.options input {
+    width: 50px;
+    height: 20px;
+    margin-left: 35%;
 }
 
 .playgame_btn {
-    padding-left: 25%;
     margin-top: 8%;
+    text-align: center;
 }
 
 .playgame_option {
-    margin-top: 5%;
-    padding-left: 33%;
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 5%;
     font-size: 20px;
 }
 
@@ -27,29 +54,4 @@ button {
     font-size: 35px;
 }
 
-.options {
-    margin-left: 150px;
-    color: #cdaada;
-    font-family: Georgia, serif;
-    font-size: 30px;
-}
 
-.options input {
-    width: 50px;
-    height: 20px;
-}
-
-.options:checked {
-    color:aqua;
-}
-
-.carousel-container {
-    border: solid;
-    color: wheat;
-    position: absolute;
-    right: 0px;
-    width: 50%;
-    height: 65%;
-    margin-right: 5%;
-    margin-top: 2%;
-}
