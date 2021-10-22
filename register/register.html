@@ -21,7 +21,7 @@
         <link href="../common/img/AC.png" rel="icon">
 
         <!-- Tab title-->
-        <title>Naagin: Login </title>
+        <title>Naagin: Register </title>
 
     </head>
 
@@ -42,68 +42,54 @@
                         <a class="nav-link" href="/rankboard">Rank Board</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="../login/login.html">Log In</a>
+                        <a class="nav-link" href="../login/login.html">Log In</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/setting">Setting</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../register/register.html">Register</a>
+                        <a class="nav-link active " href="../register/register.html">Register</a>
                     </li>                    
                 </ul>
             </div>
         </nav>
         <div class="main-content">
             <div class="signup_header">
-                <div class="signup_quote">
-                    <div id="upper_line">
-                        <h3> YOUR ESCAPE STARTS </h1>
-                    </div>
-                    <div id="lower_line">
-                        <h3> HERE </h1>
-                    </div>
+                <div id="upper_line">
+                    <h3> YOUR ESCAPE STARTS </h1>
+                </div>
+                <div id="lower_line">
+                    <h3> HERE </h1>
                 </div>
             </div>
             <div class="signup_form">
                 <div class="form_details">
                     <label for="username" class="form-label"> Username </label>
-                    <div class="form-input">
-                        <input autocomplete="off" type="text" id="username" >
-                    </div>
+                    <input autocomplete="off" type="text" id="username" >
                 </div>
                 <div class="form_details">
                     <label for="email" class="form-label"> Email </label>
-                    <div class="form-input">
-                        <input autocomplete="off" type="email" id="email" >
-                    </div>
+                    <input autocomplete="off" type="email" id="email" >
                 </div>
                 <div class="form_details">
                     <label for="dob" class="form-label"> Date of Birth </label>
-                    <div class="form-input">
-                        <input autocomplete="off" type="date" id="dob" >
-                    </div>
+                    <input autocomplete="off" type="date" id="dob" >
                 </div>
                 <div class="form_details">
                     <label for="gender" class="form-label"> Gender </label>
-                    <div class="form-input">
-                        <select id="gender" style="width:250px; height:40px">
-                            <option value="male">Male</option>
-                            <option value="female">Female</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
+                    <select id="gender" style="width:40%; height:40px">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
                 </div>
                 <div class="form_details">
                     <label for="password" class="form-label"> Password </label>
-                    <div class="form-input">
-                        <input autocomplete="off" type="password" id="password">
-                    </div>
+                    <input autocomplete="off" type="password" id="password">
                 </div>
                 <div class="form_details">
                     <label for="confirm_password" class="form-label"> Confirm Password </label>
-                    <div class="form-input">
-                        <input autocomplete="off" type="password" id="confirm_password">
-                    </div>
+                    <input autocomplete="off" type="password" id="confirm_password">
                 </div>
                 <div class="form_details checkbox">
                     <input class="form-check-input" type="checkbox"  id="termsandcondition">
@@ -111,15 +97,10 @@
                         I agree to the terms and conditions.
                     </label>
                 </div>
-                <div class="register_footer">
-                    <div class="register_btn">
-                        <button type="submit">Proceed</button>
-                    </div>
-                    
-                    <div class="register_option">
-                        <a href="../login/login.html" style="color: #cdaada;">Login Instead?</a>
-                    </div>
-                </div>
+            </div>
+            <div class="register_footer">
+                <button type="submit">Proceed</button>
+                <a href="../login/login.html" style="color: #cdaada;">Login Instead?</a>
             </div>
         </div>
     </body>

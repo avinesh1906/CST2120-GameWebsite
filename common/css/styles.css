@@ -27,6 +27,7 @@ input:hover {
 
 .navbar {
   background-color: #674a85;
+  padding-right: 1%;
 }
 .navbar-brand {
   float: left;
