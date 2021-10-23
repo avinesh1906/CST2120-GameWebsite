@@ -1,0 +1,19 @@
+.rankboard_header {
+    position: relative;
+    width: auto;
+    height: auto;
+    padding-top: 3%;
+    text-align: center;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.rankboard_table {
+    text-align: center;
+    padding-top: 3% ;
+    padding-bottom: 7%;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+}

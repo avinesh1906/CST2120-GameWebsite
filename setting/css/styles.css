@@ -1,0 +1,52 @@
+.setting_header {
+    position: relative;
+    width: auto;
+    height: auto;
+    padding-top: 3%;
+    text-align: center;
+}
+
+.setting_form {
+    position: relative;
+    margin-top: 3%;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding-top: 2.5%;
+    padding-bottom: 1%;
+    padding-left: 2%;
+    border: solid;
+    color: black;  
+    border-radius: 12px;
+    text-align: center;
+}
+
+
+.form-label {
+    width: 250px;
+    text-align: center;
+}
+
+.form_details input {
+    margin-left: 25px;
+    width: 40%;
+    height: 40px;
+    margin-bottom: 1.5%;
+    border-radius: 12px;
+}
+
+.setting_footer {
+    margin-left: 25%;
+    margin-right: 25%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    height: auto;
+    text-align: center;
+}
+
+.setting_footer button {
+    text-align: center;
+    background-color: #EFE18A;
+    border-color: black;
+    border-radius: 12px;
+    padding: 2%;
+}

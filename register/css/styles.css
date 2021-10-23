@@ -1,5 +1,4 @@
 .signup_header {
-    margin-top: 5px;
     position: relative;
     width: auto;
     height: auto;
@@ -22,11 +21,12 @@
     position: relative;
     margin-left: 25%;
     margin-right: 25%;
-    padding-top: 1%;
+    padding-top: 1.5%;
     padding-bottom: 1%;
     padding-left: 2%;
     border: solid;
-    color: blue;
+    color: black;  
+    border-radius: 12px;
 }
 
 .form_details {
@@ -50,8 +50,10 @@
     color: #cdaada;
     padding-left: 35px;
 }
+
 .checkbox label {
     padding-left: 1%;
+    color: black;
 }
 
 .register_footer {
@@ -64,12 +66,13 @@
 }
 
 .register_footer button {
-    background-color: #cdaada;
-    border-color: white;
-    color: rgb(85, 71, 71);
+    background-color: #EFE18A;
+    border-color: black;
+    border-radius: 12px;
 }
 
 .register_footer a {
  padding-left: 2%;
  font-size: medium;   
+ color: black;
 }

@@ -12,10 +12,11 @@ input {
   width: 100%;
   height: auto;
   position: relative;
+  background-color: #D4B543; 
 }
 
 footer {
-  background-color: #cdaada;
+  background-color: #D19D2E ;
   text-align: center;
   position: relative;
   width: 100%;
@@ -27,23 +28,24 @@ select {
 }
 
 select:hover {
-  background-color: #cdaada;
+  background-color: #EFE18A;
 }
 input:hover {
-  background-color: #cdaada;
+  background-color: #EFE18A;
 }
 
 .navbar {
-  background-color: #674a85;
+  background-color: #B09F54;
   padding-right: 1%;
 }
+
 .navbar-brand {
   float: left;
   margin-left: 2%;
 }
 
 .navbar-brand span {
-  color: white; 
+  color: #4B4A47; 
   margin-left:10px;
   font-size: 25px;
 }
@@ -63,13 +65,13 @@ input:hover {
 
 .navbar-item li a {
   display: block;
-  color: white;
+  color: #4B4A47;
   text-align: center;
   text-decoration: none;
 }
 
 .navbar-item li a:hover {
-  background-color: #cdaada;
+  background-color: #EFE18A ;
   color: black;
   border-radius: 8px;
 }
@@ -79,7 +81,6 @@ input:hover {
   color: black;
   border-radius: 8px;
 }
-
 
 footer a {
   color: black;
