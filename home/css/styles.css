@@ -10,10 +10,12 @@
 .carousel-container {
     width: 50%;
     height: 50%;
-    border: solid;
-    color: black;
 }
 
+.carousel-container img {
+    margin-top: 5%;
+    margin-left: 5%;
+}
 .playgame_header {
     padding-top: 10%;
     padding-left: 15%;
