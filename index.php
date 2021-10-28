@@ -24,7 +24,7 @@
             <button type="submit">Play Game</button>
         </div>
         <div class="playgame_option">
-            <a href="../howtoplay/howtoplay.html">How to Play?</a>
+            <a href="../howtoplay/howtoplay.php">How to Play?</a>
         </div>
     </div>
 </div>
