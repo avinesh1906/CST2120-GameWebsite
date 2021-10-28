@@ -1,7 +1,7 @@
 <?php
 
 //Outputs the header for the page and opening body tag
-function generateHeader($title){
+function generateHeader($title, $directoryname){
 echo '<!DOCTYPE html>';
 echo '<html>';
 echo '<!-- Required meta tags -->';
@@ -11,23 +11,28 @@ echo '<!-- Required meta tags -->';
         echo '<!-- Tab title-->';
         echo '<title>Naagin: ' . $title . '</title>';
 
-        echo '<!-- Tab icon-->';
-        echo '<link href="../common/img/AC.png" rel="icon">';
-
         echo '<!-- Bootstrap CSS -->';
         echo '<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">';
         
-        echo '<!-- External common CSS file -->';
-        echo '<link href="./css/styles.css" type="text/css" rel="stylesheet">';
-
         echo '<!-- icon CSS -->';
         echo '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">';
         
-        if ($title == 'Home') {
-            echo '<!-- External CSS -->';
-            echo '<link href="./home/css/styles.css" type="text/css" rel="stylesheet">';
+        if ($title == 'home') {
+            echo '<!-- Tab icon-->';
+            echo '<link href="./common/img/AC.png" rel="icon">';
+            echo '<!-- External common CSS file -->';
+            echo '<link href="./common/css/styles.css" type="text/css" rel="stylesheet">';    
+            echo '<!-- External'. $directoryname. 'CSS -->';
+            echo '<link href="./'. $directoryname .'/css/styles.css" type="text/css" rel="stylesheet">';
             echo '<!-- Bootstrap JS -->';
             echo '<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>';
+        } else {
+            echo '<!-- Tab icon-->';
+            echo '<link href="../common/img/AC.png" rel="icon">';
+            echo '<!-- External common CSS file -->';
+            echo '<link href="../common/css/styles.css" type="text/css" rel="stylesheet">';    
+            echo '<!-- External'. $directoryname . 'CSS -->';
+            echo '<link href="./'. $directoryname .'/css/styles.css" type="text/css" rel="stylesheet">';
         }
 
         echo '</head>';

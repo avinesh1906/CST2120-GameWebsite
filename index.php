@@ -1,6 +1,6 @@
 <?php
     include('./common/common.php');
-    generateHeader('Home');
+    generateHeader('Home', 'home');
 ?>
 
         <!-- Navigation Bar-->
