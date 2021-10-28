@@ -21,13 +21,14 @@ echo '<!-- Required meta tags -->';
             echo '<!-- Tab icon-->';
             echo '<link href="./common/img/AC.png" rel="icon">';
             echo '<!-- External common CSS file -->';
-            echo '<!-- External Avinesh '. $directoryname . ' CSS -->';
+            echo '<link href="./common/css/styles.css" type="text/css" rel="stylesheet">';    
+            echo '<!-- External '. $directoryname . ' CSS -->';
             echo '<link href="./'. $directoryname .'/css/styles.css" type="text/css" rel="stylesheet">';
             echo '<!-- Bootstrap JS -->';
             echo '<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>';
             echo '<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>';
             echo '<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>';
-            echo '<link href="./common/css/styles.css" type="text/css" rel="stylesheet">';    
+            
         } else {
             echo '<!-- Tab icon-->';
             echo '<link href="../common/img/AC.png" rel="icon">';
