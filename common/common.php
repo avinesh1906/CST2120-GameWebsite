@@ -17,7 +17,7 @@ echo '<!-- Required meta tags -->';
         echo '<!-- icon CSS -->';
         echo '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">';
         
-        if ($title == 'home') {
+        if ($directoryname == 'home') {
             echo '<!-- Tab icon-->';
             echo '<link href="./common/img/AC.png" rel="icon">';
             echo '<!-- External common CSS file -->';
