@@ -22,7 +22,7 @@ echo '<!-- Required meta tags -->';
             echo '<link href="./common/img/AC.png" rel="icon">';
             echo '<!-- External common CSS file -->';
             echo '<link href="./common/css/styles.css" type="text/css" rel="stylesheet">';    
-            echo '<!-- External'. $directoryname. 'CSS -->';
+            echo '<!-- External '. $directoryname. ' CSS -->';
             echo '<link href="./'. $directoryname .'/css/styles.css" type="text/css" rel="stylesheet">';
             echo '<!-- Bootstrap JS -->';
             echo '<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>';
