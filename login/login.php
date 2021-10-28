@@ -37,8 +37,7 @@
                 <img class="side_picture" src="./img/side_picture.gif" alt="side_picture" > 
             </div>
         </div>
-<?php
-    include('../common/common.php');
-    generateFooter();
 
+<?php
+    generateFooter();
 ?>
