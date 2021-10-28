@@ -35,7 +35,7 @@ echo '<!-- Required meta tags -->';
             echo '<!-- External common CSS file -->';
             echo '<link href="../common/css/styles.css" type="text/css" rel="stylesheet">';    
             echo '<!-- External '. $directoryname . ' CSS -->';
-            echo '<link href="./'. $directoryname .'/css/styles.css" type="text/css" rel="stylesheet">';
+            echo '<link href="./css/styles.css" type="text/css" rel="stylesheet">';
         }
 
         echo '</head>';
