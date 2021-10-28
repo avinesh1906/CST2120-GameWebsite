@@ -1,6 +1,6 @@
 <?php
-    $pageName = 'Log In';
-    $folderName = 'login';
+    $pageName = 'Rankboard';
+    $folderName = 'rankboard';
     include('../common/common.php');
     generateHeader($pageName, $folderName);
     generateNavBar($pageName);
