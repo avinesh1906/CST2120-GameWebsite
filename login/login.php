@@ -1,10 +1,9 @@
 <?php
     $pageName = 'Log In';
     $folderName = 'login';
-    echo $pageName;
     include('./common/common.php');
-    generateHeader($pageName, $folderName);
-    generateNavBar($pageName);
+    generateHeader('Log In', 'login');
+    generateNavBar('Log In');
 ?>
             <!-- The login class -->
             <div class="login_container">
