@@ -76,7 +76,7 @@ input:hover {
   border-radius: 8px;
 }
 
-.navbar-item li a.active {
+.navbar-item li a#active {
   background-color: white;
   color: black;
   border-radius: 8px;

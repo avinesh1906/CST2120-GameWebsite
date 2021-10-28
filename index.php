@@ -1,36 +1,12 @@
 <?php
+    $pageName = 'Home';
+    $folderName = 'home';
+
     include('./common/common.php');
-    generateHeader('Home', 'home');
+    generateHeader($pageName, $folderName);
+    generateNavBar($pageName);
 ?>
 
-        <!-- Navigation Bar-->
-        <nav class="navbar sticky-top">
-            <!-- Navigation Icon-->
-            <a class="navbar-brand">
-                <img src="../common/img/AC.png"  width="50" height="50" alt="navigation bar icon">
-                <span>Naagin</span>
-            </a>
-            <div class="navigation-container ">
-                <ul class="navbar-item">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="../home/home.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../rankboard/rankboard.html">Rank Board</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link " href="../login/login.html">Log In</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../setting/setting.html">Setting</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../register/register.html">Register</a>
-                    </li>                    
-                </ul>
-            </div>
-        </nav>
-        <div class="main-content">
             <div class="playgame">
                 <div class="playgame_header">
                     <h3> Choose your difficulty level: </h3>
@@ -68,7 +44,8 @@
                     </div>
                 </div>
             </div>
-        </div>
+
+
 <?php
     generateFooter();
 ?>

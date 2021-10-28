@@ -34,7 +34,7 @@ echo '<!-- Required meta tags -->';
             echo '<link href="../common/img/AC.png" rel="icon">';
             echo '<!-- External common CSS file -->';
             echo '<link href="../common/css/styles.css" type="text/css" rel="stylesheet">';    
-            echo '<!-- External'. $directoryname . 'CSS -->';
+            echo '<!-- External '. $directoryname . ' CSS -->';
             echo '<link href="./'. $directoryname .'/css/styles.css" type="text/css" rel="stylesheet">';
         }
 
@@ -42,9 +42,54 @@ echo '<!-- Required meta tags -->';
         echo '<body>';
     }
 
+// Outputs the navigation bar 
+function generateNavBar($pagename){
+    echo '<!-- Navigation '. $pagename .'Bar-->';
+    echo '<nav class="navbar sticky-top">';
+    echo '<!-- Navigation Icon-->';
+    echo '<a class="navbar-brand">';
+
+    if ($pagename == "Home"){
+        echo '<img src="./common/img/AC.png"  width="50" height="50" alt="navigation bar icon">';
+    } else {
+        echo '<img src="../common/img/AC.png"  width="50" height="50" alt="navigation bar icon">';
+    }
+
+    echo '<span>Naagin</span>';
+    echo '</a>';
+    echo '<div class="navigation-container ">';
+    echo '<ul class="navbar-item">';
+
+    // Array of pages to link
+    $linkNames = array("Home", "Rankboard", "Setting", "Log In", "Register");
+    $linkFolderHomeRoot = array("./", "./rankboard/", "./setting/", "./login/", "./register/");
+    $linkFolderName = array("../", "../rankboard/", "../setting/", "../login/", "../register/");
+    $linkFileName = array("index.php", "rankboard.php", "setting.php", "login.php", "register.php");
+
+    for ($x = 0; $x < count($linkNames); $x++){
+        echo '<li class="nav-item">';
+        echo '<a class="nav-link"';
+        if ($linkNames[$x] == $pagename){
+            echo 'id="active"';
+        }
+        
+        if ($pagename == "Home"){
+            echo 'href="'. $linkFolderHomeRoot[$x] . $linkFileName[$x] . '">' . $linkNames[$x] .'</a>';
+        } else {
+            echo 'href="'. $linkFolderName[$x] . $linkFileName[$x] . '">' . $linkNames[$x] .'</a>';
+        }
+
+        echo '</li>';
+    }
+    echo '</ul>';
+    echo '</div>';
+    echo '</nav>';
+    echo '<div class="main-content">';
+}
 
 //Outputs closing body tag and closing HTML tag
 function generateFooter(){
+    echo '</div>';
     echo '
     <footer class="footer_Container">
         <!-- Grid container -->
