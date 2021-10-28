@@ -1,7 +1,7 @@
 <?php
     $pageName = 'Log In';
     $folderName = 'login';
-
+    echo $pageName;
     include('./common/common.php');
     generateHeader($pageName, $folderName);
     generateNavBar($pageName);
