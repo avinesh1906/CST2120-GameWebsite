@@ -74,7 +74,7 @@ function generateNavBar($pagename){
         }
         
         if ($pagename == "Home"){
-            echo 'href="'. $linkFolderHomeRoot[$x] . $linkFileName[$x] . '">' . $linkNames[$x] .'</a>';
+            echo 'href="'. $linkFileName[$x] . '">' . $linkNames[$x] .'</a>';
         } else {
             echo 'href="'. $linkFolderName[$x] . $linkFileName[$x] . '">' . $linkNames[$x] .'</a>';
         }
