@@ -1,36 +1,8 @@
-<!DOCTYPE html>
+<?php
+    include('./common/common.php');
+    generateHeader('Home');
+?>
 
-<html>
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-        <!-- Bootstrap CSS -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
-
-        <!-- Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-        <!-- External CSS -->
-        <link href="./css/styles.css" type="text/css" rel="stylesheet">
-        <link href="../common/css/styles.css" type="text/css" rel="stylesheet">
-        
-        <!-- icon CSS -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-
-        <!-- Tab icon-->
-        <link href="../common/img/AC.png" rel="icon">
-
-        <!-- Tab title-->
-        <title>Naagin: Home </title>
-
-    </head>
-
-    <body>
         <!-- Navigation Bar-->
         <nav class="navbar sticky-top">
             <!-- Navigation Icon-->
@@ -97,41 +69,6 @@
                 </div>
             </div>
         </div>
-    </body>
-    <footer >
-        <!-- Grid container -->
-        <div class="container p-4 pb-0">
-            <!-- Section: Social media -->
-            <section class="mb-4">
-                <!-- Facebook -->
-                <a class="btn btn-outline-light btn-floating m-1" href="https://www.facebook.com/keshav.culloo" target="_blank" role="button">
-                    <i class="fa fa-facebook icon"></i>
-                </a>
-
-                <!-- Instagram -->
-                <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/keshav.culloo/" target="_blank" role="button">
-                    <i class="fa fa-instagram icon"></i>
-                </a>
-
-                <!-- Linkedin -->
-                <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/in/culloo-avinesh-46b3b71b6/" target="_blank" role="button">
-                    <i class="fa fa-linkedin icon"></i>
-                </a>
-
-                <!-- Github  -->
-                <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/avinesh1906" target="_blank" role="button">
-                    <i class="fa fa-github icon"></i>
-                </a>
-            </section>
-            <!-- Section: Social media -->
-
-        </div>
-        <!-- Grid container -->
-
-        <!-- Copyright -->
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-            © 2021 Copyright: Avinesh Culloo
-        </div>
-        <!-- Copyright -->
-    </footer>
-</html>
+<?php
+    generateFooter();
+?>
