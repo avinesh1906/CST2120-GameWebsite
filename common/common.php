@@ -61,10 +61,10 @@ function generateNavBar($pagename){
     echo '<ul class="navbar-item">';
 
     // Array of pages to link
-    $linkNames = array("Home", "Rankboard", "Setting", "Log In", "Register");
-    $linkFolderHomeRoot = array("./", "./rankboard/", "./setting/", "./login/", "./register/");
-    $linkFolderName = array("../", "../rankboard/", "../setting/", "../login/", "../register/");
-    $linkFileName = array("index.php", "rankboard.php", "setting.php", "login.php", "register.php");
+    $linkNames = array("Home", "Rankboard", "Setting", "Log In");
+    $linkFolderHomeRoot = array("./", "./rankboard/", "./setting/", "./login/");
+    $linkFolderName = array("../", "../rankboard/", "../setting/", "../login/");
+    $linkFileName = array("index.php", "rankboard.php", "setting.php", "login.php");
 
     for ($x = 0; $x < count($linkNames); $x++){
         echo '<li class="nav-item">';

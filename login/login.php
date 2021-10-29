@@ -30,7 +30,7 @@
                     </a>
                 </div>
                 <div class="login_footer">
-                    <a href="../register/register.html">Create Account?</a>
+                    <a href="../register/register.php">Create Account?</a>
                 </div>
             </div>
             <div class="side_picture-container">

@@ -51,7 +51,7 @@
             </div>
             <div class="register_footer">
                 <button type="submit">Proceed</button>
-                <a href="../login/login.html">Login Instead?</a>
+                <a href="../login/login.php">Login Instead?</a>
             </div>
 <?php
     generateFooter();
