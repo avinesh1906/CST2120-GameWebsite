@@ -6,7 +6,17 @@
     generateHeader($pageName, $folderName);
     generateNavBar($pageName);
 ?>
-
+<div class="introduction">
+    <div id="intro_header">
+        <h2> About Naagin </h2>
+    </div>
+    <div class="intro_content">
+        <p>
+            Enjoy the classic Snake game for free. Register now to keep track of scores with your friends. 
+            There are different levels to challenge yourself. Happy Naagin.
+        </p>    
+    </div>
+<div>
 <div class="playgame">
     <div class="playgame_header">
         <h3> Choose your difficulty level: </h3>
