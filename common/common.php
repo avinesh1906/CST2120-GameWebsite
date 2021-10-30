@@ -1,30 +1,100 @@
 <?php
 
-    //Outputs the header for the page and opening body tag
-    function generateHeader($title){
-        echo '<!DOCTYPE html>';
-        echo '<html>';
-        echo '<!-- Required meta tags -->';
+//Outputs the header for the page and opening body tag
+function generateHeader($title, $directoryname){
+echo '<!DOCTYPE html>';
+echo '<html>';
+echo '<!-- Required meta tags -->';
         echo '<meta charset="utf-8">';
         echo '<meta name="viewport" content="width=device-width, initial-scale=1.0">';
+
         echo '<!-- Tab title-->';
         echo '<title>Naagin: ' . $title . '</title>';
-        echo '<!-- Tab icon-->';
-        echo '<link href="../common/img/AC.png" rel="icon">';
+
         echo '<!-- Bootstrap CSS -->';
-        echo '<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">';
-        echo '<!-- External common CSS file -->';
-        echo '<link href="./css/styles.css" type="text/css" rel="stylesheet">';
+        echo '<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">';
+        
         echo '<!-- icon CSS -->';
         echo '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">';
         
+        if ($directoryname == 'home') {
+            echo '<!-- Tab icon-->';
+            echo '<link href="./common/img/AC.png" rel="icon">';
+            echo '<!-- External common CSS file -->';
+            echo '<link href="./common/css/styles.css" type="text/css" rel="stylesheet">';    
+            echo '<!-- External '. $directoryname . ' CSS -->';
+            echo '<link href="./'. $directoryname .'/css/styles.css" type="text/css" rel="stylesheet">';
+            echo '<!-- Bootstrap JS -->';
+            echo '<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>';
+            echo '<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>';
+            echo '<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>';
+            
+        } else {
+            echo '<!-- Tab icon-->';
+            echo '<link href="../common/img/AC.png" rel="icon">';
+            echo '<!-- External common CSS file -->';
+            echo '<link href="../common/css/styles.css" type="text/css" rel="stylesheet">';    
+            echo '<!-- External '. $directoryname . ' CSS -->';
+            echo '<link href="./css/styles.css" type="text/css" rel="stylesheet">';
+        }
+
         echo '</head>';
         echo '<body>';
     }
 
+// Outputs the navigation bar 
+function generateNavBar($pagename){
+    echo '<!-- Navigation '. $pagename .'Bar-->';
+    echo '<nav class="navbar sticky-top">';
+    echo '<!-- Navigation Icon-->';
+    echo '<a class="navbar-brand">';
+
+    if ($pagename == "Home"){
+        echo '<img src="./common/img/AC.png"  width="50" height="50" alt="navigation bar icon">';
+    } else {
+        echo '<img src="../common/img/AC.png"  width="50" height="50" alt="navigation bar icon">';
+    }
+
+    echo '<span>Naagin</span>';
+    echo '</a>';
+    echo '<div class="navigation-container ">';
+    echo '<ul class="navbar-item">';
+
+    // Array of pages to link
+    $linkNames = array("Home", "Rankboard", "Setting", "Log In");
+    $linkFolderHomeRoot = array("./", "./rankboard/", "./setting/", "./login/");
+    $linkFolderName = array("../", "../rankboard/", "../setting/", "../login/");
+    $linkFileName = array("index.php", "rankboard.php", "setting.php", "login.php");
+
+    for ($x = 0; $x < count($linkNames); $x++){
+        echo '<li class="nav-item">';
+        echo '<a class="nav-link"';
+        if ($linkNames[$x] == $pagename){
+            echo 'id="active"';
+        }
+        
+        if ($pagename == "Home"){
+            echo 'href="'. $linkFolderHomeRoot[$x] . $linkFileName[$x] . '">' . $linkNames[$x] .'</a>';
+        } else {
+            echo 'href="'. $linkFolderName[$x] . $linkFileName[$x] . '">' . $linkNames[$x] .'</a>';
+        }
+
+        echo '</li>';
+    }
+    echo '</ul>';
+    echo '</div>';
+    echo '</nav>';
+
+    if ($pagename != "Home"){
+    echo '<div class="main-content">';
+    }
+}
 
 //Outputs closing body tag and closing HTML tag
-function generateFooter(){
+function generateFooter($pagename){
+    if ($pagename != "Home"){
+        echo '</div>';
+    }
     echo '
     <footer class="footer_Container">
         <!-- Grid container -->
