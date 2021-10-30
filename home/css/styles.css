@@ -1,6 +1,4 @@
-.main-content {
-    display: flex;
-}
+
 
 .introduction {
     width: 100%;
@@ -8,6 +6,7 @@
 }
 
 .playgame {
+    display: flex;
     width: 50%;
     height: 50%;
 }

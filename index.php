@@ -37,23 +37,24 @@
             <a href="../howtoplay/howtoplay.php">How to Play?</a>
         </div>
     </div>
-</div>
-<!-- Carousel -->
-<div class="carousel-container">
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-            <img class="d-block" src="./common/img/js-snake.png" width="450"  alt="First slide">
-            </div>
-            <div class="carousel-item">
-            <img class="d-block" src="./common/img/apple-snake.png"  width="450" alt="Second slide">
-            </div>
-            <div class="carousel-item">
-            <img class="d-block" src="./common/img/snakeitup.png"  width="450"  alt="Third slide">
+    <!-- Carousel -->
+    <div class="carousel-container">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                <img class="d-block" src="./common/img/js-snake.png" width="450"  alt="First slide">
+                </div>
+                <div class="carousel-item">
+                <img class="d-block" src="./common/img/apple-snake.png"  width="450" alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                <img class="d-block" src="./common/img/snakeitup.png"  width="450"  alt="Third slide">
+                </div>
             </div>
         </div>
     </div>
 </div>
+
 
 <?php
     generateFooter();
