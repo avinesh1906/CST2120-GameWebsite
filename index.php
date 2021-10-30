@@ -63,7 +63,7 @@
         <section>
             <div class="card-deck">
                 <div class="card">
-                  <img class="card-img-top" src="./img/register.png" alt="Card image cap">
+                  <img class="card-img-top" src="./home/img/register.png" alt="Card image cap">
                   <div class="card-body">
                     <h5 class="card-title">Registration</h5>
                     <p class="card-text">Want to burn some steam off? Register for free to enjoy Naagin</p>
@@ -73,7 +73,7 @@
                   </div>
                 </div>
                 <div class="card">
-                  <img class="card-img-top" src="./img/rankboard.png" alt="Card image cap">
+                  <img class="card-img-top" src="./home/img/rankboard.png" alt="Card image cap">
                   <div class="card-body">
                     <h5 class="card-title">Rank Board</h5>
                     <p class="card-text">Want to beat your friends' high score? Compare their high score with yours to challenge yourself.</p>
@@ -83,7 +83,7 @@
                   </div>
                 </div>
                 <div class="card">
-                  <img class="card-img-top" src="./img/help.png" alt="Card image cap">
+                  <img class="card-img-top" src="./home/img/help.png" alt="Card image cap">
                   <div class="card-body">
                     <h5 class="card-title">How to Play</h5>
                     <p class="card-text">Don't know how to play? Click on the 'How to Play' button to find out more.</p>
