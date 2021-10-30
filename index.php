@@ -17,7 +17,7 @@
             There are different levels to challenge yourself. Happy Naagin.
         </p>    
     </div>
-<div>
+</div>
 <div class="main-content">
     <div class="playgame">
         <div class="playgame_header">
