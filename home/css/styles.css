@@ -1,4 +1,6 @@
-
+.main-content{
+    display: flex;
+}
 
 .introduction {
     width: 100%;
