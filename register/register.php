@@ -54,5 +54,5 @@
                 <a href="../login/login.php">Login Instead?</a>
             </div>
 <?php
-    generateFooter();
+    generateFooter($pageName);
 ?>

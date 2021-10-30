@@ -35,5 +35,5 @@
                 <button type="submit">Save Changes</button>
             </div>
 <?php
-    generateFooter();
+    generateFooter($pageName);
 ?>

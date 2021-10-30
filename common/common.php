@@ -84,12 +84,17 @@ function generateNavBar($pagename){
     echo '</ul>';
     echo '</div>';
     echo '</nav>';
+
+    if ($pagename != "Home"){
     echo '<div class="main-content">';
+    }
 }
 
 //Outputs closing body tag and closing HTML tag
-function generateFooter(){
-    echo '</div>';
+function generateFooter($pagename){
+    if ($pagename != "Home"){
+        echo '</div>';
+    }
     echo '
     <footer class="footer_Container">
         <!-- Grid container -->

@@ -39,5 +39,5 @@
         </div>
 
 <?php
-    generateFooter();
+    generateFooter($pageName);
 ?>
