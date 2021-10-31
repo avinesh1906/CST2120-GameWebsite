@@ -1,3 +1,8 @@
+.playgame, .introduction, .card-deck {
+    background-color: #112031;
+    color: #D4ECDD;
+}
+
 .main-content{
     display: flex;
     padding-bottom: 2%;
@@ -5,9 +10,8 @@
 
 .introduction {
     text-align: center;
-    background-color: #D4B543; 
-
 }
+
 .introduction #intro_header {
     padding-top: 2%;
 }
@@ -19,10 +23,9 @@
     margin-right: 3%;
     border-radius: 12px;
     border: solid;
-    color: black;
-    background-color: white; 
+    border-color: #D4ECDD;
+    background-color: #345B63;
 }   
-
 
 .playgame {
     width: 50%;
@@ -31,24 +34,23 @@
 }
 
 .carousel-container {
-    width: 50%;
-    height: 50%;
-}
-
-.carousel-container img {
-    margin-top: 5%;
-    margin-left: 5%;
+    padding-right: 5%;
+    width: auto;
+    height: auto;
+    padding-top: 2%;
 }
 
 .playgame_header {
     padding-top: 10%;
     padding-left: 15%;
+    color: #D4ECDD;
 }
 
 .options {
     padding-top: 3%;
     font-family: Georgia, serif;
     font-size: 25px;
+    color: #D4ECDD;
 }
 
 .options input {
@@ -64,66 +66,66 @@
     font-size: 20px;
 }
 
-.playgame_option a {
-    color: black;
-}
-
 .playgame_footer {
     text-align: center;
     padding-top: 2%;
 }
 
 .playgame_footer button {
-    background-color: #EFE18A;
-    border-color: black;
+    background-color: #D4ECDD;
+    color: #112031;
+    border-color: #152D35;
     border-radius: 12px;
     width: 220px;
     height: 60px;
     font-size: 35px;
 }
 
-.playgame_footer button:hover {
-    background-color: #EFE18A ;
-    color: black;
-    border-radius: 8px;
+.playgame_footer button:hover, .card-footer button:hover {
+    background-color:#345B63  ;
+    color:  #D4ECDD;
+    border-radius: 12px;
+}
+
+.card-deck {
+    padding-left: 5%;
+    padding-right: 3%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin-right: 0px;
+}
+
+.card-body, .card {
+    background-color: #345B63;
+    color:#D4ECDD;
 }
 
 .card {
     border: solid;
-    border-color: black;
-    margin-left: 5px;
-}
-
-.card-deck {
-    background-color: #EFE18A; 
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-top: 5%;
-    padding-bottom: 5%;
+    border-color: #D4ECDD;
+    border-radius: 12px;
+    background-color: #345B63;
 }
 
 .card-body {
-    background-color: #EFE18A;
-    border: solid;
-    border-color: black;
     margin-bottom: 5%;
-    margin-left: 5%;
-    margin-right: 5%;
+}
+
+.card-title, .card-body {
+    text-align: center;
 }
 
 .card-footer {
     text-align: center;
-
 }
 
 .card-footer button {
-    background-color: #EFE18A;
-    border-color: black;
+    background-color: #D4ECDD;
+    color: #112031;
+    border-color: #152D35;
     border-radius: 12px;
+    font-size: 20px;
+    width: 150px;
+    height: 40px;
 } 
 
-.card-footer button:hover {
-    background-color: #EFE18A ;
-    color: black;
-    border-radius: 8px;
-}

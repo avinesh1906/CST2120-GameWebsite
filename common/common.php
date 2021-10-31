@@ -110,36 +110,31 @@ function generateFooter($pagename){
     echo '
     <footer class="footer_Container">
         <!-- Grid container -->
-        <div class="container p-4 pb-0">
+        <div class="footer_logo-container">
             <!-- Section: Social media -->
-            <section class="mb-4">
-                <!-- Facebook -->
-                <a class="btn btn-outline-light btn-floating m-1" href="https://www.facebook.com/keshav.culloo" target="_blank" role="button">
-                    <i class="fa fa-facebook icon"></i>
-                </a>
-
-                <!-- Instagram -->
-                <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/keshav.culloo/" target="_blank" role="button">
-                    <i class="fa fa-instagram icon"></i>
-                </a>
-
-                <!-- Linkedin -->
-                <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/in/culloo-avinesh-46b3b71b6/" target="_blank" role="button">
-                    <i class="fa fa-linkedin icon"></i>
-                </a>
-
-                <!-- Github  -->
-                <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/avinesh1906" target="_blank" role="button">
-                    <i class="fa fa-github icon"></i>
-                </a>
-            </section>
+             <!-- Facebook -->
+             <a class="btn btn-outline-light btn-floating m-1" href="https://www.facebook.com/keshav.culloo" target="_blank" role="button">
+                 <i class="fa fa-facebook icon"></i>
+             </a>
+           <!-- Instagram -->
+             <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/keshav.culloo/" target="_blank" role="button">
+                 <i class="fa fa-instagram icon"></i>
+             </a>
+           <!-- Linkedin -->
+             <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/in/culloo-avinesh-46b3b71b6/" target="_blank" role="button">
+                 <i class="fa fa-linkedin icon"></i>
+             </a>
+           <!-- Github  -->
+             <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/avinesh1906" target="_blank" role="button">
+                 <i class="fa fa-github icon"></i>
+             </a>
             <!-- Section: Social media -->
 
         </div>
         <!-- Grid container -->
 
         <!-- Copyright -->
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        <div class="text-center p-3 footer-content" >
             © 2021 Copyright: Avinesh Culloo
         </div>
         <!-- Copyright -->
