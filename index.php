@@ -105,7 +105,7 @@
       </div>
       <!-- Registration card button -->
       <div class="card-footer card-btn">
-        <button onclick="location.href = '../register/register.php';" >Register</button>
+        <button onclick="location.href = './register/register.php';" >Register</button>
       </div>
     </div>
 
@@ -120,7 +120,7 @@
       </div>
       <!-- Leaderboard card button -->
       <div class="card-footer">
-        <button onclick="location.href = '../rankboard/rankboard.php';">Leader Board</button>
+        <button onclick="location.href = './rankboard/rankboard.php';">Leader Board</button>
       </div>
     </div>
 
@@ -135,7 +135,7 @@
       </div>
       <!-- How to play card button -->
       <div class="card-footer">
-        <button onclick="location.href = '../howtoplay/howtoplay.php';">How to Play</button>
+        <button onclick="location.href = './howtoplay/howtoplay.php';">How to Play</button>
       </div>
     </div>
 

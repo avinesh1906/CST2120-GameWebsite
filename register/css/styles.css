@@ -25,7 +25,7 @@
     padding-bottom: 1%;
     padding-left: 2%;
     border: solid;
-    color: black;  
+    color: #D4ECDD;  
     border-radius: 12px;
 }
 
@@ -66,7 +66,7 @@
 }
 
 .register_footer button {
-    background-color: #EFE18A;
+    background-color: white;
     border-color: black;
     border-radius: 12px;
 }

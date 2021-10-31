@@ -4,11 +4,11 @@
 
 .login_container {
   width: 50%;
-  background-color: #D4B543  ;
+  background-color: #112031;
 }
 
 .side_picture-container {
-  background-color: #D4B543;
+  background-color: #112031;
   width: 50%;
   height: 50%;
 
@@ -19,18 +19,22 @@
   padding-top: 5%;
   padding-left: 15px;
   padding-right: 15px;
+  color: #D4ECDD;
 }
 
 .login_form {
+  border-color: #D4ECDD;
+  background-color: #345B63;
+  color: #D4ECDD;
   margin-top: 7%;
   margin-left: 12%;
   margin-right: 12%;
   margin-bottom: 7%;
   border: solid;
-  color: black;
   padding-top: 2%;
   padding-bottom: 5%;
-  border-radius: 10px;
+  border-radius: 12px;
+  font-size: large;
 }
 
 .login_form .username {
@@ -53,11 +57,13 @@
   text-align: center;
   padding-top: 3%;
   padding-bottom: 3%;
+  
 }
 
 .login_footer a {
-  color: black;
+  color: #D4ECDD;
 }
+
 .side_picture {
   margin-top: 5%;
   margin-left: 15%;
@@ -66,4 +72,20 @@
   height: 50%;
 }
 
+input {
+  width: 250px;
+  height: 40px;
+}
 
+select {
+  width: 210px;
+  height: 30px;
+}
+
+select:hover {
+  background-color: #152D35;
+}
+
+input:hover {
+  background-color: #152D35;
+}
