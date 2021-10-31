@@ -1,13 +1,16 @@
+/* Common CSS */
 .playgame, .introduction, .card-deck {
     background-color: #112031;
     color: #D4ECDD;
 }
 
+/* main content CSS */
 .main-content{
     display: flex;
     padding-bottom: 2%;
 }
 
+/* Introduction CSS */
 .introduction {
     text-align: center;
 }
@@ -27,23 +30,29 @@
     background-color: #345B63;
 }   
 
+/* playgame CSS */
 .playgame {
     width: 50%;
     height: 50%;
     padding-bottom: 3%;
 }
 
-.carousel-container {
-    padding-right: 5%;
-    width: auto;
-    height: auto;
-    padding-top: 2%;
-}
-
 .playgame_header {
     padding-top: 10%;
     padding-left: 15%;
     color: #D4ECDD;
+}
+
+.playgame_option {
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    font-size: 20px;
+}
+
+.playgame_footer {
+    text-align: center;
+    padding-top: 2%;
 }
 
 .options {
@@ -57,18 +66,6 @@
     width: 50px;
     height: 20px;
     margin-left: 35%;
-}
-
-.playgame_option {
-    text-align: center;
-    margin-top: 2%;
-    margin-bottom: 5%;
-    font-size: 20px;
-}
-
-.playgame_footer {
-    text-align: center;
-    padding-top: 2%;
 }
 
 .playgame_footer button {
@@ -87,6 +84,15 @@
     border-radius: 12px;
 }
 
+/* Carousel CSS */
+.carousel-container {
+    padding-right: 5%;
+    width: auto;
+    height: auto;
+    padding-top: 2%;
+}
+
+/* Card CSS */
 .card-deck {
     padding-left: 5%;
     padding-right: 3%;
