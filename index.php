@@ -1,11 +1,16 @@
 <?php
+    // php variables
     $pageName = 'Home';
     $folderName = 'home';
 
+    // include the common.php which contains the php functions
     include('./common/common.php');
+
+    // call the php functions 
     generateHeader($pageName, $folderName);
     generateNavBar($pageName);
 ?>
+
 
 <section>
             <div class="introduction">
@@ -13,11 +18,11 @@
                     <h2> About Naagin </h2>
                 </div>
                 <div id="intro_content">
-                    Enjoy the classic Snake game for free. Register now to keep track of scores with your friends. 
+                    🐍 Play the retro arcade snake game online now. Chase after the apples but don't hit the wall, or eat your own tail. How long can you survive? 🐍 
                     <br>
-                    There are different levels to challenge yourself. 
+                    🐍🐍 Eat and grow! Slither to the top of the leaderboard. 🐍🐍
                     <br>
-                    Happy Naagin.    
+                    🐍🐍🐍 Happy Naagin 🐍🐍🐍   
                 </div>
             </div>
         </section>
@@ -94,6 +99,9 @@
                 </div>
             </div>
         </section>
+
+
 <?php
+    // php function to generate the footer
     generateFooter($pageName);
 ?>

@@ -14,7 +14,7 @@
 
 .introduction #intro_content {
     margin-top: 15px;
-    padding: 2px;
+    padding: 5px;
     margin-left: 3%;
     margin-right: 3%;
     border-radius: 12px;
@@ -39,6 +39,7 @@
     margin-top: 5%;
     margin-left: 5%;
 }
+
 .playgame_header {
     padding-top: 10%;
     padding-left: 15%;
@@ -54,12 +55,6 @@
     width: 50px;
     height: 20px;
     margin-left: 35%;
-}
-
-
-.playgame_btn {
-    margin-top: 8%;
-    text-align: center;
 }
 
 .playgame_option {
@@ -85,6 +80,12 @@
     width: 220px;
     height: 60px;
     font-size: 35px;
+}
+
+.playgame_footer button:hover {
+    background-color: #EFE18A ;
+    color: black;
+    border-radius: 8px;
 }
 
 .card {
@@ -120,3 +121,9 @@
     border-color: black;
     border-radius: 12px;
 } 
+
+.card-footer button:hover {
+    background-color: #EFE18A ;
+    color: black;
+    border-radius: 8px;
+}

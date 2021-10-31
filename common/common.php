@@ -1,6 +1,8 @@
 <?php
 
-//Outputs the header for the page and opening body tag
+// Outputs the header for the page and opening body tag
+// $title: will be the page title to be shown in the head
+// $directoryname: will be the directory containing the css and other related files 
 function generateHeader($title, $directoryname){
 echo '<!DOCTYPE html>';
 echo '<html>';
@@ -17,6 +19,8 @@ echo '<!-- Required meta tags -->';
         echo '<!-- icon CSS -->';
         echo '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">';
         
+        // choose whether the directoryname is home or not
+        // the path for other websites are different for home  
         if ($directoryname == 'home') {
             echo '<!-- Tab icon-->';
             echo '<link href="./common/img/AC.png" rel="icon">';
@@ -30,6 +34,7 @@ echo '<!-- Required meta tags -->';
             echo '<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>';
             
         } else {
+            // other directory locations
             echo '<!-- Tab icon-->';
             echo '<link href="../common/img/AC.png" rel="icon">';
             echo '<!-- External common CSS file -->';
@@ -49,6 +54,7 @@ function generateNavBar($pagename){
     echo '<!-- Navigation Icon-->';
     echo '<a class="navbar-brand">';
 
+    // choose path location depending whether it is accessing from home page or not
     if ($pagename == "Home"){
         echo '<img src="./common/img/AC.png"  width="50" height="50" alt="navigation bar icon">';
     } else {
@@ -66,13 +72,17 @@ function generateNavBar($pagename){
     $linkFolderName = array("../", "../rankboard/", "../setting/", "../login/");
     $linkFileName = array("index.php", "rankboard.php", "setting.php", "login.php");
 
+    // Loop through the navigation items 
     for ($x = 0; $x < count($linkNames); $x++){
         echo '<li class="nav-item">';
         echo '<a class="nav-link"';
+        
+        // If current item in the linkName array is the chosen page, id active will form part of the html code
         if ($linkNames[$x] == $pagename){
             echo 'id="active"';
         }
         
+        // different path for home and other pages
         if ($pagename == "Home"){
             echo 'href="'. $linkFolderHomeRoot[$x] . $linkFileName[$x] . '">' . $linkNames[$x] .'</a>';
         } else {
@@ -85,13 +95,15 @@ function generateNavBar($pagename){
     echo '</div>';
     echo '</nav>';
 
+    // if pagename is not Home, then print the following html code. 
     if ($pagename != "Home"){
-    echo '<div class="main-content">';
+        echo '<div class="main-content">';
     }
 }
 
 //Outputs closing body tag and closing HTML tag
 function generateFooter($pagename){
+    // if pagename is not Home, then print the following html code. 
     if ($pagename != "Home"){
         echo '</div>';
     }
