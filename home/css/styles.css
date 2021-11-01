@@ -101,7 +101,7 @@
     margin-right: 0px;
 }
 
-.card-body, .card {
+.card {
     background-color: #345B63;
     color:#D4ECDD;
 }
@@ -111,6 +111,12 @@
     border-color: #D4ECDD;
     border-radius: 12px;
     background-color: #345B63;
+}
+
+.card:hover {
+    border-color: #D4ECDD;
+    background-color:  #D4ECDD  ;
+    color: #345B63;
 }
 
 .card-body {
