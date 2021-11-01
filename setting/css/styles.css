@@ -17,15 +17,18 @@
     width: 25%;
 }
 
-.main_form {
+.form-layout {
     width: 50%;
     position: relative;
-    margin-top: 3%;
-    padding: 1.5%;
+}
+
+.form-content {
     border: solid;
     color: #D4ECDD; 
     background-color: #345B63; 
     border-radius: 12px;
+    margin-top: 3%;
+    padding: 1.5%;
     text-align: center;
 }
 
@@ -33,7 +36,6 @@
     width: 250px;
     text-align: center;
 }
-
 
 .form_details input {
     margin-left: 25px;
@@ -52,8 +54,8 @@
 .setting_footer {
     margin-left: 25%;
     margin-right: 25%;
-    padding-top: 2%;
-    padding-bottom: 1%;
+    padding-top: 3%;
+    padding-bottom: 3%;
     height: auto;
     text-align: center;
 }
