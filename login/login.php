@@ -18,8 +18,8 @@
         <h2>Sign In</h2>
     </div>
     <!-- Login form -->
-    <div class="login_form ">
-        <form>
+    <form action="../index.php">
+        <div class="login_form ">
             <div class="username">
                 <i class="fa fa-user icon"></i>
                 <label for="Username" class="form-label">Username</label>
@@ -30,14 +30,13 @@
                 <label for="Password" class="form-label">Password</label>
                 <input  autocomplete="off" type="password" class="form-control" id="Password" >
             </div>
-        </form>
-    </div>
-    <!-- Login submit button -->
-    <div class="login_btn">
-        <a href="../home/home.html">
-            <img class="login_image" src="./img/login.png" alt="login" width="90">
-        </a>
-    </div>
+        </div>
+        <!-- Login submit button -->
+        <div class="login_btn">
+            <input type="image" name="submit" src="./img/login.png" alt="login" style="width:70px; height:70px">
+        </div>
+    <form>
+
     <!-- Option to create account -->
     <div class="login_footer">
         <a href="../register/register.php">Create Account?</a>
