@@ -9,12 +9,14 @@
     width: auto;
     position: relative;
     text-align: center;
+    color: #D4ECDD;
 }
 
 #lower_line {
     width: auto;
     position: relative;
     text-align: center;
+    color: #D4ECDD;
 }
 
 .signup_form {
@@ -26,6 +28,7 @@
     padding-left: 2%;
     border: solid;
     color: #D4ECDD;  
+    background-color: #345B63 ;
     border-radius: 12px;
 }
 
@@ -44,35 +47,59 @@
     width: 40%;
     height: 40px;
     margin-bottom: 1.5%;
+    border-radius: 12px; 
+    font-size: medium;
+    text-align: center;
+   
 }
 
-.checkbox {
+.form_details input:hover, select:hover, .checkbox_container label:hover {
+    background-color:#112031  ;
+    color:  #D4ECDD;
+    border-radius: 12px; 
+}
+
+.checkbox_container {
     color: #cdaada;
-    padding-left: 35px;
+    padding-left: 8%;
 }
 
-.checkbox label {
+.checkbox_container input[type=checkbox] {
+    transform: scale(1.5);
+}
+
+.checkbox_container label {
     padding-left: 1%;
-    color: black;
+    color: #D4ECDD;
 }
 
 .register_footer {
     margin-left: 25%;
     margin-right: 25%;
-    padding-top: 1%;
-    padding-bottom: 1%;
+    padding-top: 2%;
+    padding-bottom: 2%;
     height: auto;
     text-align: center;
 }
 
 .register_footer button {
-    background-color: white;
-    border-color: black;
+    background-color: #D4ECDD;
+    color: #112031;
+    border-color: #152D35;
+    border-radius: 12px;
+    font-size: 20px;
+    width: 150px;
+    height: 40px;
+}
+
+.register_footer button:hover{
+    background-color:#345B63  ;
+    color:  #D4ECDD;
     border-radius: 12px;
 }
 
 .register_footer a {
  padding-left: 2%;
  font-size: medium;   
- color: black;
+ color: #D4ECDD;
 }

@@ -3,11 +3,6 @@ body,footer {
   font-size: 20px;
 }
 
-input {
-  width: 250px;
-  height: 40px;
-}
-
 .main-content {
   width: 100%;
   height: auto;
@@ -20,19 +15,6 @@ footer {
   text-align: center;
   position: relative;
   width: 100%;
-}
-
-select {
-  width: 210px;
-  height: 30px;
-}
-
-select:hover {
-  background-color: #EFE18A;
-}
-
-input:hover {
-  background-color: #EFE18A;
 }
 
 .navbar {

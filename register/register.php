@@ -42,7 +42,7 @@
                     <label for="confirm_password" class="form-label"> Confirm Password </label>
                     <input autocomplete="off" type="password" id="confirm_password">
                 </div>
-                <div class="form_details checkbox">
+                <div class="form_details checkbox_container">
                     <input class="form-check-input" type="checkbox"  id="termsandcondition">
                     <label class="form-check-label" for="termsandcondition">
                         I agree to the terms and conditions.
