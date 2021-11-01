@@ -1,7 +1,7 @@
 <?php
     // php variables
-    $pageName = 'How To Play';
-    $folderName = 'howtoplay';
+    $pageName = 'Support';
+    $folderName = 'support';
 
     // include the common.php which contains the php functions
     include('../common/common.php');
