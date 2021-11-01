@@ -6,6 +6,7 @@
     text-align: center;
     padding-left: 5%;
     padding-right: 5%;
+    color: #D4ECDD;
 }
 
 .rankboard_table {
@@ -16,4 +17,10 @@
     padding-right: 5%;
     margin-left: 5%;
     margin-right: 5%;
+    color: #D4ECDD;
+    
+}
+.rankboard_table table {
+    background-color: #345B63;
+    border-radius: 12px;
 }
