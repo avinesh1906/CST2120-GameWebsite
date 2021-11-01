@@ -1,29 +1,30 @@
-.howtoplay_header {
+.card-columns {
     padding-top: 2%;
-    text-align: center;
-}
-
-.howtoplay-arrow, .howtoplay-wasd {
-    display: flex;
-}
-
-.arrow_picture, .wasd_picture{
-    margin-left: 25%;
-}
-
-.arrow_information, .wasd_information {
-    padding-top: 2%;
-    padding-left: 3%;
-    padding-right: 3%;
-    padding-bottom: 2%;
-    margin-bottom: 5%;
-    margin-top: 5%;
-    margin-left: 5%;
-    border: solid;
-    border-color: black;
-    border-radius: 12px;
-}
-
-.details{
     padding-left: 2%;
+    padding-right: 2%;
+}
+
+.light-color {
+    border-color: #D4ECDD;
+    background-color: #345B63;
+    color: #D4ECDD;
+}
+
+.dark-color {
+    border-color: #D4ECDD;
+    background-color: #152D35;
+    color: #D4ECDD;
+}
+.card-img-top {
+    padding-top: 2%;
+}
+
+.card-title {
+    text-align: center;
+    font-size: 25px;
+}
+
+.card-text{
+    padding-left: 3%;
+    font-size: 20px;
 }
