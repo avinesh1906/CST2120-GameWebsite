@@ -10,6 +10,7 @@
     position: relative;
     text-align: center;
     color: #D4ECDD;
+    font-size: 15px;
 }
 
 #lower_line {
@@ -17,19 +18,30 @@
     position: relative;
     text-align: center;
     color: #D4ECDD;
+    font-size: 15px;
 }
 
 .signup_form {
+    display: flex;
+}
+
+.left_side_picture, .right_side_picture {
+    padding-top: 5%;
+    padding-left: 3%;
+    width: 25%;
+}
+
+.main_form {
     position: relative;
-    margin-left: 25%;
-    margin-right: 25%;
+    width: 50%;
     padding-top: 1.5%;
     padding-bottom: 1%;
-    padding-left: 2%;
     border: solid;
     color: #D4ECDD;  
     background-color: #345B63 ;
     border-radius: 12px;
+    font-size: larger;
+    text-align: center;
 }
 
 .form_details {
