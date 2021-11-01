@@ -124,18 +124,18 @@
       </div>
     </div>
 
-    <!-- Card: How to play -->
+    <!-- Card: Support -->
     <div class="card">
-      <!-- How to play card image -->
+      <!-- Support card image -->
       <img class="card-img-top" src="./home/img/help.png" alt="How to play image">
-      <!-- How to play card title and text -->
+      <!-- Support card title and text -->
       <div class="card-body">
         <h5 class="card-title">Support </h5>
         <p class="card-text">Don't know how to play? Want more information? Click on the 'Learn More' button to find out more.</p>
       </div>
-      <!-- How to play card button -->
+      <!-- Support card button -->
       <div class="card-footer">
-        <button onclick="location.href = './howtoplay/howtoplay.php';">Learn More</button>
+        <button onclick="location.href = './support/support.php';">Learn More</button>
       </div>
     </div>
 
