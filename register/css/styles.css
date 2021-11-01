@@ -31,17 +31,21 @@
     width: 25%;
 }
 
-.main_form {
+.form-layout {
     position: relative;
     width: 50%;
+}
+
+.form-content{
+    font-size: larger;
+    text-align: center;
+    margin-bottom: 2%;
     padding-top: 1.5%;
     padding-bottom: 1%;
     border: solid;
     color: #D4ECDD;  
     background-color: #345B63 ;
     border-radius: 12px;
-    font-size: larger;
-    text-align: center;
 }
 
 .form_details {
@@ -92,6 +96,7 @@
     padding-bottom: 2%;
     height: auto;
     text-align: center;
+    width: 50%;
 }
 
 .register_footer button {
