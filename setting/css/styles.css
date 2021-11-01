@@ -8,10 +8,19 @@
 }
 
 .setting_form {
+    display: flex;
+}
+
+.left_side_picture, .right_side_picture {
+    padding-top: 5%;
+    padding-left: 3%;
+    width: 25%;
+}
+
+.main_form {
+    width: 50%;
     position: relative;
     margin-top: 3%;
-    margin-left: 25%;
-    margin-right: 25%;
     padding: 1.5%;
     border: solid;
     color: #D4ECDD; 
@@ -19,7 +28,6 @@
     border-radius: 12px;
     text-align: center;
 }
-
 
 .form-label {
     width: 250px;
