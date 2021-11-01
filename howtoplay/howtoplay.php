@@ -73,7 +73,7 @@
     </div>
     
     <!-- Card: Bsc Computer Science -->
-    <div class="card p-3 text-right light-color">
+    <div class="card p-3 light-color">
         <blockquote class="blockquote mb-0">
             <!-- Card Title -->
             <h5 class="card-title">
