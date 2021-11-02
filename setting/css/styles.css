@@ -1,11 +1,3 @@
-/* CSS Variable */
-:root {
-    --teal: #D4ECDD;
-    --darkblue: #112031;
-    --darknavy: #152D35;
-    --navy: #345B63;
-}
-
 /* Common text alignment CSS */
 .setting_header,
 .form-content,

@@ -1,9 +1,3 @@
-/* CSS Variable */
-:root {
-    --teal: #D4ECDD;
-    --navy: #345B63;
-}
-
 /* Common Padding CSS*/
 .rankboard_header,
 .rankboard_table
