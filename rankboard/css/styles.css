@@ -1,26 +1,41 @@
+/* CSS Variable */
+:root {
+    --teal: #D4ECDD;
+    --navy: #345B63;
+}
+
+/* Common Padding CSS*/
+.rankboard_header,
+.rankboard_table
+{
+    padding-top: 3%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+/* Common text alignment CSS */
+.rankboard_header,
+.rankboard_table
+{
+    text-align: center;
+}
+
+/* Rankboard CSS */
 .rankboard_header {
     position: relative;
     width: auto;
     height: auto;
-    padding-top: 3%;
-    text-align: center;
-    padding-left: 5%;
-    padding-right: 5%;
-    color: #D4ECDD;
+    color: var(--teal);
 }
 
 .rankboard_table {
-    text-align: center;
-    padding-top: 3% ;
     padding-bottom: 10%;
-    padding-left: 5%;
-    padding-right: 5%;
     margin-left: 5%;
     margin-right: 5%;
-    color: #D4ECDD;
-    
+    color: var(--teal);  
 }
+
 .rankboard_table table {
-    background-color: #345B63;
+    background-color: var(--navy);
     border-radius: 12px;
 }

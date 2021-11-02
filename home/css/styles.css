@@ -1,7 +1,39 @@
+/* CSS Variable */
+:root {
+    --teal: #D4ECDD;
+    --darkblue: #112031;
+    --darknavy: #152D35;
+    --navy: #345B63;
+}
+
 /* Common CSS */
-.playgame, .introduction, .card-deck {
-    background-color: #112031;
-    color: #D4ECDD;
+.playgame, 
+.introduction, 
+.card-deck {
+    background-color: var(--darkblue);
+    color: var(--teal);
+}
+
+/* Border Radius */
+.introduction #intro_content,
+.playgame_footer button,
+.playgame_footer button:hover, 
+.card,
+.card-footer button,
+.card-footer button:hover
+{
+    border-radius: 12px;
+    border:solid;
+}
+
+/* Common text-alignment CSS */
+.introduction, 
+.playgame_option,
+.playgame_footer,
+.card-title, 
+.card-body, 
+.card-footer {
+    text-align: center;
 }
 
 /* main content CSS */
@@ -10,11 +42,20 @@
     padding-bottom: 2%;
 }
 
-/* Introduction CSS */
-.introduction {
-    text-align: center;
+.options {
+    padding-top: 3%;
+    font-family: Georgia, serif;
+    font-size: 25px;
+    color: var(--teal);
 }
 
+.options input {
+    width: 50px;
+    height: 20px;
+    margin-left: 35%;
+}
+
+/* Introduction CSS */
 .introduction #intro_header {
     padding-top: 2%;
 }
@@ -24,10 +65,8 @@
     padding: 5px;
     margin-left: 3%;
     margin-right: 3%;
-    border-radius: 12px;
-    border: solid;
-    border-color: #D4ECDD;
-    background-color: #345B63;
+    border-color: var(--teal);
+    background-color: var(--navy);
 }   
 
 /* playgame CSS */
@@ -40,48 +79,32 @@
 .playgame_header {
     padding-top: 10%;
     padding-left: 15%;
-    color: #D4ECDD;
+    color: var(--teal);
 }
 
 .playgame_option {
-    text-align: center;
     margin-top: 2%;
     margin-bottom: 5%;
     font-size: 20px;
 }
 
 .playgame_footer {
-    text-align: center;
     padding-top: 2%;
 }
 
-.options {
-    padding-top: 3%;
-    font-family: Georgia, serif;
-    font-size: 25px;
-    color: #D4ECDD;
-}
-
-.options input {
-    width: 50px;
-    height: 20px;
-    margin-left: 35%;
-}
 
 .playgame_footer button {
-    background-color: #D4ECDD;
-    color: #112031;
-    border-color: #152D35;
-    border-radius: 12px;
+    background-color: var(--teal);
+    color: var(--darkblue);
+    border-color: var(--darknavy);
     width: 220px;
     height: 60px;
     font-size: 35px;
 }
 
 .playgame_footer button:hover, .card-footer button:hover {
-    background-color:#345B63  ;
-    color:  #D4ECDD;
-    border-radius: 12px;
+    background-color: var(--navy);
+    color:  var(--teal);
 }
 
 /* Carousel CSS */
@@ -102,40 +125,25 @@
 }
 
 .card {
-    background-color: #345B63;
-    color:#D4ECDD;
-}
-
-.card {
-    border: solid;
-    border-color: #D4ECDD;
-    border-radius: 12px;
-    background-color: #345B63;
+    background-color: var(--navy);
+    color:var(--teal);
+    border-color: var(--teal);
 }
 
 .card:hover {
-    border-color: #345B63;
-    background-color:  #D4ECDD  ;
-    color: #345B63;
+    border-color: var(--navy);
+    background-color:  var(--teal)  ;
+    color: var(--navy);
 }
 
 .card-body {
     margin-bottom: 5%;
 }
 
-.card-title, .card-body {
-    text-align: center;
-}
-
-.card-footer {
-    text-align: center;
-}
-
 .card-footer button {
-    background-color: #D4ECDD;
-    color: #112031;
-    border-color: #152D35;
-    border-radius: 12px;
+    background-color: var(--teal);
+    color: var(--darkblue);
+    border-color: var(--darknavy);
     font-size: 20px;
     width: 150px;
     height: 40px;

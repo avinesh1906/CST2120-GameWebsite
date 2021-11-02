@@ -1,10 +1,37 @@
+/* CSS Variable */
+:root {
+    --teal: #D4ECDD;
+    --darkblue: #112031;
+    --darknavy: #152D35;
+    --navy: #345B63;
+}
+
+/* Common text alignment CSS */
+.setting_header,
+.form-content,
+.form-label,
+.form_details input,
+.setting_footer
+{
+    text-align: center;
+}
+
+/* Common border radius */
+.form-content,
+.form_details input,
+.form_details input:hover,
+.setting_footer button,
+.setting_footer button:hover
+{
+    border-radius: 12px;
+}
+
 .setting_header {
     position: relative;
     width: auto;
     height: auto;
     padding-top: 3%;
-    text-align: center;
-    color: #D4ECDD;
+    color: var(--teal);
 }
 
 .setting_form {
@@ -24,17 +51,14 @@
 
 .form-content {
     border: solid;
-    color: #D4ECDD; 
-    background-color: #345B63; 
-    border-radius: 12px;
+    color: var(--teal); 
+    background-color: var(--navy); 
     margin-top: 3%;
     padding: 1.5%;
-    text-align: center;
 }
 
 .form-label {
     width: 250px;
-    text-align: center;
 }
 
 .form_details input {
@@ -42,14 +66,12 @@
     width: 40%;
     height: 40px;
     margin-bottom: 1.5%;
-    border-radius: 12px;
-    text-align: center;
 }
 
 .form_details input:hover {
-    background-color:#112031  ;
-    color:  #D4ECDD;
-    border-radius: 12px; 
+    background-color:var(--darkblue)  ;
+    color:  var(--teal);
+
 } 
 .setting_footer {
     margin-left: 25%;
@@ -57,21 +79,18 @@
     padding-top: 3%;
     padding-bottom: 3%;
     height: auto;
-    text-align: center;
 }
 
 .setting_footer button {
-    background-color: #D4ECDD;
-    color: #112031;
-    border-color: #152D35;
-    border-radius: 12px;
+    background-color: var(--teal);
+    color: var(--darkblue);
+    border-color: var(--darknavy);
     font-size: 20px;
     width: 150px;
     height: 40px;
 }
 
 .setting_footer button:hover{
-    background-color:#345B63  ;
-    color:  #D4ECDD;
-    border-radius: 12px;
+    background-color:var(--navy);
+    color:  var(--teal);
 }

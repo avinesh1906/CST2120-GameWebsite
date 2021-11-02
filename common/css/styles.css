@@ -1,24 +1,35 @@
+/* CSS Variable */
+:root {
+  --teal: #D4ECDD;
+  --darkblue: #112031;
+  --darknavy: #152D35;
+  --navy: #345B63;
+}
+
+/* Common font-family and font-size CSS  */
 body,footer {
   font-family: Georgia, serif;
   font-size: 20px;
 }
 
+/* Common text-align CSS */
+.navbar-item li a,
+.footer_logo-container,
+footer {
+  text-align: center;
+}
+
+/* Main Content CSS */
 .main-content {
   width: 100%;
   height: auto;
   position: relative;
-  background-color: #112031; 
+  background-color: var(--darkblue); 
 }
 
-footer {
-  background-color: #345B63 ;
-  text-align: center;
-  position: relative;
-  width: 100%;
-}
-
+/* Navigation CSS */
 .navbar {
-  background-color: #345B63;
+  background-color: var(--navy);
   padding-right: 1%;
 }
 
@@ -28,7 +39,7 @@ footer {
 }
 
 .navbar-brand span {
-  color: #D4ECDD; 
+  color: var(--teal); 
   margin-left:10px;
   font-size: 25px;
 }
@@ -48,34 +59,36 @@ footer {
 
 .navbar-item li a {
   display: block;
-  color: #D4ECDD;
-  text-align: center;
+  color: var(--teal);
   text-decoration: none;
 }
 
-.navbar-item li a:hover {
-  background-color: #152D35 ;
-  color: #D4ECDD;
+.navbar-item li a{
   border-radius: 8px;
 }
 
+.navbar-item li a:hover {
+  background-color: var(--darknavy) ;
+  color: var(--teal);
+}
+
 .navbar-item li a#active {
-  background-color: #D4ECDD;
-  color: #112031;
-  border-radius: 8px;
+  background-color: var(--teal);
+  color: var(--darkblue);
+}
+
+footer {
+  background-color: var(--navy) ;
+  position: relative;
+  width: 100%;
 }
 
 .footer-content {
   background-color: rgba(0, 0, 0, 0.2); 
-  color: #D4ECDD;
+  color: var(--teal);
 }
 
 .footer_logo-container {
   padding: 1%;
-  text-align: center;
-  color: #D4ECDD;
-}
-
-section.mb-4 {
-  padding-bottom: 0px;
+  color: var(--teal);
 }

@@ -1,17 +1,20 @@
+/* CSS Variable */
+:root {
+  --teal: #D4ECDD;
+  --darkblue: #112031;
+  --darknavy: #152D35;
+  --navy: #345B63;
+}
+
+/* Main Content Container */
 .main-content {
   display: flex;
 }
 
+/* Login CSS */
 .login_container {
   width: 50%;
-  background-color: #112031;
-}
-
-.side_picture-container {
-  background-color: #112031;
-  width: 50%;
-  height: 50%;
-
+  background-color: var(--darkblu);
 }
 
 .login_container_header {
@@ -19,13 +22,13 @@
   padding-top: 5%;
   padding-left: 15px;
   padding-right: 15px;
-  color: #D4ECDD;
+  color: var(--teal);
 }
 
 .login_form {
-  border-color: #D4ECDD;
-  background-color: #345B63;
-  color: #D4ECDD;
+  border-color: var(--teal);
+  background-color: var(--navy);
+  color: var(--teal);
   margin-top: 7%;
   margin-left: 12%;
   margin-right: 12%;
@@ -35,6 +38,20 @@
   padding-bottom: 5%;
   border-radius: 12px;
   font-size: large;
+}
+
+input {
+  width: 250px;
+  height: 40px;
+}
+
+select {
+  width: 210px;
+  height: 30px;
+}
+
+select:hover, input:hover {
+  background-color: var(--darknavy);
 }
 
 .login_form .username {
@@ -61,7 +78,15 @@
 }
 
 .login_footer a {
-  color: #D4ECDD;
+  color: var(--teal);
+}
+
+/* Side Picture CSS */
+.side_picture-container {
+  background-color: var(--darkblue);
+  width: 50%;
+  height: 50%;
+
 }
 
 .side_picture {
@@ -70,22 +95,4 @@
   margin-bottom: 15%;
   width: 75%;
   height: 50%;
-}
-
-input {
-  width: 250px;
-  height: 40px;
-}
-
-select {
-  width: 210px;
-  height: 30px;
-}
-
-select:hover {
-  background-color: #152D35;
-}
-
-input:hover {
-  background-color: #152D35;
 }
