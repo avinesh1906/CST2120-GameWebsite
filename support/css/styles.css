@@ -1,37 +1,41 @@
-
-/* Common padding top */
+/* Common padding top */ 
 .card-img-top,.card-columns {
     padding-top: 2%;
 }
 
+/* Card Columns CSS */
 .card-columns {
     padding-left: 2%;
     padding-right: 2%;
 }
 
+/* Light Color class CSS */
 .light-color {
     border-color: var(--teal);
     background-color: var(--navy);
     color: var(--teal);
 }
 
+/* Dark Color class CSS */
 .dark-color {
     border-color: var(--teal);
     background-color: var(--darknavy);
     color: var(--teal);
 }
 
-
+/* Card Title CSS */
 .card-title {
     text-align: center;
     font-size: 25px;
 }
 
+/* Card Text */
 .card-text{
     padding-left: 3%;
     font-size: 20px;
 }
 
+/* Card Hover */
 .card:hover {
     border-color: var(--teal);
     background-color:  var(--teal);
