@@ -33,61 +33,69 @@ footer {
   padding-right: 1%;
 }
 
+/* Navigation bar Logo */
 .navbar-brand {
   float: left;
   margin-left: 2%;
 }
 
+/* Navigation bar Title */
 .navbar-brand span {
   color: var(--teal); 
   margin-left:10px;
   font-size: 25px;
 }
 
+/* The navigation Container */
 .navigation-container {
   float: right;
 }
+
 .navbar-item {
   margin-top: 2%;
   list-style-type: none;
   overflow: hidden;
 }
 
+/* Navigation item list */
 .navbar-item li {
   float: left;
 }
 
+/* Navigation item text */
 .navbar-item li a {
   display: block;
   color: var(--teal);
   text-decoration: none;
-}
-
-.navbar-item li a{
   border-radius: 8px;
 }
 
+/* Navigation Hover */
 .navbar-item li a:hover {
   background-color: var(--darknavy) ;
   color: var(--teal);
 }
 
+/* Navigation active */
 .navbar-item li a#active {
   background-color: var(--teal);
   color: var(--darkblue);
 }
 
+/* Footer CSS   */
 footer {
   background-color: var(--navy) ;
   position: relative;
   width: 100%;
 }
 
+/* Footer text */
 .footer-content {
   background-color: rgba(0, 0, 0, 0.2); 
   color: var(--teal);
 }
 
+/* Footer Logo */
 .footer_logo-container {
   padding: 1%;
   color: var(--teal);
