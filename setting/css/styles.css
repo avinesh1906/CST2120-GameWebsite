@@ -18,6 +18,7 @@
     border-radius: 12px;
 }
 
+/* Setting Header CSS */
 .setting_header {
     position: relative;
     width: auto;
@@ -26,21 +27,25 @@
     color: var(--teal);
 }
 
+/* Setting form CSS */
 .setting_form {
     display: flex;
 }
 
+/* Common side pictures CSS */
 .left_side_picture, .right_side_picture {
     padding-top: 5%;
     padding-left: 3%;
     width: 25%;
 }
 
+/* Form Layout CSS */
 .form-layout {
     width: 50%;
     position: relative;
 }
 
+/* Form Content Layout */
 .form-content {
     border: solid;
     color: var(--teal); 
@@ -49,10 +54,12 @@
     padding: 1.5%;
 }
 
+/* Form Text CSS */
 .form-label {
     width: 250px;
 }
 
+/* Form Input CSS */
 .form_details input {
     margin-left: 25px;
     width: 40%;
@@ -60,11 +67,14 @@
     margin-bottom: 1.5%;
 }
 
+/* Input Hover CSS */
 .form_details input:hover {
     background-color:var(--darkblue)  ;
     color:  var(--teal);
 
 } 
+
+/* Setting Footer CSS */
 .setting_footer {
     margin-left: 25%;
     margin-right: 25%;
@@ -73,6 +83,7 @@
     height: auto;
 }
 
+/* Setting Footer Button CSS */
 .setting_footer button {
     background-color: var(--teal);
     color: var(--darkblue);
@@ -82,6 +93,7 @@
     height: 40px;
 }
 
+/* Setting Footer Button Hover CSS */
 .setting_footer button:hover{
     background-color:var(--navy);
     color:  var(--teal);
