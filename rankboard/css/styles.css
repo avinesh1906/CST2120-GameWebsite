@@ -22,6 +22,7 @@
     color: var(--teal);
 }
 
+/* Rankboard Container CSS*/
 .rankboard_table {
     padding-bottom: 10%;
     margin-left: 5%;
@@ -29,6 +30,7 @@
     color: var(--teal);  
 }
 
+/* Table CSS */
 .rankboard_table table {
     background-color: var(--navy);
     border-radius: 12px;
