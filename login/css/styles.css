@@ -9,6 +9,7 @@
   background-color: var(--darkblu);
 }
 
+/* Login Title  */
 .login_container_header {
   text-align: center; 
   padding-top: 5%;
@@ -17,6 +18,7 @@
   color: var(--teal);
 }
 
+/* Login Form Layout */
 .login_form {
   border-color: var(--teal);
   background-color: var(--navy);
@@ -32,36 +34,43 @@
   font-size: large;
 }
 
+/* Login Input Layout */
 input {
   width: 250px;
   height: 40px;
 }
 
+/* Login Select Layout */
 select {
   width: 210px;
   height: 30px;
 }
 
+/* Input and Select Hover CSS */
 select:hover, input:hover {
   background-color: var(--darknavy);
 }
 
+/* Username CSS */
 .login_form .username {
   margin-top: 5px;
   width: 50%;
   margin-left: 25%;
 }
 
+/* Password CSS */
 .login_form .password {
   margin-top: 25px;
   width: 50%;
   margin-left: 25%;
 }
 
+/* Login Button CSS */
 .login_btn {
   text-align: center;
 }
 
+/* Login Footer CSS Layout */
 .login_footer {
   text-align: center;
   padding-top: 3%;
@@ -69,6 +78,7 @@ select:hover, input:hover {
   
 }
 
+/* Login Footer Text */
 .login_footer a {
   color: var(--teal);
 }
@@ -81,6 +91,7 @@ select:hover, input:hover {
 
 }
 
+/* Side Picture CSS */
 .side_picture {
   margin-top: 5%;
   margin-left: 15%;
