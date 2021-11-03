@@ -40,18 +40,18 @@
         <h3> Choose your difficulty level: </h3>
       </div>
       <!-- Options to choose level -->
-      <form class="options">
+      <form class="options" action="./game/game.php" >
         <input type="radio" id="beginner" name="game_option" value="beginner" checked="checked"> 
         <label for="beginner">Beginner </label><br>
         <input type="radio" id="normal" name="game_option" value="normal"> 
         <label for="normal">Normal </label><br>
         <input type="radio" id="time-attack" name="game_option" value="time-attack"> 
         <label for="time-attack">Time Attack </label>
+        <!-- Playgame footer to display button -->
+        <div class="playgame_footer">
+            <button type="submit">Play Game</button>
+        </div>
       </form>
-      <!-- Playgame footer to display button -->
-      <div class="playgame_footer">
-          <button type="submit">Play Game</button>
-      </div>
     </div>
     <!-- Carousel -->
     <div class="carousel-container">
@@ -141,8 +141,8 @@
 
   </div>
 </section>
-
 <!-- End of card section -->
+
 <?php
     // php function to generate the footer
     generateFooter($pageName);

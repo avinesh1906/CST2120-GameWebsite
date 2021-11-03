@@ -1,0 +1,15 @@
+.main-content{
+    padding-top: 5%;
+    padding-left: 25%;
+    padding-right: 25%;
+    padding-bottom: 5%;
+}
+.game-window{
+    border: solid;
+    border-color: var(--teal);
+    border-radius: 12px;
+    height: 400px;
+    color: var(--teal);
+    text-align: center;
+    font-size: x-large;
+}
