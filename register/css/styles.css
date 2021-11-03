@@ -26,6 +26,7 @@
     padding-top: 2%;
 }
 
+/* First Line Sign Up */
 #upper_line {
     width: auto;
     position: relative;
@@ -33,6 +34,7 @@
     font-size: 15px;
 }
 
+/* Second Line Sign Up */
 #lower_line {
     width: auto;
     position: relative;
@@ -40,6 +42,7 @@
     font-size: 15px;
 }
 
+/* Sign Up Form Container */
 .signup_form {
     display: flex;
 }
@@ -51,11 +54,13 @@
     width: 25%;
 }
 
+/* Form layout */
 .form-layout {
     position: relative;
     width: 50%;
 }
 
+/* Form Content Layout */
 .form-content{
     font-size: larger;
     margin-bottom: 2%;
@@ -71,10 +76,12 @@
     margin: 0 auto;
 }
 
+/* Form text */
 .form-label {
     width: 250px;
 }
 
+/* Form Input Type CSS */
 .form_details input[type=text],input[type=password],input[type=email],input[type=date],select {
     margin-left: 25px;
     width: 40%;
@@ -83,6 +90,7 @@
     font-size: medium;
 }
 
+/* Input Hover */
 .form_details input:hover, select:hover, .checkbox_container label:hover {
     background-color:var(--darkblue) ;
     color:  var(--teal);
@@ -93,10 +101,12 @@
     padding-left: 8%;
 }
 
+/* Checkbox input type checkbox */
 .checkbox_container input[type=checkbox] {
     transform: scale(1.5);
 }
 
+/* Checkbox Label */
 .checkbox_container label {
     padding-left: 1%;
     color: var(--teal);
@@ -112,6 +122,7 @@
     width: 50%;
 }
 
+/* Register footer Proceed button */
 .register_footer button {
     background-color: var(--teal);
     color: var(--darkblue);
@@ -121,11 +132,13 @@
     height: 40px;
 }
 
+/* Proceed Button Hover */
 .register_footer button:hover{
     background-color:var(--navy);
     color:  var(--teal);
 }
 
+/* Register Footer Login Instead CSS */
 .register_footer a {
     padding-left: 2%;
     font-size: medium;   
