@@ -55,7 +55,7 @@
     </div>
     <!-- Carousel -->
     <div class="carousel-container">
-      <div id="carouselIndicators" class="carousel-container carousel slide " data-ride="carousel">
+      <div id="carouselIndicators" class=" carousel slide " data-ride="carousel">
         <!-- Display the carousel indicators -->
         <ol class="carousel-indicators">
           <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
@@ -64,14 +64,14 @@
         </ol>
         <!-- Carousel images to display -->
         <div class="carousel-inner">
+          <div class="carousel-item">
+            <img class="d-block w-100" src="./home/img/snake-score.gif" alt="Third slide">
+          </div>
           <div class="carousel-item active">
-            <img class="d-block w-100" src="./common/img/apple-snake.png" alt="First slide">
+            <img class="d-block w-100" src="./home/img/snakeIMG.PNG" alt="First slide">
           </div>
           <div class="carousel-item">
-            <img class="d-block w-100" src="./common/img/apple-snake.png" alt="Second slide">
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="./common/img/apple-snake.png" alt="Third slide">
+            <img class="d-block w-100" src="./home/img/snake-apple.gif" alt="Second slide">
           </div>
         </div>
         <!-- Previous button for carousel -->
