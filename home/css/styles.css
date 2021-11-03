@@ -34,6 +34,7 @@
     padding-bottom: 2%;
 }
 
+/* Level Options CSS  */
 .options {
     padding-top: 3%;
     font-family: Georgia, serif;
@@ -41,6 +42,7 @@
     color: var(--teal);
 }
 
+/* Level Button CSS */
 .options input {
     width: 50px;
     height: 20px;
@@ -52,6 +54,7 @@
     padding-top: 2%;
 }
 
+/* Introduction Text CSS   */
 .introduction #intro_content {
     margin-top: 15px;
     padding: 5px;
@@ -68,6 +71,7 @@
     padding-bottom: 3%;
 }
 
+/* Playgame header Container CSS */
 .playgame_header {
     padding-top: 10%;
     padding-left: 15%;
@@ -80,11 +84,12 @@
     font-size: 20px;
 }
 
+/*  Playgame CSS footer */
 .playgame_footer {
     padding-top: 2%;
 }
 
-
+/* Playgame footer Button */
 .playgame_footer button {
     background-color: var(--teal);
     color: var(--darkblue);
@@ -94,6 +99,7 @@
     font-size: 35px;
 }
 
+/* Button Hover */
 .playgame_footer button:hover, .card-footer button:hover {
     background-color: var(--navy);
     color:  var(--teal);
@@ -116,22 +122,26 @@
     margin-right: 0px;
 }
 
+/* Card Layout CSS */
 .card {
     background-color: var(--navy);
     color:var(--teal);
     border-color: var(--teal);
 }
 
+/* Card Hover CSS */
 .card:hover {
     border-color: var(--navy);
     background-color:  var(--teal)  ;
     color: var(--navy);
 }
 
+/* Card Body CSS */
 .card-body {
     margin-bottom: 5%;
 }
 
+/* Card Footer Button CSS */
 .card-footer button {
     background-color: var(--teal);
     color: var(--darkblue);
