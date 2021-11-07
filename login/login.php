@@ -23,12 +23,14 @@
             <div class="username">
                 <i class="fa fa-user icon"></i>
                 <label for="Username" class="form-label">Username</label>
-                <input autocomplete="off" type="text" class="form-control" id="Username">
-                </div>
+                <input autocomplete="off" type="text" class="form-control" id="Username" onkeyup="usernameValidation()">
+                <span id="usr_details"></span>
+            </div>
             <div class="password">
                 <i class="fa fa-key icon"></i>
                 <label for="Password" class="form-label">Password</label>
-                <input  autocomplete="off" type="password" class="form-control" id="Password" >
+                <input  autocomplete="off" type="password" class="form-control" id="Password" onkeyup="passwordValidation()" >
+                <span id="pwd_details"></span>
             </div>
         </div>
         <!-- Login submit button -->
@@ -48,8 +50,9 @@
     <img class="side_picture" src="./img/side_picture.gif" alt="side_picture" > 
 </div>
 
-<!-- Php function to generate the footer -->
+<!-- Php function to generate the footer and import JS -->
 <?php
     // function call
     generateFooter($pageName);
+    generateJavaScript($pageName);
 ?>

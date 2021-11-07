@@ -140,6 +140,21 @@ function generateFooter($pagename){
         <!-- Copyright -->
     </footer>
     ';
+}
+
+function generateJavaScript($title){
+    // Array Dictionary 
+    $linkNames = array(
+        "Home" => "./home/js/home.js", 
+        "Game" => "./js/game.js", 
+        "Rankboard" => "./js/rankboard.js", 
+        "Setting" => "./js/setting.js", 
+        "Log In" => "./js/login.js"
+    );
+    
+    echo '<script ';
+    echo 'src = "'. $linkNames[$title] .'">"'; 
+    echo '</script>';
     echo '</body>';
     echo '</html>';
 }
