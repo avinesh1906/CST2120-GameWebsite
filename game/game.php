@@ -18,4 +18,5 @@
 <?php
     // php function to generate the footer
     generateFooter($pageName);
+    generateJavaScript($pageName);
 ?>

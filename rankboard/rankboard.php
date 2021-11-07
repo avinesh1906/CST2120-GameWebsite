@@ -53,4 +53,5 @@
 <?php
     // function call
     generateFooter($pageName);
+    generateJavaScript($pageName);
 ?>
