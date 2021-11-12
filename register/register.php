@@ -35,42 +35,68 @@
         <div class="form-content">
             <!-- Username -->
             <div class="form_details">
-                <label for="username" class="form-label"> Username </label>
-                <input autocomplete="off" type="text" id="username" >
+                <div class="form_input">
+                    <label for="username" class="form-label"> Username </label>
+                    <input autocomplete="off" type="text" id="Username" onkeyup="usernameValidation()">
+            
+                </div>
+                <div class="form_error">
+                    <span id="usr_details"></span>
+                </div>
             </div>
             <!-- Email -->
             <div class="form_details">
-                <label for="email" class="form-label"> Email </label>
-                <input autocomplete="off" type="email" id="email" >
+                <div class="form_input">
+                    <label for="email" class="form-label"> Email </label>
+                    <input autocomplete="off" type="email" id="email" onkeyup="emailValidation()">
+                </div>
+                <div class="form_error">
+                    <span id="email_details"></span>
+                </div>
             </div>
             <!-- Date of Birth -->
             <div class="form_details">
-                <label for="dob" class="form-label"> Date of Birth </label>
-                <input autocomplete="off" type="date" id="dob" >
+                <div class="form_input">
+                    <label for="dob" class="form-label"> Date of Birth </label>
+                    <input autocomplete="off" type="date" id="dob" max="<?php echo date('Y').'-'.date('m').'-'.date('d'); ?>">
+                </div>
             </div>
             <!-- Gender -->
             <div class="form_details">
-                <label for="gender" class="form-label"> Gender </label>
-                <select id="gender" style="width:40%; height:40px">
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
-                    <option value="other">Other</option>
-                </select>
+                <div class="form_input">
+                    <label for="gender" class="form-label"> Gender </label>
+                    <select id="gender" style="width:40%; height:40px">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>               
             </div>
             <!-- Password -->
             <div class="form_details">
-                <label for="password" class="form-label"> Password </label>
-                <input autocomplete="off" type="password" id="password">
+                <div class="form_input" style="padding-left:20px;">
+                    <label for="password" class="form-label"> Password </label>
+                    <input autocomplete="off" type="password" id="password" onkeyup="passwordValidation()" >
+                    <i id="toggleEye" class=" fa fa-eye"></i>
+                </div>
+                <div class="form_error">
+                        <span id="pwd_details"></span>
+                </div>                
             </div>
             <!-- Confirm Password -->
             <div class="form_details">
-                <label for="confirm_password" class="form-label"> Confirm Password </label>
-                <input autocomplete="off" type="password" id="confirm_password">
+                <div class="form_input">
+                    <label for="confirm_password" class="form-label"> Confirm Password </label>
+                    <input autocomplete="off" type="password" id="confirm_password" onkeyup="confirmPassword()">
+                </div>
+                <div class="form_error">
+                    <span id="confirmPWD_details"></span>
+                </div>                
             </div>
             <!-- Terms and Condition -->
             <div class="form_details checkbox_container">
                 <input class="form-check-input" type="checkbox"  id="termsandcondition">
-                <label class="form-check-label" for="termsandcondition">
+                <label class="form-check-label" for="termsandcondition" required>
                     I agree to the terms and conditions.
                 </label>
             </div>

@@ -150,7 +150,7 @@ function generateJavaScript($title){
         "Rankboard" => "./js/rankboard.js", 
         "Setting" => "./js/setting.js", 
         "Log In" => "./js/login.js",
-        "Support" => "./js/support.js"
+        "Register" => "./js/register.js"
     );
     
     echo '<script ';

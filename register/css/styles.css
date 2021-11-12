@@ -74,6 +74,13 @@
 .form_details {
     height: auto;
     margin: 0 auto;
+    padding-bottom: 1.5%;
+}
+
+.form_error {
+    margin-left: 50%;
+    text-align:left;
+    font-size: small;
 }
 
 /* Form text */
@@ -86,7 +93,6 @@
     margin-left: 25px;
     width: 40%;
     height: 40px;
-    margin-bottom: 1.5%;
     font-size: medium;
 }
 
