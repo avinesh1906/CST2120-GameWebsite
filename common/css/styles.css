@@ -100,3 +100,10 @@ footer {
   padding: 1%;
   color: var(--teal);
 }
+
+/* toggle eye CSS */
+#toggleEye{
+  position: absolute;
+  margin-left: 1.5%;
+  padding-top: 1%;
+}

@@ -59,12 +59,12 @@
     width: 250px;
 }
 
+
 /* Form Input CSS */
 .form_details input {
     margin-left: 25px;
     width: 40%;
     height: 40px;
-    margin-bottom: 1.5%;
 }
 
 /* Input Hover CSS */
@@ -97,4 +97,13 @@
 .setting_footer button:hover{
     background-color:var(--navy);
     color:  var(--teal);
+}
+
+/* Form error CSS */
+.form_error{
+    margin-top: 1%;
+    text-align: left;
+    padding-left: 35%;
+    font-size: 15px;
+    margin-bottom: 1%;
 }

@@ -154,7 +154,16 @@ function generateJavaScript($title){
     );
     
     echo '<script ';
-    echo 'src = "'. $linkNames[$title] .'">"'; 
+    echo 'src = "'. $linkNames[$title] .'">'; 
+    echo '</script>';
+
+    echo '<script ';
+    if ($title == "Home") {
+        echo 'src = "./common/js/common.js">';
+    } else {
+        echo 'src = "../common/js/common.js">';
+    }
+
     echo '</script>';
     echo '</body>';
     echo '</html>';

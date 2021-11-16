@@ -30,7 +30,7 @@
         <img class="side_picture" src="../common/img/serpent.gif"  width="250" alt="side_picture" >
     </div>
     <!-- Input form -->
-    <form class="form-layout" action="../index.php">
+    <form class="form-layout" action="../index.php"  onsubmit="return validateRegisterForm()" method="post">
         <!-- Form Input Label and input -->
         <div class="form-content">
             <!-- Username -->
@@ -58,7 +58,7 @@
             <div class="form_details">
                 <div class="form_input">
                     <label for="dob" class="form-label"> Date of Birth </label>
-                    <input autocomplete="off" type="date" id="dob" max="<?php echo date('Y').'-'.date('m').'-'.date('d'); ?>">
+                    <input autocomplete="off" type="date" id="dob" value="<?php echo date("Y-m-d"); ?>" max="<?php echo date('Y').'-'.date('m').'-'.date('d'); ?>">
                 </div>
             </div>
             <!-- Gender -->
@@ -74,13 +74,13 @@
             </div>
             <!-- Password -->
             <div class="form_details">
-                <div class="form_input" style="padding-left:20px;">
+                <div class="form_input">
                     <label for="password" class="form-label"> Password </label>
                     <input autocomplete="off" type="password" id="password" onkeyup="passwordValidation()" >
-                    <i id="toggleEye" class=" fa fa-eye"></i>
+                    <i id="toggleEye" name="password" class=" fa fa-eye"></i>
                 </div>
                 <div class="form_error">
-                        <span id="pwd_details"></span>
+                    <span id="pwd_details"></span>
                 </div>                
             </div>
             <!-- Confirm Password -->
@@ -104,7 +104,7 @@
         <!-- Form Footer Container -->
         <div class="register_footer">
             <!-- Submit Button -->
-            <button type="submit">Proceed</button>
+            <button type="submit" id="submit_btn">Proceed</button>
             <!-- Login Instead Link -->
             <a href="../login/login.php">Login Instead?</a>
         </div>

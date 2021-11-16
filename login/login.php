@@ -18,7 +18,7 @@
         <h2>Sign In</h2>
     </div>
     <!-- Login form -->
-    <form action="../index.php">
+    <form name="login_form" action="../index.php" onsubmit="return validateLoginForm()" method="post">
         <div class="login_form ">
             <div class="username">
                 <i class="fa fa-user icon"></i>
@@ -35,7 +35,7 @@
         </div>
         <!-- Login submit button -->
         <div class="login_btn">
-            <input type="image" name="submit" src="./img/login.png" alt="login" style="width:70px; height:70px">
+            <input type="image" name="submit" id="submit_btn" src="./img/login.png" alt="login" style="width:70px; height:70px">
         </div>
     <form>
 

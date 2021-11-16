@@ -1,3 +1,11 @@
+let btn = document.getElementById("submit_btn");
+
+window.onload = init;
+
+function init() {
+    btn.disabled = true;
+}
+
 function usernameValidation() {
     // variables 
     let details = document.getElementById("usr_details");
@@ -5,29 +13,42 @@ function usernameValidation() {
 
     if (usr.value.length == 0) {
         details.innerHTML = '*required';
-    } else {
-        details.innerHTML = '<span id="usr_details"></span>';
+        details.style.color = "#FDD2BF";
+        btn.disabled = true;
+        return false;
     }
+    btn.disabled = false;
+    details.innerHTML = "";
+    return true;
+    
 }
-function passwordValidation() {
-    // variables 
-    let details = document.getElementById("pwd_details");
-    /* Regular Expression for validating password with the following conditions":
-    1. Min 6 elements
-    2. Containing at least:
-        a. A symbol (!@#$%^&*)
-        b. Upper and lower case letter
-        c. A number */
-    let re = new RegExp("^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,}$");
 
+function passwordValidation() {
     let pwd = document.getElementById("Password");
+    let details = document.getElementById("pwd_details");
 
     if (pwd.value.length == 0) {
         details.innerHTML = '*required';
-    } else if (!re.test(pwd.value)) {
-        console.log(re.test(pwd))
-        details.innerHTML = '<span style=" color:red"> Password should contain at least one symbol, upper and lower case letter and a number of min 6 characters. </span>';
+        details.style.color = "#FDD2BF";
+        return false;
+    }
+    btn.disabled = false;
+    details.innerHTML = "";
+    return true;
+}
+
+function validateLoginForm(){
+    if (!usernameValidation() && !passwordValidation()){
+        return false;
     } else {
-        details.innerHTML = '<span style=" color:green"> Strong Password </span>';
+        if (!usernameValidation()){
+            return false;
+        }
+        if (!passwordValidation()){
+            return false;
+        }
+        btn.disabled = false;
+        return true;
     }
 }
+
