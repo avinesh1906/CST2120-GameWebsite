@@ -1,23 +1,37 @@
 let btn = document.getElementById("submit_btn");
+let usr = document.getElementById("Username");
+let email = document.getElementById("email");
+let pwd = document.getElementById("password");
+let confirm_pwd = document.getElementById("confirm_password");
 
 window.onload = init;
 
 function init() {
     btn.disabled = true;
-    console.log(localStorage)
+    
 }
 
 function usernameValidation() {
     // variables 
     let details = document.getElementById("usr_details");
-    let usr = document.getElementById("Username");
+    let users = JSON.parse(localStorage.users);
 
     if (usr.value.length == 0) {
         btn.disabled = true;
         details.innerHTML = '*required';
         details.style.color = "#FDD2BF";
         return false;
+    } 
+
+    for (i = 0; i < users.length; i++){
+        if (users[i].username == usr.value){
+            btn.disabled = true;
+            details.innerHTML = '*username not available';
+            details.style.color = "#FDD2BF";
+            return false;
+        }
     }
+   
     btn.disabled = false;
     details.innerHTML = "";
     return true;
@@ -27,7 +41,6 @@ function usernameValidation() {
 function emailValidation() {
     //variables
     let details = document.getElementById("email_details");
-    let email = document.getElementById("email")
 
     // Regular expression for validating email
     let re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
@@ -60,8 +73,6 @@ function passwordValidation() {
         c. A number */
     let re = new RegExp("^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,}$");
 
-    let pwd = document.getElementById("password");
-
     if (pwd.value.length == 0) {
         btn.disabled = true;
         details.innerHTML = '*required';
@@ -83,8 +94,7 @@ function passwordValidation() {
 function confirmPassword() {
     //variables
     let details = document.getElementById("confirmPWD_details");
-    let pwd = document.getElementById("password");
-    let confirm_pwd = document.getElementById("confirm_password");
+
 
     if (confirm_pwd.value.length == 0) {
         btn.disabled = true;
@@ -131,6 +141,26 @@ function validateRegisterForm() {
         if (!checkbox()){
             return false;
         }
+
+        // input field value
+        let user = usr.value;
+        let dob = document.getElementById("dob").value;
+        let gender = document.getElementById("gender").value;
+        let Email = email.value;
+        let Pwd = password.value;
+
+        let newUsr = {
+            username: user,
+            email: Email,
+            dob: dob,
+            gender: gender,
+            password: Pwd
+        }
+
+        let users = JSON.parse(localStorage.users);
+        users.push(newUsr);       
+        localStorage.users = JSON.stringify(users);
+
         btn.disabled = false;
         return true;
     }
