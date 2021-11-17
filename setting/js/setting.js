@@ -32,7 +32,7 @@ function passwordValidation() {
         a. A symbol (!@#$%^&*)
         b. Upper and lower case letter
         c. A number */
-    let re = new RegExp("^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,}$");
+    let re = new RegExp("^(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[A-Z])[a-zA-Z0-9!@#$%^&*]{6,}$");
     let old_pwd = document.getElementById("current_password");
     let pwd = document.getElementById("new_password");
 

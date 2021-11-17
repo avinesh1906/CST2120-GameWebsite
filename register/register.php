@@ -30,7 +30,7 @@
         <img class="side_picture" src="../common/img/serpent.gif"  width="250" alt="side_picture" >
     </div>
     <!-- Input form -->
-    <form class="form-layout" action="../index.php"  onsubmit="return validateRegisterForm()" method="post">
+    <div class="form-layout" >
         <!-- Form Input Label and input -->
         <div class="form-content">
             <!-- Username -->
@@ -108,7 +108,7 @@
             <!-- Login Instead Link -->
             <a href="../login/login.php">Login Instead?</a>
         </div>
-    </form>
+</div>
     <!-- Right Side Gif -->
     <div class="right_side_picture">
         <img class="side_picture" src="../common/img/serpent.gif"  width="250" alt="side_picture" >

@@ -1,4 +1,6 @@
 let btn = document.getElementById("submit_btn");
+let usr = document.getElementById("Username");
+let pwd = document.getElementById("Password");
 
 window.onload = init;
 
@@ -9,14 +11,17 @@ function init() {
 function usernameValidation() {
     // variables 
     let details = document.getElementById("usr_details");
-    let usr = document.getElementById("Username");
+
+
 
     if (usr.value.length == 0) {
         details.innerHTML = '*required';
         details.style.color = "#FDD2BF";
         btn.disabled = true;
         return false;
-    }
+    } 
+
+
     btn.disabled = false;
     details.innerHTML = "";
     return true;
@@ -24,7 +29,7 @@ function usernameValidation() {
 }
 
 function passwordValidation() {
-    let pwd = document.getElementById("Password");
+
     let details = document.getElementById("pwd_details");
 
     if (pwd.value.length == 0) {
@@ -38,6 +43,7 @@ function passwordValidation() {
 }
 
 function validateLoginForm(){
+    let users = JSON.parse(localStorage.users);
     if (!usernameValidation() && !passwordValidation()){
         return false;
     } else {
@@ -46,6 +52,16 @@ function validateLoginForm(){
         }
         if (!passwordValidation()){
             return false;
+        }
+
+        for (i = 0; i < users.length; i++){
+            if (users[i].username != usr.value && users[i].password != pwd.value){
+                console.log("uhmm")
+                btn.disabled = true;
+                details.innerHTML = '*username/password incorrect';
+                details.style.color = "#FDD2BF";
+                return false;
+            }
         }
         btn.disabled = false;
         return true;

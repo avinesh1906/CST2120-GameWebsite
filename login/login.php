@@ -18,7 +18,7 @@
         <h2>Sign In</h2>
     </div>
     <!-- Login form -->
-    <form name="login_form" action="../index.php" onsubmit="return validateLoginForm()" method="post">
+    <form name="login_form"  onsubmit="return validateLoginForm()" method="post">
         <div class="login_form ">
             <div class="username">
                 <i class="fa fa-user icon"></i>

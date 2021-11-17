@@ -4,12 +4,8 @@ let email = document.getElementById("email");
 let pwd = document.getElementById("password");
 let confirm_pwd = document.getElementById("confirm_password");
 
-window.onload = init;
 
-function init() {
-    btn.disabled = true;
-    
-}
+btn.onclick = validateRegisterForm;
 
 function usernameValidation() {
     // variables 
@@ -17,7 +13,7 @@ function usernameValidation() {
     let users = JSON.parse(localStorage.users);
 
     if (usr.value.length == 0) {
-        btn.disabled = true;
+        // btn.disabled = true;
         details.innerHTML = '*required';
         details.style.color = "#FDD2BF";
         return false;
@@ -25,14 +21,14 @@ function usernameValidation() {
 
     for (i = 0; i < users.length; i++){
         if (users[i].username == usr.value){
-            btn.disabled = true;
+            // btn.disabled = true;
             details.innerHTML = '*username not available';
             details.style.color = "#FDD2BF";
             return false;
         }
     }
    
-    btn.disabled = false;
+    // btn.disabled = false;
     details.innerHTML = "";
     return true;
     
@@ -71,7 +67,7 @@ function passwordValidation() {
         a. A symbol (!@#$%^&*)
         b. Upper and lower case letter
         c. A number */
-    let re = new RegExp("^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,}$");
+    let re = new RegExp("^(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[A-Z])[a-zA-Z0-9!@#$%^&*]{6,}$");
 
     if (pwd.value.length == 0) {
         btn.disabled = true;
@@ -120,28 +116,14 @@ function checkbox(){
         alert("Please indicate that you accept the Terms and Conditions");
         return false;
     }
+
     return true;
 }
-function validateRegisterForm() {
-    if (!usernameValidation() && !emailValidation() && !passwordValidation() && !confirmPassword() && !checkbox()){
-        return false;
-    } else {
-        if (!usernameValidation()){
-            return false;
-        }
-        if (!emailValidation()){
-            return false;
-        }
-        if (!passwordValidation()){
-            return false;
-        }
-        if (!confirmPassword()){
-            return false;
-        }
-        if (!checkbox()){
-            return false;
-        }
 
+function validateRegisterForm() {
+    if (usernameValidation() && emailValidation() && passwordValidation() && confirmPassword() && checkbox()){
+        btn.disabled = false;
+        console.log("uhmmm");
         // input field value
         let user = usr.value;
         let dob = document.getElementById("dob").value;
@@ -161,9 +143,8 @@ function validateRegisterForm() {
         users.push(newUsr);       
         localStorage.users = JSON.stringify(users);
 
-        btn.disabled = false;
-        return true;
+        window.location.href="../index.php";
+    } else {
+        btn.disabled = true;
     }
-
 }
-
