@@ -11,13 +11,19 @@ function usernameValidation() {
     // variables 
     let details = document.getElementById("usr_details");
     let users = JSON.parse(localStorage.users);
-
+    let re = new RegExp("^(?=[a-zA-Z0-9._]{8,20}$)(?!.*[_.]{2})[^_.].*[^_.]$");
+    
     if (usr.value.length == 0) {
-        // btn.disabled = true;
+        btn.disabled = true;
         details.innerHTML = '*required';
         details.style.color = "#FDD2BF";
         return false;
-    } 
+    } else if (!re.test(usr.value)) { 
+        btn.disabled = true;
+        details.innerHTML = '*Username should be 8-20 characters long <br> _ or . at the end <br>  no _ or . at the beginning <br> no __ or _. or ._ or .. inside ';
+        details.style.color = "#FDD2BF";
+        return false;
+    }
 
     for (i = 0; i < users.length; i++){
         if (users[i].username == usr.value){
