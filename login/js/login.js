@@ -2,17 +2,12 @@ let btn = document.getElementById("submit_btn");
 let usr = document.getElementById("Username");
 let pwd = document.getElementById("Password");
 
-window.onload = init;
+btn.onclick = validateLoginForm;
 
-function init() {
-    btn.disabled = true;
-}
 
 function usernameValidation() {
     // variables 
     let details = document.getElementById("usr_details");
-
-
 
     if (usr.value.length == 0) {
         details.innerHTML = '*required';
@@ -44,6 +39,8 @@ function passwordValidation() {
 
 function validateLoginForm(){
     let users = JSON.parse(localStorage.users);
+    let details = document.getElementById("pwd_details");
+
     if (!usernameValidation() && !passwordValidation()){
         return false;
     } else {
@@ -53,18 +50,21 @@ function validateLoginForm(){
         if (!passwordValidation()){
             return false;
         }
-
         for (i = 0; i < users.length; i++){
-            if (users[i].username != usr.value && users[i].password != pwd.value){
-                console.log("uhmm")
-                btn.disabled = true;
+            if (users[i].username == usr.value && users[i].password == pwd.value){
+                console.log(users[i].username);
+                console.log(usr.value);
+                console.log(pwd.value);
+                btn.disabled = false;
+                window.location.href="../index.php";
+            } else {
+                console.log(users[i].username);
+                console.log(usr.value);
+                console.log(pwd.value);
                 details.innerHTML = '*username/password incorrect';
                 details.style.color = "#FDD2BF";
-                return false;
             }
         }
-        btn.disabled = false;
-        return true;
     }
 }
 

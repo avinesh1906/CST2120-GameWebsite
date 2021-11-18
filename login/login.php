@@ -18,7 +18,7 @@
         <h2>Sign In</h2>
     </div>
     <!-- Login form -->
-    <form name="login_form"  onsubmit="return validateLoginForm()" method="post">
+    <section name="login_form">
         <div class="login_form ">
             <div class="username">
                 <i class="fa fa-user icon"></i>
@@ -37,7 +37,7 @@
         <div class="login_btn">
             <input type="image" name="submit" id="submit_btn" src="./img/login.png" alt="login" style="width:70px; height:70px">
         </div>
-    <form>
+    <section>
 
     <!-- Option to create account -->
     <div class="login_footer">
