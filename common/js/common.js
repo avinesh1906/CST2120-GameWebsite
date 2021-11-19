@@ -12,14 +12,22 @@ function init() {
                 gender: "male",
                 password: "password@Naagin06",
                 score: 54
-                }, 
+            }, 
             {
-                username: "test2024",
-                email: "test1906@live.mdx.ac.uk",
+                username: "sounil2605",
+                email: "souculloo@gmail.com",
                 dob: "2011-01-19",
-                gender: "female",
-                password: "test2024@Pass",
+                gender: "male",
+                password: "sou2024@Pass",
                 score: 36
+            },
+            {
+                username: "Anoopama05",
+                email: "anoop@gmail.com",
+                dob: "2012-10-05",
+                gender: "female",
+                password: "anoop@Culloo12",
+                score: 49
             }
         ];
         let usrDetails = JSON.stringify(users);
