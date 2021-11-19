@@ -142,7 +142,8 @@ function validateRegisterForm() {
             email: Email,
             dob: dob,
             gender: gender,
-            password: Pwd
+            password: Pwd,
+            score: 0
         }
 
         let users = JSON.parse(localStorage.users);
