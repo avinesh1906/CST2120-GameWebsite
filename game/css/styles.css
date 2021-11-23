@@ -5,6 +5,7 @@
     padding-bottom: 5%;
 }
 .game-window{
+    display: none;
     border: solid;
     border-color: var(--teal);
     border-radius: 12px;
@@ -12,4 +13,37 @@
     color: var(--teal);
     text-align: center;
     font-size: x-large;
+}
+
+#notLoggedIn  {
+    text-align: center;
+    color: rgb(253, 210, 191);
+    font-size: xx-large;
+    display: none;
+}
+
+.button {
+    display: flex;
+    margin-top: 5%;
+}
+
+.button #signin_btn  {
+    left: 0;
+    padding-left: 10%;
+    padding-right: 25%;
+}
+
+button {
+    background-color: var(--teal);
+    color: var(--darkblue);
+    border-color: var(--darknavy);
+    width: 220px;
+    height: 60px;
+    font-size: 35px;
+    border-radius: 12px;
+}
+
+button:hover {
+    background-color: var(--navy);
+    color:  var(--teal);
 }

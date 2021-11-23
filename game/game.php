@@ -11,9 +11,24 @@
     generateNavBar($pageName);
 ?>
 <div id="notLoggedIn">
-    You have to login to play!
+    <div class="title">
+        Login Required
+        <br>
+        Create an account or login to enjoy Naagin for free.
+    </div>
+    <div class="button">
+        <div id="signin_btn">
+            <button onclick="window.location.href='../login/login.php'">Log In</button>
+        </div> 
+        <div id="register_btn">
+            <button  onclick='window.location.href="../register/register.php"'>Register</button>
+        </div> 
+    </div>
 </div>
-
+<!-- Game Window -->
+<div class="game-window">
+    Game Window
+</div>
 <?php
     // php function to generate the footer
     generateFooter($pageName);
