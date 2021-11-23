@@ -10,11 +10,10 @@
     generateHeader($pageName, $folderName);
     generateNavBar($pageName);
 ?>
-
-<!-- Game Window -->
-<div class="game-window">
-    Game section
+<div id="notLoggedIn">
+    You have to login to play!
 </div>
+
 <?php
     // php function to generate the footer
     generateFooter($pageName);

@@ -32,6 +32,7 @@
 .main-content{
     display: flex;
     padding-bottom: 2%;
+    min-height: auto;
 }
 
 /* Level Options CSS  */

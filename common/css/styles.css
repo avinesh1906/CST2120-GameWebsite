@@ -22,6 +22,7 @@ footer {
 /* Main Content CSS */
 .main-content {
   width: 100%;
+  min-height: 70vh;
   height: auto;
   position: relative;
   background-color: var(--darkblue); 
@@ -84,6 +85,8 @@ footer {
 
 /* Footer CSS   */
 footer {
+  position: fixed;
+  bottom: 0;
   background-color: var(--navy) ;
   position: relative;
   width: 100%;
