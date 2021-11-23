@@ -63,6 +63,7 @@ function validateLoginForm(){
             //  check if password corresponds to that particular username
             if (users[i].username == usr.value && users[i].password == pwd.value){
                 btn.disabled = false;
+                sessionStorage.loggedUser = users[i].username;
                 // redirect to home page
                 window.location.href="../index.php";
             // error messages
