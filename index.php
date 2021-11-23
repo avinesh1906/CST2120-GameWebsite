@@ -38,9 +38,9 @@
       <!-- Playgame header -->
       <div class="playgame_header">
         <h3> Choose your difficulty level: </h3>
-      </div>
+      </div> 
       <!-- Options to choose level -->
-      <form class="options" action="./game/game.php" >
+      <section class="options">
         <input type="radio" id="beginner" name="game_option" value="beginner" checked="checked"> 
         <label for="beginner">Beginner </label><br>
         <input type="radio" id="normal" name="game_option" value="normal"> 
@@ -49,10 +49,15 @@
         <label for="time-attack">Time Attack </label>
         <!-- Playgame footer to display button -->
         <div class="playgame_footer">
-            <button type="submit">Play Game</button>
+            <button type="submit" id="play_btn">Play Game</button>
         </div>
-      </form>
-    </div>
+        <div id="signinPrompt">
+          Login Required! 
+          <br>
+          <a href="./register/register.php">Register?</a><a href="./login/login.php">Log In?</a>  
+        </div>
+      </section>
+    </div>   
     <!-- Carousel -->
     <div class="carousel-container">
       <div id="carouselIndicators" class=" carousel slide " data-ride="carousel">
