@@ -84,9 +84,9 @@ function generateNavBar($pagename){
         
         // different path for home and other pages
         if ($pagename == "Home"){
-            echo 'href="'. $linkFolderHomeRoot[$x] . $linkFileName[$x] . '">' . $linkNames[$x] .'</a>';
+            echo 'name ="'.$linkNames[$x].'" href="'. $linkFolderHomeRoot[$x] . $linkFileName[$x] . '">' . $linkNames[$x] .'</a>';
         } else {
-            echo 'href="'. $linkFolderName[$x] . $linkFileName[$x] . '">' . $linkNames[$x] .'</a>';
+            echo 'name ="'.$linkNames[$x].'" href="'. $linkFolderName[$x] . $linkFileName[$x] . '">' . $linkNames[$x] .'</a>';
         }
 
         echo '</li>';

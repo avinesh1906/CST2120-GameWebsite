@@ -2,9 +2,20 @@
 let btn = document.getElementById("submit_btn");
 let usr = document.getElementById("Username");
 let pwd = document.getElementById("Password");
+let log_btn = document.getElementsByName("Log In");
 
 // call the function validateLoginForm when submit button is clicked
 btn.onclick = validateLoginForm;
+init();
+
+// function init
+function init(){
+    // check if session storage (loggeduser) is not empty
+    if (sessionStorage.loggedUser != undefined){
+        sessionStorage.clear()
+        log_btn[0].innerText = 'Log In';
+    }
+}
 
 // function to validate username
 function usernameValidation() {

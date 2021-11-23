@@ -37,7 +37,12 @@ function init() {
         // create the local storage for storing user details
         localStorage.users = usrDetails;
     };
-
+    let current_page = document.getElementsByName("Log In");
+    if (sessionStorage.loggedUser != undefined){
+        current_page[0].innerText = 'Log Out';
+    } else {
+        current_page[0].innerText = 'Log In';
+    }    
 }
 
 //  variable to store the toggleEye details
@@ -69,4 +74,8 @@ function togglePassword() {
 
     //  change the icon 
     this.classList.toggle('fa-eye-slash');
+}
+
+function clearSessionStorage(){
+    sessionStorage.clear();
 }
