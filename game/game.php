@@ -26,9 +26,9 @@
     </div>
 </div>
 <!-- Game Window -->
-<div class="game-window">
+<canvas class="game-window">
     Game Window
-</div>
+</canvas>
 <?php
     // php function to generate the footer
     generateFooter($pageName);
