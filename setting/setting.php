@@ -37,7 +37,7 @@
         </div>
     </div>
     <!-- Setting form -->
-    <form class="form-layout" action="../index.php" onsubmit="return validateSettingForm()" method="post">
+    <section class="form-layout">
         <!-- Form Label and Input -->
         <div class="form-content">
             <!-- Current Password -->
@@ -79,7 +79,7 @@
         <div class="setting_footer">
             <button type="submit" id="submit_btn">Save Changes</button>
         </div>
-    </form>
+    </section>
     <!-- Right side Gif -->
     <div class="right_side_picture">
         <img class="side_picture" src="../common/img/serpent.gif"  width="250" alt="side_picture" >

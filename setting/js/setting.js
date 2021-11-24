@@ -1,7 +1,8 @@
 // global variables
 let btn = document.getElementById("submit_btn");
+let users = JSON.parse(localStorage.users);
 
-
+btn.onclick = validateSettingForm;
 verifyLogin();
 
 
@@ -20,16 +21,33 @@ function verifyLogin()
 function oldPassword() {
     // variables 
     let details = document.getElementById("currentPWD_details");
-    let pwd = document.getElementById("current_password");
+    let current_pwd = document.getElementById("current_password");
 
     //  check if the input field is empty
-    if (pwd.value.length == 0) {
+    if (current_pwd.value.length == 0) {
         // error message
         details.innerHTML = '*required';
         details.style.color = "#FDD2BF";
         btn.disabled = true;
         return false;
     }
+
+    for (i = 0; i < users.length; i++){
+       if (users[i].username == sessionStorage.loggedUser) {
+           if (users[i].password != current_pwd.value){
+               // error message
+                details.innerHTML = 'password does not match';
+                details.style.color = "#FDD2BF";
+                btn.disabled = true;
+                return false;
+           } else {
+                details.innerHTML = "Correct Current Password";
+                details.style.color = "#77D970";
+                return true;
+           }
+       }
+    }    
+
     // success message
     btn.disabled = false;
     details.innerHTML = "";
@@ -48,21 +66,21 @@ function passwordValidation() {
         b. Upper and lower case letter
         c. A number */
     let re = new RegExp("^(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[A-Z])[a-zA-Z0-9!@#$%^&*]{6,}$");
-    let old_pwd = document.getElementById("current_password");
-    let pwd = document.getElementById("new_password");
+    let current_pwd = document.getElementById("current_password");
+    let new_pwd = document.getElementById("new_password");
 
     //  check if input field is empty
-    if (pwd.value.length == 0) {
+    if (new_pwd.value.length == 0) {
         details.innerHTML = '*required';
         details.style.color = "#FDD2BF";
         return false;
     // check if new password passes the regex test
-    } else if (!re.test(pwd.value)) {
+    } else if (!re.test(new_pwd.value)) {
         details.innerHTML = " Password should contain at least one symbol, <br> upper and lower case letter <br> and a number of min 6 characters. </span>";
         details.style.color = "#FDD2BF";
         return false;
     // check if new password is same as the old password
-    } else if (pwd.value == old_pwd.value) {
+    } else if (new_pwd.value == current_pwd.value) {
         details.innerHTML = 'New password cannot be the same <br> as your old password.';
         details.style.color = "#FDD2BF";
         return false;
@@ -78,9 +96,8 @@ function passwordValidation() {
 // function to verify confirm password matches new password
 function confirmPassword() {
     //variables
-    let button = document.getElementById("submit_btn");
     let details = document.getElementById("confirmPWD_details");
-    let pwd = document.getElementById("new_password");
+    let new_pwd = document.getElementById("new_password");
     let confirm_pwd = document.getElementById("confirm_password");
 
     // check for empty input field
@@ -89,21 +106,23 @@ function confirmPassword() {
         details.style.color = "#FDD2BF";
         return false;
     // check if password matches
-    } else if (confirm_pwd.value != pwd.value) {
+    } else if (confirm_pwd.value != new_pwd.value) {
         details.innerHTML = "password does not match";
         details.style.color = "#FDD2BF";
         return false;
+    } else {
+        // sucessful messages
+        btn.disabled = false;
+        details.innerHTML = "Password matches ";
+        details.style.color = "#77D970";
+        return true;
     }
-    // sucessful messages
-    btn.disabled = false;
-    details.innerHTML = "Password matches ";
-    details.style.color = "#77D970";
-    return true;
+
 }
 
 // function to validate setting form in general
 function validateSettingForm() {
-    let users = JSON.parse(localStorage.users);
+    let confirm_pwd = document.getElementById("confirm_password");
     if (!oldPassword() && !passwordValidation() && !confirmPassword()){
         return false;
         
@@ -117,11 +136,16 @@ function validateSettingForm() {
         if (!confirmPassword()){
             return false;
         }
-
-        // for (i = 0; i < users.length; i++){
-
-        // };
         btn.disabled = false;
-        return true;
+        console.log("uhmm");
+        for (i = 0; i < users.length; i++){
+            if (users[i].username == sessionStorage.loggedUser) {
+                users[i].password =  confirm_pwd.value;
+            }
+        }
+        // convert JS objects into JSON for html local storage   
+        localStorage.users = JSON.stringify(users);
+        // redirect to home page
+        window.location.href="../index.php";
     } 
 }
