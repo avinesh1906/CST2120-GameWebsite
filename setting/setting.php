@@ -15,12 +15,26 @@
 <div class="setting_header">
     <h2> Change Password </h2>
 </div>
-
 <!-- Setting form -->
 <div class="setting_form">
     <!-- Left side Gif -->
     <div class="left_side_picture">
         <img class="side_picture" src="../common/img/serpent.gif" width="250" alt="side_picture" >
+    </div>
+    <div class ="login_Required">
+        <div class="title">
+            Login Required
+            <br>
+            Create an account or login to access Setting.
+        </div>
+        <div class="loginRequired_btn">
+            <div id="signin_btn">
+                <button onclick="window.location.href='../login/login.php'">Log In</button>
+            </div> 
+            <div id="register_btn">
+                <button  onclick='window.location.href="../register/register.php"'>Register</button>
+            </div> 
+        </div>
     </div>
     <!-- Setting form -->
     <form class="form-layout" action="../index.php" onsubmit="return validateSettingForm()" method="post">

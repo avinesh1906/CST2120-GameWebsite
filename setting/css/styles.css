@@ -3,7 +3,8 @@
 .form-content,
 .form-label,
 .form_details input,
-.setting_footer
+.setting_footer,
+.login_Required
 {
     text-align: center;
 }
@@ -13,7 +14,10 @@
 .form_details input,
 .form_details input:hover,
 .setting_footer button,
-.setting_footer button:hover
+.setting_footer button:hover,
+.loginRequired_btn button, 
+.loginRequired_btn button:hover,
+.login_Required
 {
     border-radius: 12px;
 }
@@ -43,6 +47,7 @@
 .form-layout {
     width: 50%;
     position: relative;
+    display: none;
 }
 
 /* Form Content Layout */
@@ -84,7 +89,7 @@
 }
 
 /* Setting Footer Button CSS */
-.setting_footer button {
+.setting_footer button, .loginRequired_btn button {
     background-color: var(--teal);
     color: var(--darkblue);
     border-color: var(--darknavy);
@@ -94,9 +99,10 @@
 }
 
 /* Setting Footer Button Hover CSS */
-.setting_footer button:hover{
+.setting_footer button:hover, .loginRequired_btn button:hover{
     background-color:var(--navy);
     color:  var(--teal);
+    border-color: var(--teal);
 }
 
 /* Form error CSS */
@@ -106,4 +112,26 @@
     padding-left: 35%;
     font-size: 15px;
     margin-bottom: 1%;
+}
+
+.login_Required {
+    border: solid;
+    color: var(--teal); 
+    background-color: var(--navy); 
+    margin-top: 3%;
+    padding: 1.5%;
+    display: none;
+    width: 50%;
+    font-size: x-large;
+}
+
+.loginRequired_btn {
+    display: flex;
+    margin-left: 25%;
+    margin-top: 5%;
+    font-size: x-large;
+    margin-right: 25%;
+}
+.loginRequired_btn #register_btn {
+    padding-left: 5%;
 }

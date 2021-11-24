@@ -1,13 +1,19 @@
 // global variables
 let btn = document.getElementById("submit_btn");
 
-// call function init on window load
-window.onload = init;
 
-// function init
-function init() {
-    // disable submit button
-    btn.disabled = true;
+verifyLogin();
+
+
+function verifyLogin() 
+{   
+    let text_message = document.getElementsByClassName("login_Required")[0];
+    let game_window = document.getElementsByClassName("form-layout")[0];
+    if (sessionStorage.loggedUser == undefined){
+        text_message.style.display = "block";
+    } else {
+        game_window.style.display = "block";
+    }
 }
 
 // function to validate old password
