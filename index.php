@@ -40,7 +40,7 @@
         <h3> Choose your difficulty level: </h3>
       </div> 
       <!-- Options to choose level -->
-      <section class="options">
+      <section class="options" id="level_radio">
         <input type="radio" id="beginner" name="game_option" value="beginner" checked="checked"> 
         <label for="beginner">Beginner </label><br>
         <input type="radio" id="normal" name="game_option" value="normal"> 

@@ -1,5 +1,13 @@
+let canvas = document.getElementsByClassName("game-window")[0];
+
+// draw the canvas into a 2D space
+let context = canvas.getContext("2d");
+
 // call the function verify Login
 verifyLogin();
+
+// call function to determine level
+// level();
 
 // function verifyLogin 
 function verifyLogin() 
@@ -17,3 +25,7 @@ function verifyLogin()
         game_window.style.display = "block";
     }
 }
+
+// function level(){
+
+// }

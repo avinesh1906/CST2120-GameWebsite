@@ -44,11 +44,11 @@ button:hover {
     border: solid;
     border-color: var(--teal);
     border-radius: 12px;
-    height: 400px;
-    width:800px;
+    height: 60vh;
+    width: 120vh;
     color: var(--teal);
     text-align: center;
     font-size: x-large;
-    margin-left: 50vh;
+    margin-left: 45vh;
 }
 
