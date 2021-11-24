@@ -52,3 +52,22 @@ button:hover {
     margin-left: 45vh;
 }
 
+.options {
+    display: none;
+    text-align: left;
+    padding-top: 3%;
+    font-family: Georgia, serif;
+    font-size: 25px;
+    color: var(--teal);
+    margin-left: 95vh;
+}
+
+/* Level Button CSS */
+.options input {
+    width: 50px;
+    height: 20px;
+}
+
+.options button {
+    margin-top: 2%;
+}

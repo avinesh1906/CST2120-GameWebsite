@@ -26,6 +26,20 @@
     </div>
 </div>
 <!-- Game Window -->
+<section class="options" id="level_radio">
+    Choose your level:
+    <br>
+    <input type="radio" id="beginner" name="game_option" value="beginner" checked="checked"> 
+    <label for="beginner">Beginner </label><br>
+    <input type="radio" id="normal" name="game_option" value="normal"> 
+    <label for="normal">Normal </label><br>
+    <input type="radio" id="time-attack" name="game_option" value="time-attack"> 
+    <label for="time-attack">Time Attack </label>
+    <!-- Playgame footer to display button -->
+    <div class="playgame_footer">
+        <button type="submit" id="play_btn">Play Game</button>
+    </div>
+</section>
 <canvas class="game-window">
     Game Window
 </canvas>
