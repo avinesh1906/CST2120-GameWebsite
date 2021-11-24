@@ -179,6 +179,7 @@ function validateRegisterForm() {
         // convert JS objects into JSON for html local storage   
         localStorage.users = JSON.stringify(users);
 
+        sessionStorage.loggedUser = usr.value;
         // redirect to index
         window.location.href="../index.php";
     
