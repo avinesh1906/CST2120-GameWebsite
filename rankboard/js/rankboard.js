@@ -1,3 +1,4 @@
+
 // function to generate the content of the table body
 function generateTable(){
     // retrieve only the tbody tag name from the table

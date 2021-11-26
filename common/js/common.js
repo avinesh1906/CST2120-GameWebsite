@@ -58,6 +58,12 @@ if (pathname == 'setting.php' || pathname == 'register.php' ){
     toggle_name.addEventListener("click", togglePassword);
 }
 
+// clear the level session storage of all pages except game.php
+if (pathname != 'game.php'){
+    sessionStorage.removeItem('level');
+}
+
+
 //  function for togglePaassword
 function togglePassword() {
     // variables
