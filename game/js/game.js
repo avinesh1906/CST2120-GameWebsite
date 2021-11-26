@@ -29,15 +29,15 @@ let UP;
 let DOWN;
 let RIGHT;
 let LEFT;
-
 // food coordinates
 let food = {
     x:0, 
     y:90
 };
-
 // set True is snake is changing direction
 let snakeChangingPos = false;
+// pause
+let paused = false;
 
 // draw the canvas into a 2D space
 let context = canvas.getContext("2d");
@@ -131,7 +131,9 @@ function beginnerLevel()
     }
     
     snakeChangingPos  = false;
-    
+
+    if (paused) return;
+
     setTimeout(function(){
        
         // clear the canvas for new snake
@@ -199,29 +201,30 @@ function navigate_Snake(keyDetails)
     RIGHT = (xPosStep == 10);
     LEFT = (xPosStep == -10);
     
-    if (snakeChangingPos){
-        return;
-    }
     snakeChangingPos = true;
 
-    if ((KeyPressedCode == LEFT_ARROW || KeyPressedCode == A_KEY) && !RIGHT){
+    if ((KeyPressedCode == LEFT_ARROW || KeyPressedCode == A_KEY) && !RIGHT ){
         xPosStep = -10;
         yPosStep = 0;
     } 
-    if ((KeyPressedCode == RIGHT_ARROW || KeyPressedCode == D_KEY) && !LEFT){
+    if ((KeyPressedCode == RIGHT_ARROW || KeyPressedCode == D_KEY) && !LEFT ){
         xPosStep = 10;
         yPosStep = 0;
     } 
 
-    if ((KeyPressedCode == UP_ARROW || KeyPressedCode == W_KEY) && !DOWN){
+    if ((KeyPressedCode == UP_ARROW || KeyPressedCode == W_KEY) && !DOWN ){
         xPosStep = 0;
         yPosStep = -10;
     } 
 
-    if ((KeyPressedCode == DOWN_ARROW || KeyPressedCode == S_KEY) && !UP){
+    if ((KeyPressedCode == DOWN_ARROW || KeyPressedCode == S_KEY) && !UP ){
         xPosStep = 0;
         yPosStep = 10;
     } 
+
+    if(KeyPressedCode == 80){
+        togglePause();
+    }
 }
 
 // function to check if eat tail or touch canvas border (wall)
@@ -327,6 +330,23 @@ function drawFood()
     //  draw the food
     context.fillRect(food.x, food.y, 10, 10);
     context.strokeRect(food.x, food.y, 10, 10);
+}
+
+function togglePause()
+{   
+    // if pause is true, then set to false. vice-versa
+    paused = !paused; // toggle the gamePaused value (false <-> true)
+    if (!paused) {
+        if (sessionStorage.level == "beginner") {
+            beginnerLevel();
+        } else if (sessionStorage.level == "normal") {
+            normalLevel();
+        } else if (sessionStorage.level == "time-attack") {
+            timeAttackLevel();
+        } 
+    }
+    
+
 }
 
 // call the function verify Login
