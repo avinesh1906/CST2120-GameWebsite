@@ -71,3 +71,20 @@ button:hover {
 .options button {
     margin-top: 2%;
 }
+
+.Game {
+    display: flex;
+}
+
+.menu, .score {
+    display: none;
+    color: var(--teal);
+    text-align: center;
+}
+
+.score {
+    text-align: center;
+    padding-left: 10%;
+    padding-top: 5%;
+    font-size: 35px;
+}

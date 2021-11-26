@@ -40,9 +40,20 @@
         <button type="submit" id="play_btn">Play Game</button>
     </div>
 </section>
-<canvas class="game-window">
-    Game Window
-</canvas>
+<div class="Game">
+    <div class="menu">
+    
+    </div>
+    <canvas class="game-window">
+        Game Window
+    </canvas>
+    <div class="score" id="score_Details">
+        Score
+        <div id="score_num">
+            0
+        </div>
+    </div> 
+</div>
 <?php
     // php function to generate the footer
     generateFooter($pageName);

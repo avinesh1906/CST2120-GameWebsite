@@ -1,6 +1,8 @@
 let play_btn = document.getElementById("play_btn");
 play_btn.onclick = checkLoggedIn;
 
+sessionStorage.removeItem('level');
+
 function checkLoggedIn()
 {   
     let error_message = document.getElementById("signinPrompt");
