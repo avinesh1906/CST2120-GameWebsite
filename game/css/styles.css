@@ -1,6 +1,6 @@
 .main-content{
     display: block;
-    padding-top: 5%;
+    padding-top: 2%;
     padding-bottom: 5%;
     text-align: center;
 }
@@ -43,13 +43,10 @@ button:hover {
     display: none;
     border: solid;
     border-color: var(--teal);
-    border-radius: 12px;
-    height: 60vh;
-    width: 120vh;
+    border-radius: 5px;
+    width: 100vh;
+    height: 50vh;
     color: var(--teal);
-    text-align: center;
-    font-size: x-large;
-    margin-left: 45vh;
 }
 
 .options {
@@ -80,11 +77,35 @@ button:hover {
     display: none;
     color: var(--teal);
     text-align: center;
+    width: 25%;
+    padding-top: 4.5%;
+    font-size: 30px;
 }
 
-.score {
+.menu button {
+    margin-top: 2%;
+    font-size: x-large;
+}
+
+.countdown_class{
+    display: none;
+    margin-left: 15%;
+} 
+
+.counter_body{
+    color: var(--teal);
     text-align: center;
-    padding-left: 10%;
+    font-size: 45px;
+    border: solid;
+    background-color: var(--navy); 
+    margin-top: 10%;
+    margin-bottom: 10%;
+    padding: 1.5%;
+    width: 500px;
+    border-radius: 12px;
+}
+
+/* Common side pictures CSS */
+.left_side_picture, .right_side_picture {
     padding-top: 5%;
-    font-size: 35px;
 }

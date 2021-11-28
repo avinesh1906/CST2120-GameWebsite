@@ -41,18 +41,38 @@
     </div>
 </section>
 <div class="Game">
-    <div class="menu">
-    
-    </div>
-    <canvas class="game-window">
-        Game Window
-    </canvas>
     <div class="score" id="score_Details">
         Score
         <div id="score_num">
             0
         </div>
     </div> 
+    <div class="countdown_class">
+        <!-- Left side Gif -->
+        <div class="left_side_picture">
+            <img class="side_picture" src="../common/img/serpent.gif" width="250" alt="side_picture" >
+        </div>
+        <div class="counter_body">
+            Naagin Starting In:
+            <div id="counter_num">
+                3
+            </div>
+        </div>
+        <!-- Right side Gif -->
+        <div class="right_side_picture">
+            <img class="side_picture" src="../common/img/serpent.gif"  width="250" alt="side_picture" >
+        </div>
+    </div>
+    <div class="game_div">
+        <canvas class="game-window">
+        </canvas>
+    </div>
+    <div class="menu">
+        <button id="pause_btn">Pause</button>
+        <button id="restart_btn">Restart</button>
+        <button id="level_change">Change Level</button>
+        <button id="quit">Quit</button>
+    </div>
 </div>
 <?php
     // php function to generate the footer

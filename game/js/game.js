@@ -1,7 +1,13 @@
+// getElementsbyClassName variables
 let canvas = document.getElementsByClassName("game-window")[0];
 let game_window = document.getElementsByClassName("game-window")[0];
+let menu_class = document.getElementsByClassName("menu")[0];
+let counter_details = document.getElementsByClassName("countdown_class")[0];
+// getElementbyID variables
 let game_level = document.getElementById("level_radio");
 let score_details = document.getElementById("score_Details");
+let counter_num = document.getElementById("counter_num");
+// local storage variables
 let users = JSON.parse(localStorage.users);
 
 // game variables
@@ -42,8 +48,28 @@ let paused = false;
 // draw the canvas into a 2D space
 let context = canvas.getContext("2d");
 
+// play button during level choice
 let play_btn = document.getElementById("play_btn");
 play_btn.onclick = assignLevel;
+
+// pause button
+let pause_btn = document.getElementById("pause_btn");
+pause_btn.onclick = togglePause;
+
+// restart button
+let restart_btn = document.getElementById("restart_btn");
+restart_btn.onclick = restart;
+
+// Change Level button
+let level_change = document.getElementById("level_change");
+level_change.onclick = change_level;
+
+// quit button
+let quit = document.getElementById("quit");
+quit.onclick = exit;
+
+// start counter 
+timeleft = 3;
 
 // Event Listener for key down
 document.addEventListener("keydown", navigate_Snake);
@@ -67,18 +93,18 @@ function verifyLogin()
         // hide the div text_message
         text_message.style.display = "block";
     } else {
+        // display the level choice window
         if (sessionStorage.level == undefined) {
             game_level.style.display = "block";
             
         } else {
-            // display the div text_message
-            game_window.style.display = "block";
-            score_details.style.display = "block";
+            // call function counter
+            counter();
         }
     }
 }
 
-//  function to assign the chosen level to session storage
+//  function to assign the chosen level to session storage when play_game btn clicked
 function assignLevel()
 {   
     let beginner = document.getElementById("beginner");
@@ -92,15 +118,12 @@ function assignLevel()
     } else if (time_attack.checked) {
         sessionStorage.level = "time-attack";
     }
-    // display and hide the required windows
-    game_level.style.display = "none";
-    game_window.style.display = "block";
-    score_details.style.display = "block";
-    level();
+    counter();
 }
 
-// function to determine which functio to execute
+// function to determine which function to execute
 function level(){
+    console.log("jvpo;sdv");
     if (sessionStorage.level == "beginner") {
         beginnerLevel();
     } else if (sessionStorage.level == "normal") {
@@ -200,29 +223,38 @@ function navigate_Snake(keyDetails)
     DOWN = (yPosStep == 10);
     RIGHT = (xPosStep == 10);
     LEFT = (xPosStep == -10);
-    
+
+    // add snakeChangingPos true
     snakeChangingPos = true;
 
+    // verify if left arrow or a is pressed and is not going to right
     if ((KeyPressedCode == LEFT_ARROW || KeyPressedCode == A_KEY) && !RIGHT ){
+        // change the x and y position
         xPosStep = -10;
         yPosStep = 0;
     } 
+    // verify if right arrow or d is pressed and is not going to left
     if ((KeyPressedCode == RIGHT_ARROW || KeyPressedCode == D_KEY) && !LEFT ){
+        // change the x and y position
         xPosStep = 10;
         yPosStep = 0;
     } 
-
+    // verify if up arrow or w is pressed and not going to down
     if ((KeyPressedCode == UP_ARROW || KeyPressedCode == W_KEY) && !DOWN ){
+        // change the x and y position
         xPosStep = 0;
         yPosStep = -10;
     } 
-
+    // verify if down arrow or S is pressed and not going up
     if ((KeyPressedCode == DOWN_ARROW || KeyPressedCode == S_KEY) && !UP ){
+        // change the x and y position
         xPosStep = 0;
         yPosStep = 10;
     } 
 
+    // check if P is pressed
     if(KeyPressedCode == 80){
+        // call togglePause function
         togglePause();
     }
 }
@@ -279,11 +311,8 @@ function snake_movement()
     if (foodEaten){
         // increase score
         score += 10;
-        console.log(score);
         // Display the score
-        console.log(score_num);
         score_num.innerHTML = score;
-
         // generate a new food location
         generateFoodLocationRandom();
     } else {
@@ -332,11 +361,14 @@ function drawFood()
     context.strokeRect(food.x, food.y, 10, 10);
 }
 
+// function to pause or unpause
 function togglePause()
 {   
     // if pause is true, then set to false. vice-versa
-    paused = !paused; // toggle the gamePaused value (false <-> true)
+    paused = !paused; 
     if (!paused) {
+        pause_btn.innerHTML = "Pause";
+        // call the appropriate level according to session storage
         if (sessionStorage.level == "beginner") {
             beginnerLevel();
         } else if (sessionStorage.level == "normal") {
@@ -344,16 +376,75 @@ function togglePause()
         } else if (sessionStorage.level == "time-attack") {
             timeAttackLevel();
         } 
+    } else {
+        pause_btn.innerHTML = "Play";
     }
-    
+}
 
+// Function to restart the game;
+function restart()
+{
+    // reload the page
+    window.location.reload();
+}
+
+// function to change the level
+function change_level()
+{
+    // reload the page to set it to default
+    window.location.reload();
+    // remove the item of level key in session storage
+    sessionStorage.removeItem('level');
+    // hide the menu, score and game window
+    game_window.style.display = "none";
+    score_details.style.display = "none";
+    menu_class.style.display = "none";
+    // call the function verifylogin
+    verifyLogin();
+}
+
+// function to redirect to the home page
+function exit()
+{
+   window.location.href="../index.php"; 
+}
+
+// function counter
+function counter() {
+    // display the counter window
+    counter_details.style.display = "flex";
+    // Hide the non-required windows
+    game_level.style.display = "none";
+    game_window.style.display = "none";
+    score_details.style.display = "none";
+    menu_class.style.display = "none";
+    
+    // countdown timer 1 sec
+    let count = setInterval(function(){
+        // decrement timeleft
+        timeleft -= 1;
+
+        // display the timeleft
+        counter_num.innerHTML = timeleft;
+
+        // check if timeleft is equal to zero
+        if (timeleft == 0){
+            // close the counter
+            clearInterval(count);
+
+            // hide non-required windows
+            counter_details.style.display = "none";
+            // display required windows
+            game_window.style.display = "block";
+            score_details.style.display = "block";
+            menu_class.style.display = "block";
+
+            // call function level
+            level();
+        }
+    }, 1000);
+    
 }
 
 // call the function verify Login
 verifyLogin();
-
-// call function to determine level
-level();
-
-// function call to generate the food location
-generateFoodLocationRandom();

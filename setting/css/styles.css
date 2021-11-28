@@ -22,6 +22,10 @@
     border-radius: 12px;
 }
 
+.main-content{
+    padding-bottom: 5%;
+}
+
 /* Setting Header CSS */
 .setting_header {
     position: relative;
