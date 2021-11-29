@@ -40,6 +40,22 @@
         <button type="submit" id="play_btn">Play Game</button>
     </div>
 </section>
+<div class="countdown_class">
+    <!-- Left side Gif -->
+    <div class="left_side_picture">
+        <img class="side_picture" src="../common/img/serpent.gif" width="250" alt="side_picture" >
+    </div>
+    <div class="counter_body">
+        Naagin Starting In:
+        <div id="counter_num">
+            3
+        </div>
+    </div>
+    <!-- Right side Gif -->
+    <div class="right_side_picture">
+        <img class="side_picture" src="../common/img/serpent.gif"  width="250" alt="side_picture" >
+    </div>
+</div>
 <div class="Game">
     <div class="score" id="score_Details">
         Score
@@ -47,22 +63,6 @@
             0
         </div>
     </div> 
-    <div class="countdown_class">
-        <!-- Left side Gif -->
-        <div class="left_side_picture">
-            <img class="side_picture" src="../common/img/serpent.gif" width="250" alt="side_picture" >
-        </div>
-        <div class="counter_body">
-            Naagin Starting In:
-            <div id="counter_num">
-                3
-            </div>
-        </div>
-        <!-- Right side Gif -->
-        <div class="right_side_picture">
-            <img class="side_picture" src="../common/img/serpent.gif"  width="250" alt="side_picture" >
-        </div>
-    </div>
     <div class="game_div">
         <canvas class="game-window">
         </canvas>
@@ -72,6 +72,39 @@
         <button id="restart_btn">Restart</button>
         <button id="level_change">Change Level</button>
         <button id="quit">Quit</button>
+    </div>
+</div>
+<div class="game_over">
+    <!-- Game Over Title -->
+    <div class="title">
+        Game Over
+    </div>
+    <div class="content">
+        <!-- Left side Gif -->
+        <div class="left_side_picture">
+            <img class="side_picture" src="../common/img/serpent.gif" width="250" alt="side_picture" >
+        </div>
+        <!-- Game Over Body -->
+        <div class="body">
+            <!-- Meesage: New highscore or no new highscore -->
+            <div class="Message">
+                <div id="oldHighScore"> Your Score </div>
+                <div id="newHighScore"> Congrats, You have a new highscore </div>
+            </div>
+            <!-- Score -->
+            <div id="GameOverScore">
+                0
+            </div>
+            <div class="buttons">
+                <button onclick="restart()" type="button">Play Again</button>
+                <button onclick="location.href='../index.php'" type="button">Home</button>
+                <button onclick="change_level()" type="button">Change Level</button>
+            </div>
+        </div>
+        <!-- Right side Gif -->
+        <div class="right_side_picture">
+            <img class="side_picture" src="../common/img/serpent.gif"  width="250" alt="side_picture" >
+        </div>
     </div>
 </div>
 <?php

@@ -13,7 +13,7 @@ function init() {
                 dob: "2001-06-01",
                 gender: "male",
                 password: "password@Naagin06",
-                score: 54
+                score: 10
             }, 
             {
                 username: "sounil2605",
@@ -21,7 +21,7 @@ function init() {
                 dob: "2011-01-19",
                 gender: "male",
                 password: "sou2024@Pass",
-                score: 36
+                score: 50
             },
             {
                 username: "Anoopama05",
@@ -29,7 +29,7 @@ function init() {
                 dob: "2012-10-05",
                 gender: "female",
                 password: "anoop@Culloo12",
-                score: 49
+                score: 20
             }
         ];
         // convert the JS object array into JSON

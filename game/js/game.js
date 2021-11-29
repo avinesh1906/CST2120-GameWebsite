@@ -3,16 +3,22 @@ let canvas = document.getElementsByClassName("game-window")[0];
 let game_window = document.getElementsByClassName("game-window")[0];
 let menu_class = document.getElementsByClassName("menu")[0];
 let counter_details = document.getElementsByClassName("countdown_class")[0];
+let game_over = document.getElementsByClassName("game_over")[0];
 // getElementbyID variables
 let game_level = document.getElementById("level_radio");
 let score_details = document.getElementById("score_Details");
 let counter_num = document.getElementById("counter_num");
+let oldHighScore = document.getElementById("oldHighScore");
+let newHighScore = document.getElementById("newHighScore");
+let GameOverScore = document.getElementById("GameOverScore");
 // local storage variables
 let users = JSON.parse(localStorage.users);
 
 // game variables
 let snake;
 let snake_head;
+let snake_color;
+
 //  Horizontal movement speed
 let xPosStep = 10;
 // Vertical movement speed
@@ -107,10 +113,13 @@ function verifyLogin()
 //  function to assign the chosen level to session storage when play_game btn clicked
 function assignLevel()
 {   
+    // variables
     let beginner = document.getElementById("beginner");
     let normal = document.getElementById("normal");
     let time_attack = document.getElementById("time-attack");
     
+    // verify which radio button is selected
+    // then assign the level name
     if (beginner.checked) {
         sessionStorage.level = "beginner";
     } else if (normal.checked) {
@@ -118,12 +127,13 @@ function assignLevel()
     } else if (time_attack.checked) {
         sessionStorage.level = "time-attack";
     }
+    //  call counter function
     counter();
 }
 
 // function to determine which function to execute
 function level(){
-    console.log("jvpo;sdv");
+    // check the level name and call the required function
     if (sessionStorage.level == "beginner") {
         beginnerLevel();
     } else if (sessionStorage.level == "normal") {
@@ -133,23 +143,17 @@ function level(){
     } 
 }
 
+//  Beginner level function
 function beginnerLevel()
 {   
     // context, snake and snake-border color 
     context_background_color = "#345B63";
-    snake_color = "#D4ECDD";
+    snake_color = snakeColour();
     snake_border_color = "#89B5AF";
 
     if (die()){
-        for (i = 0; i < users.length; i++){
-            if (users[i].username == sessionStorage.loggedUser) {
-                if (score > users[i].score) {
-                    users[i].score =  score;
-                }
-            }
-        }
-        // convert JS objects into JSON for html local storage   
-        localStorage.users = JSON.stringify(users);
+        // call gameOver
+        gameOver();
         return;
     }
     
@@ -353,7 +357,7 @@ function checkLocation(xFood,yFood,xSnake,ySnake)
 function drawFood()
 {
     // food colour
-    context.fillStyle = "#CD1818";
+    context.fillStyle = getRandomRed();
     //  food border colour
     context.strokestyle = "#FF6B6B";
     //  draw the food
@@ -399,6 +403,7 @@ function change_level()
     game_window.style.display = "none";
     score_details.style.display = "none";
     menu_class.style.display = "none";
+    game_over.style.display = "none";
     // call the function verifylogin
     verifyLogin();
 }
@@ -446,5 +451,103 @@ function counter() {
     
 }
 
+// Normal Level function 
+function normalLevel()
+{
+    // context, snake and snake-border color 
+    context_background_color = "#345B63";
+    snake_color = snakeColour();
+    snake_border_color = "#89B5AF";
+
+    if (die()){
+        for (i = 0; i < users.length; i++){
+            if (users[i].username == sessionStorage.loggedUser) {
+                if (score > users[i].score) {
+                    users[i].score =  score;
+                }
+            }
+        }
+        // convert JS objects into JSON for html local storage   
+        localStorage.users = JSON.stringify(users);
+        return;
+    }
+
+    snakeChangingPos  = false;
+
+    if (paused) return;
+
+    setTimeout(function(){
+    
+        // clear the canvas for new snake
+        clearCanvas( context_background_color);
+        // draw the food
+        drawFood();
+        // move the snake's coordinates
+        snake_movement();
+        // draw the snake
+        drawSnake();
+        // call the beginnerLevel to have a loop
+        normalLevel();
+
+    }, 150);
+
+}
+
+// generate snake colour
+function snakeColour()
+{
+    // colour arrays
+    colour_Array = ["32502E", "3E7C17", "0B4619", "5D8233", "3A6351"];
+    // randomly choose the colour
+    colour = "#" + colour_Array[Math.floor(Math.random() * 4)];
+
+    return colour;
+}
+
+// random red colour
+function getRandomRed() {
+    // hexadecimal digits
+    let hex = '0123456789ABCDEF';
+    //  starting hex colour
+    let colour = '#FF';
+    // loop to produce 4 hex digits
+    for (let i = 0; i < 4; i++) {
+        // make use of math.random to generate a number 0 to 1.0
+        // times 16 to have a number 0 to 16
+        // math.floor to round the number downward to the nearest integer
+        colour += hex[Math.floor(Math.random() * 16)];
+    }
+    return colour;
+}
+
+// function to display gameover
+function gameOver()
+{
+    // hide non-required windows
+    game_over.style.display = "block";
+    // display required windows
+    game_window.style.display = "none";
+    score_details.style.display = "none";
+    menu_class.style.display = "none";
+
+    for (i = 0; i < users.length; i++){
+        if (users[i].username == sessionStorage.loggedUser) {
+            if (score > users[i].score) {
+                console.log("High Score");
+                users[i].score =  score;
+                newHighScore.style.display = "block";
+            }
+            else {
+                console.log("Normal");
+                oldHighScore.style.display = "block";
+            }
+        }
+    }
+    // convert JS objects into JSON for html local storage   
+    localStorage.users = JSON.stringify(users);
+    GameOverScore.innerHTML = score;
+}
+
 // call the function verify Login
 verifyLogin();
+

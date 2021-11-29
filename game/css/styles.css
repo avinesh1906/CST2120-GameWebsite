@@ -89,7 +89,6 @@ button:hover {
 
 .countdown_class{
     display: none;
-    margin-left: 15%;
 } 
 
 .counter_body{
@@ -98,14 +97,75 @@ button:hover {
     font-size: 45px;
     border: solid;
     background-color: var(--navy); 
-    margin-top: 10%;
-    margin-bottom: 10%;
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
     padding: 1.5%;
-    width: 500px;
+    width: 50%;
+    height: 250px;
     border-radius: 12px;
 }
 
 /* Common side pictures CSS */
 .left_side_picture, .right_side_picture {
     padding-top: 5%;
+    width: 25%;
+    
+}
+
+.left_side_picture {
+    padding-left: 3%;
+}
+.right_side_picture {
+    padding-right: 3%;
+}
+
+.game_over {
+    display: none;
+
+}
+.game_over .title {
+    font-size: 45px;
+}
+
+.game_over .title, .Message, #GameOverScore {
+    position: relative;
+    width: auto;
+    height: auto;
+    color: var(--teal);
+}
+.game_over .Message, #GameOverScore {
+    font-size: 35px;
+}
+
+.game_over .content{
+    display: flex;
+}
+
+.game_over .body {
+    border: solid;
+    border-color: var(--teal);
+    background-color: var(--navy); 
+    border-radius: 12px;
+    width: 50%;
+    margin-top: 2%;
+    padding-top: 1.5%;
+}
+
+.game_over .buttons {
+    padding-left: 5%;
+    display: flex;
+    padding-right: 5%;
+}
+
+.game_over button {
+    margin: 2%;
+    font-size: 30px;
+}
+/* .game_over .buttons #level_change{
+    width:fit-content;
+} */
+
+#oldHighScore, #newHighScore{
+    display: none;
 }
