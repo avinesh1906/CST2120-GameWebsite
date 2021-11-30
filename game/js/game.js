@@ -1,6 +1,4 @@
 "use strict";
-// import classes from other modules
-import {Snake} from './Snake.js';
 
 // getElementsbyClassName variables
 let canvas = document.getElementsByClassName("game-window")[0];
@@ -23,7 +21,6 @@ let users = JSON.parse(localStorage.users);
 let context_background_color;
 
 // game variables
-let snake_pos;
 let snake_head;
 let snake_color;
 let snake_border_color;
@@ -97,7 +94,8 @@ let colour;
 document.addEventListener("keydown", navigate_Snake);
 
 // snake starting position
-snake_pos = [
+let snake;
+snake = [
     {xPos:130, yPos:90},
     {xPos:130, yPos:80},
     {xPos:130, yPos:70},
@@ -106,8 +104,7 @@ snake_pos = [
 ]
 
 // set up snakes
-let snake;
-snake = new Snake(context, snake_pos, snakeColour(), "#89B5AF");
+// snake = new Snake(context, snake_pos, snakeColour(), "#89B5AF");
 
 // function verifyLogin 
 function verifyLogin() 
@@ -190,7 +187,7 @@ function beginnerLevel()
         // move the snake's coordinates
         snake_movement();
         // draw the snake
-        snake.drawSnake();
+        drawSnake();
         // call the beginnerLevel to have a loop
         beginnerLevel();
 
@@ -212,29 +209,29 @@ function clearCanvas()
     context.strokeRect(0,0,game_window.width,game_window.height);
 }
 
-// // function to draw the snake
-// function drawSnake()
-// {
-//     // loop through snake variable to print each snake element
-//     // making use of arrow function
-//     snake.forEach(element => {
-//         drawSnakeElement(element)
-//     });
-// }
+// function to draw the snake
+function drawSnake()
+{
+    // loop through snake variable to print each snake element
+    // making use of arrow function
+    snake.forEach(element => {
+        drawSnakeElement(element)
+    });
+}
 
-// // function to print each snake element
-// function drawSnakeElement(element)
-// {
-//     // Snake color
-//     context.fillStyle = snake_color;
-//     // Snake border color
-//     context.strokestyle = snake_border_color;
+// function to print each snake element
+function drawSnakeElement(element)
+{
+    // Snake color
+    context.fillStyle = snake_color;
+    // Snake border color
+    context.strokestyle = snake_border_color;
 
-//     // Draw a rect to mark the snake element
-//     context.fillRect(element.xPos, element.yPos, 10, 10);
-//     // Draw the snake border for each element
-//     context.strokeRect(element.xPos, element.yPos, 10, 10);
-// }
+    // Draw a rect to mark the snake element
+    context.fillRect(element.xPos, element.yPos, 10, 10);
+    // Draw the snake border for each element
+    context.strokeRect(element.xPos, element.yPos, 10, 10);
+}
 
 // function to change the snake direction
 function navigate_Snake(keyDetails)
