@@ -153,11 +153,15 @@ function generateJavaScript($title){
         "Register" => "./js/register.js"
     );
     
-    echo '<script type="module"';
-    echo 'src = "'. $linkNames[$title] .'">'; 
+    echo '<script ';
+    if ($title == "Game"){
+        echo 'type="module" src = "'. $linkNames[$title] .'">';
+    } else{
+        echo 'src = "'. $linkNames[$title] .'">'; 
+    }
     echo '</script>';
 
-    echo '<script type="module"';
+    echo '<script ';
     if ($title == "Home") {
         echo 'src = "./common/js/common.js">';
     } else {
