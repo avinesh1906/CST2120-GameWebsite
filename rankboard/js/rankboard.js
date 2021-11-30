@@ -15,7 +15,7 @@ function generateTable(){
     });
 
     //  loop through the JS objects
-    for (i = 0; i < users.length; i++){
+    for (let i = 0; i < users.length; i++){
         // create variable for row
         let row = table.insertRow(i);
         // create variable for cells
