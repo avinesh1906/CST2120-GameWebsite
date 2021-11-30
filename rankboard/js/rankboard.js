@@ -1,4 +1,5 @@
-
+// Entire script will be in script mode
+"use strict";
 // function to generate the content of the table body
 function generateTable(){
     // retrieve only the tbody tag name from the table

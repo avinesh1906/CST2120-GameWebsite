@@ -1,3 +1,5 @@
+// Entire script will be in script mode
+"use strict";
 let play_btn = document.getElementById("play_btn");
 play_btn.onclick = checkLoggedIn;
 

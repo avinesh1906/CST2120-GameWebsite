@@ -1,3 +1,4 @@
+"use strict";
 // getElementsbyClassName variables
 let canvas = document.getElementsByClassName("game-window")[0];
 let game_window = document.getElementsByClassName("game-window")[0];
@@ -16,10 +17,13 @@ let timer_id = document.getElementById("timerID_sec");
 // local storage variables
 let users = JSON.parse(localStorage.users);
 
+let context_background_color;
+
 // game variables
 let snake;
 let snake_head;
 let snake_color;
+let snake_border_color;
 let timer_sec = 30;
 
 // general speed
@@ -80,7 +84,11 @@ let quit = document.getElementById("quit");
 quit.onclick = exit;
 
 // start counter 
-timeleft = 3;
+let timeleft = 3;
+
+// Colour Var
+let colour_Array;
+let colour; 
 
 // Event Listener for key down
 document.addEventListener("keydown", navigate_Snake);
@@ -623,4 +631,3 @@ function timeover()
 
 // call the function verify Login
 verifyLogin();
-

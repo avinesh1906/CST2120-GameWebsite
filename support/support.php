@@ -152,5 +152,4 @@
 <?php
     // Function call
     generateFooter($pageName);
-    generateJavaScript($pageName);
 ?>

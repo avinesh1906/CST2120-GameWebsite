@@ -1,3 +1,5 @@
+// Entire script will be in script mode
+"use strict";
 // call function init when window loads
 window.onload = init;
 

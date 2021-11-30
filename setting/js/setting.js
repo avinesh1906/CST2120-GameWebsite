@@ -1,3 +1,6 @@
+// Entire script will be in script mode
+"use strict";
+
 // global variables
 let btn = document.getElementById("submit_btn");
 let users = JSON.parse(localStorage.users);
