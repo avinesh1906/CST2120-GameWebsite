@@ -4,6 +4,7 @@ let game_window = document.getElementsByClassName("game-window")[0];
 let menu_class = document.getElementsByClassName("menu")[0];
 let counter_details = document.getElementsByClassName("countdown_class")[0];
 let game_over = document.getElementsByClassName("game_over")[0];
+let timer = document.getElementsByClassName("timerAttack_sec")[0];
 // getElementbyID variables
 let game_level = document.getElementById("level_radio");
 let score_details = document.getElementById("score_Details");
@@ -11,6 +12,7 @@ let counter_num = document.getElementById("counter_num");
 let oldHighScore = document.getElementById("oldHighScore");
 let newHighScore = document.getElementById("newHighScore");
 let GameOverScore = document.getElementById("GameOverScore");
+let timer_id = document.getElementById("timerID_sec");
 // local storage variables
 let users = JSON.parse(localStorage.users);
 
@@ -18,11 +20,14 @@ let users = JSON.parse(localStorage.users);
 let snake;
 let snake_head;
 let snake_color;
+let timer_sec = 30;
 
+// general speed
+let velocity = 10;
 //  Horizontal movement speed
-let xPosStep = 10;
+let xPosStep = velocity;
 // Vertical movement speed
-let yPosStep = 0;
+let yPosStep = "0";
 // score
 let score = 0;
 // keyboard ARROWS value
@@ -223,41 +228,39 @@ function navigate_Snake(keyDetails)
     let KeyPressedCode = keyDetails.keyCode;
 
     // check the xPosStep and yPosStep to determine direction of snake
-    UP = (yPosStep == -10);
-    DOWN = (yPosStep == 10);
-    RIGHT = (xPosStep == 10);
-    LEFT = (xPosStep == -10);
-
+    UP = (yPosStep == ("-" + velocity));
+    DOWN = (yPosStep == velocity);
+    RIGHT = (xPosStep == velocity);
+    LEFT = (xPosStep == ("-" + velocity));
     // add snakeChangingPos true
     snakeChangingPos = true;
 
     // verify if left arrow or a is pressed and is not going to right
     if ((KeyPressedCode == LEFT_ARROW || KeyPressedCode == A_KEY) && !RIGHT ){
         // change the x and y position
-        xPosStep = -10;
+        xPosStep = ("-" + velocity);
         yPosStep = 0;
     } 
     // verify if right arrow or d is pressed and is not going to left
     if ((KeyPressedCode == RIGHT_ARROW || KeyPressedCode == D_KEY) && !LEFT ){
         // change the x and y position
-        xPosStep = 10;
+        xPosStep =  velocity;
         yPosStep = 0;
     } 
     // verify if up arrow or w is pressed and not going to down
     if ((KeyPressedCode == UP_ARROW || KeyPressedCode == W_KEY) && !DOWN ){
         // change the x and y position
         xPosStep = 0;
-        yPosStep = -10;
+        yPosStep = ("-" + velocity);
     } 
     // verify if down arrow or S is pressed and not going up
     if ((KeyPressedCode == DOWN_ARROW || KeyPressedCode == S_KEY) && !UP ){
         // change the x and y position
         xPosStep = 0;
-        yPosStep = 10;
+        yPosStep =  velocity;
     } 
-
     // check if P is pressed
-    if(KeyPressedCode == 80){
+    if(KeyPressedCode == 80 && sessionStorage.level != "time-attack"){
         // call togglePause function
         togglePause();
     }
@@ -280,11 +283,31 @@ function die()
         }
     }
 
-    // if hit wall
-    if (LEFTWALLHIT || RIGHTWALLHIT || TOPWALLHIT || BOTTONWALLHIT){
-        
-        return true;
+    // check if beginner level or not
+    if (sessionStorage.level =="beginner"){
+        // if exit wall comes from the other side
+        for (let i = 0; i < snake.length; i++){
+            if (snake[i].xPos < 0) {
+                snake[i].xPos = snake[i].xPos + game_window.width;
+            }
+            if (snake[i].xPos == (game_window.width - 10)) {
+                snake[i].xPos = snake[i].xPos - game_window.width;
+            }
+            if (snake[i].yPos < 0) {
+                snake[i].yPos = snake[i].yPos + game_window.height;
+            }
+            if (snake[i].yPos == (game_window.height - 10)) {
+                snake[i].yPos = snake[i].yPos - game_window.height;
+            }
+        }
+    // not normal level: if hit wall, game over
+    } else {
+        if (LEFTWALLHIT || RIGHTWALLHIT || TOPWALLHIT || BOTTONWALLHIT){
+            return true;
+        }
+        return false;
     }
+
     return false;
     
 }
@@ -303,8 +326,8 @@ function snake_movement()
     let score_num = document.getElementById("score_num");
     // create a new head for the snake
     snake_head = {
-        xPos: snake[0].xPos + xPosStep, 
-        yPos: snake[0].yPos + yPosStep
+        xPos: snake[0].xPos + eval(xPosStep), 
+        yPos: snake[0].yPos + eval(yPosStep)
     };
     
     // Add the head to the beginning
@@ -336,8 +359,8 @@ function randomPosition(min, max)
 function generateFoodLocationRandom()
 {   
     // generate random location for food
-    food.x = randomPosition(0,game_window.width - 10);
-    food.y = randomPosition(0, game_window.height - 10);
+    food.x = randomPosition(0,game_window.width - eval(velocity));
+    food.y = randomPosition(0, game_window.height - eval(velocity));
 
     // loop through the snake's elements
     for (let i = 0; i < snake.length; i++){
@@ -460,15 +483,8 @@ function normalLevel()
     snake_border_color = "#89B5AF";
 
     if (die()){
-        for (i = 0; i < users.length; i++){
-            if (users[i].username == sessionStorage.loggedUser) {
-                if (score > users[i].score) {
-                    users[i].score =  score;
-                }
-            }
-        }
-        // convert JS objects into JSON for html local storage   
-        localStorage.users = JSON.stringify(users);
+        // call gameOver
+        gameOver();
         return;
     }
 
@@ -526,6 +542,7 @@ function gameOver()
     // hide non-required windows
     game_over.style.display = "block";
     // display required windows
+    timer.style.display = "none";
     game_window.style.display = "none";
     score_details.style.display = "none";
     menu_class.style.display = "none";
@@ -533,12 +550,10 @@ function gameOver()
     for (i = 0; i < users.length; i++){
         if (users[i].username == sessionStorage.loggedUser) {
             if (score > users[i].score) {
-                console.log("High Score");
                 users[i].score =  score;
                 newHighScore.style.display = "block";
             }
             else {
-                console.log("Normal");
                 oldHighScore.style.display = "block";
             }
         }
@@ -546,6 +561,64 @@ function gameOver()
     // convert JS objects into JSON for html local storage   
     localStorage.users = JSON.stringify(users);
     GameOverScore.innerHTML = score;
+}
+
+// Time Attack Level function 
+function timeAttackLevel()
+{
+    // context, snake and snake-border color 
+    context_background_color = "#345B63";
+    snake_color = snakeColour();
+    snake_border_color = "#89B5AF";
+    timer.style.display = "block";
+
+    if (die()){
+        // call gameOver
+        gameOver();
+        return;
+    }
+
+    snakeChangingPos  = false;
+
+    if (paused) return;
+
+    timeover();
+
+    setTimeout(function(){
+    
+        // clear the canvas for new snake
+        clearCanvas( context_background_color);
+        // draw the food
+        drawFood();
+        // move the snake's coordinates
+        snake_movement();
+        // draw the snake
+        drawSnake();
+        // call the beginnerLevel to have a loop
+        normalLevel();
+
+    }, 150);
+
+}
+
+function timeover()
+{
+    pause_btn.style.display = "none";
+    // countdown timer 1 sec
+    let count = setInterval(function(){
+        // decrement timeleft
+        timer_sec -= 1;
+
+        // display the timeleft
+        timer_id.innerHTML = timer_sec;
+
+        // check if timeleft is equal to zero
+        if (timer_sec == 0){
+            // close the counter
+            clearInterval(count);
+            gameOver();
+        }
+    }, 1000);
 }
 
 // call the function verify Login

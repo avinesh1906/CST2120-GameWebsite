@@ -169,3 +169,8 @@ button:hover {
 #oldHighScore, #newHighScore{
     display: none;
 }
+
+.timerAttack_sec{
+    display: none;
+    color: var(--teal);
+}

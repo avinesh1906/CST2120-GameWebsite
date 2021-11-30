@@ -62,7 +62,13 @@
         <div id="score_num">
             0
         </div>
-    </div> 
+        <div class="timerAttack_sec">
+            Time left
+            <div id="timerID_sec">
+                30
+            </div>
+        </div> 
+    </div>
     <div class="game_div">
         <canvas class="game-window">
         </canvas>
