@@ -73,7 +73,7 @@ function validateLoginForm(){
             return false;
         }
         // loop through the user objects
-        for (i = 0; i < users.length; i++){
+        for (let i = 0; i < users.length; i++){
             //  check if password corresponds to that particular username
             if (users[i].username == usr.value && users[i].password == pwd.value){
                 btn.disabled = false;
