@@ -3,6 +3,7 @@
 
 //Import classes from other modules
 import {Snake} from './Snake.js';
+import {Canvas} from './Canvas.js';
 
 // getElementsbyClassName variables
 let canvas = document.getElementsByClassName("game-window")[0];
@@ -24,6 +25,7 @@ let timer_id = document.getElementById("timerID_sec");
 let users = JSON.parse(localStorage.users);
 
 let context_background_color;
+context_background_color = "#345B63";
 
 // game variables
 let snake_head;
@@ -114,7 +116,9 @@ snake = [
 
 // set up snakes
 let snakeClass;
-snakeClass = new Snake(context, snake_pos, snakeColour(), "#89B5AF");
+snakeClass = new Snake(context, snake, snakeColour(), "#89B5AF");
+
+let canvasClass= new Canvas(context, 0, 0,game_window.width, game_window.height, context_background_color);
 
 // function verifyLogin 
 function verifyLogin() 
@@ -191,7 +195,7 @@ function beginnerLevel()
     setTimeout(function(){
        
         // clear the canvas for new snake
-        clearCanvas();
+        canvasClass.clearCanvas();
         // draw the food
         drawFood();
         // move the snake's coordinates
@@ -203,20 +207,6 @@ function beginnerLevel()
 
     }, 150);
 
-}
-
-// function to clear the canvas
-function clearCanvas()
-{   
-    // set the drawing color
-    context.fillStyle = context_background_color;
-
-    // Context has a method for drawing rectangles
-    context.fillRect(0,0,game_window.width,game_window.height);   
-    
-    // Draw a border around the canvas 
-    // This will be helpful to detect whether the snake touches the wall or not
-    context.strokeRect(0,0,game_window.width,game_window.height);
 }
 
 // function to draw the snake
