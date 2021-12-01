@@ -1,5 +1,8 @@
 "use strict";
 
+//Import classes from other modules
+import {Snake} from './Snake.js';
+
 // getElementsbyClassName variables
 let canvas = document.getElementsByClassName("game-window")[0];
 let game_window = document.getElementsByClassName("game-window")[0];
@@ -104,7 +107,8 @@ snake = [
 ]
 
 // set up snakes
-// snake = new Snake(context, snake_pos, snakeColour(), "#89B5AF");
+let snakeClass;
+snakeClass = new Snake(context, snake_pos, snakeColour(), "#89B5AF");
 
 // function verifyLogin 
 function verifyLogin() 
