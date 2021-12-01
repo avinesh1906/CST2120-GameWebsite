@@ -1,3 +1,6 @@
+// Entire script will be in script mode
+"use strict";
+
 export class Canvas{
     // Canvas context
     context;
@@ -11,25 +14,28 @@ export class Canvas{
     height;
     // game window color
     color;
+    // border colr
+    borderColor;
 
-    constructor(context, x,y, width, height, color){
+    constructor(context, x, y, width, height, color, borderColor){
         this.context = context;
         this.x = x;
         this.y = y;
         this.width = width;
         this.height = height;
         this.color = color;
+        this.borderColor = borderColor;
     }
 
-    clearCanvas(){   
-        // set the drawing color
+    draw()
+    {
+        // color
         this.context.fillStyle = this.color;
-
-        // Context has a method for drawing rectangles
-        this.context.fillRect(this.x, this.y, this.width, this.height);   
-        
-        // Draw a border around the canvas 
-        // This will be helpful to detect whether the snake touches the wall or not
+        //  outline colour
+        this.context.strokestyle = this.borderColor;
+        //  draw the object
+        this.context.fillRect(this.x, this.y, this.width, this.height);
         this.context.strokeRect(this.x, this.y, this.width, this.height);
+
     }
 }
