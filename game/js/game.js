@@ -1,3 +1,4 @@
+// Entire script will be in script mode
 "use strict";
 
 //Import classes from other modules
@@ -18,6 +19,7 @@ let oldHighScore = document.getElementById("oldHighScore");
 let newHighScore = document.getElementById("newHighScore");
 let GameOverScore = document.getElementById("GameOverScore");
 let timer_id = document.getElementById("timerID_sec");
+
 // local storage variables
 let users = JSON.parse(localStorage.users);
 
@@ -85,6 +87,10 @@ level_change.onclick = change_level;
 // quit button
 let quit = document.getElementById("quit");
 quit.onclick = exit;
+
+// Game Over Level Change
+let GameOverLevel_change = document.getElementById("GameOverLevel_change");
+GameOverLevel_change.onclick = change_level;
 
 // start counter 
 let timeleft = 3;
@@ -563,7 +569,7 @@ function gameOver()
     score_details.style.display = "none";
     menu_class.style.display = "none";
 
-    for (i = 0; i < users.length; i++){
+    for (let i = 0; i < users.length; i++){
         if (users[i].username == sessionStorage.loggedUser) {
             if (score > users[i].score) {
                 users[i].score =  score;

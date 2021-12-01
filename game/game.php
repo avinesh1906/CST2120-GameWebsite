@@ -102,9 +102,9 @@
                 0
             </div>
             <div class="buttons">
-                <button onclick="restart()" type="button">Play Again</button>
+                <button onclick="location.reload()" type="button">Play Again</button>
                 <button onclick="location.href='../index.php'" type="button">Home</button>
-                <button onclick="change_level()" type="button">Change Level</button>
+                <button id="GameOverLevel_change">Change Level</button>
             </div>
         </div>
         <!-- Right side Gif -->
