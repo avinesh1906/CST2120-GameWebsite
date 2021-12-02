@@ -1,9 +1,12 @@
 // Entire script will be in script mode
 "use strict";
 
+// import class from other modules
 import {Canvas} from './Canvas.js';
 
+// class Food
 export class Food{
+    // constructor functions
     constructor(context, foodColor, foodBorderColor, foodPos, width, height, gameWindow){
         this.context = context;
         this.foodColor = foodColor;
@@ -13,6 +16,7 @@ export class Food{
         this.height = height;
         this.gameWindow = gameWindow;
 
+        // draw food function
         this.drawFood = function(){
             let foodOPP = new Canvas(context, this.foodPos.x, this.foodPos.y, 10, 10, foodColor, foodBorderColor);
             foodOPP.draw();
@@ -20,13 +24,16 @@ export class Food{
         this.drawFood();
     }
 
+    // check if snake ate food
     eatingFood(snakePosition){
+        // check if snake position equals to foof position
         if (snakePosition[0].xPos == this.foodPos.x && snakePosition[0].yPos == this.foodPos.y){
             return true;
         }
         return false;
     }
 
+    // generate a new food location randomly
     generateFoodLocationRandom(snakePosition){
         // random function to produce x and y position
         function randomPosition(min, max)
@@ -38,8 +45,8 @@ export class Food{
         this.foodPos.y = randomPosition(0, this.gameWindow.height - 10);
         
         for (let i = 0; i < snakePosition.length; i++){
+            // check if snake position is not same as food location
             if (snakePosition[i].xPos == this.foodPos.x && snakePosition[i].yPos == this.foodPos.y){
-                console.log("ayttyo");
                 this.generateFoodLocationRandom(snakePosition);
             }
         }
