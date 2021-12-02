@@ -130,6 +130,9 @@ let yPosStep = 0;
 // Event Listener for key down
 document.addEventListener("keydown", navigate_Snake);
 
+if (sessionStorage.level = "time-attack"){
+    timeover();
+}
 
 // function verifyLogin 
 function verifyLogin() 
@@ -395,8 +398,6 @@ function navigate_Snake(keyDetails)
     }
 }
 
-
-
 // function to determine if game has ended or not
 function die(snakeOOP){
     //Autophagy Death
@@ -416,6 +417,29 @@ function die(snakeOOP){
     return false;
 }
 
+// function to change the speed
+function setSpeed(){
+    if (score > 0) {
+        speed = 150;
+    } 
+    if (score > 50) {
+        speed = 140;
+    } 
+    if (score > 100) {
+        speed = 130;
+    } 
+    if (score > 150) {
+        speed = 120;
+    } 
+    if (score > 200) {
+        speed = 110;
+    } 
+    if (score > 250) {
+        speed = 100;
+    }
+    return speed;
+}
+
 
 //  Beginner level function
 function beginnerLevel()
@@ -433,6 +457,7 @@ function beginnerLevel()
     if (die(snakeOOP)){
         // call gameOver
         gameOver();
+        return;
     }
      
     // reset the changing position to false
@@ -458,28 +483,6 @@ function beginnerLevel()
 
 }
 
-// function to change the speed
-function setSpeed(){
-    if (score > 0) {
-        speed = 150;
-    } 
-    if (score > 50) {
-        speed = 140;
-    } 
-    if (score > 100) {
-        speed = 130;
-    } 
-    if (score > 150) {
-        speed = 120;
-    } 
-    if (score > 200) {
-        speed = 110;
-    } 
-    if (score > 250) {
-        speed = 100;
-    }
-    return speed;
-}
 
 // Normal Level function 
 function normalLevel()
@@ -543,9 +546,8 @@ function timeAttackLevel()
     if (die(snakeOOP)){
         // call gameOver
         gameOver();
+        return;
     }
-    
-    timeover();
 
     // reset the changing position to false
     snakeChangingPos  = false;
