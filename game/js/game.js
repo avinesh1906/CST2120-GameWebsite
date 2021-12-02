@@ -292,6 +292,11 @@ function timeover()
         timer_sec -= 1;
         // display the timeleft
         timer_id.innerHTML = timer_sec;
+        // change the timer color 
+        if (timer_sec < 10){
+            timer_id.style.color = getRandomRed();
+            timer.style.color = getRandomRed();
+        }
         // check if timeleft is equal to zero
         if (timer_sec < 0){
             gameOver();
