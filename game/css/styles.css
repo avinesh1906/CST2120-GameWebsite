@@ -1,29 +1,83 @@
+/* Common display none */
+.game-window,
+.options,
+.menu, .score ,
+.countdown_class,
+.game_over,
+.timerAttack_sec,
+#notLoggedIn, 
+#oldHighScore, #newHighScore,
+#beginnerRules, #normalRules, #time_AttackRules {
+    display: none;
+}
+
+/* Function text-align center */
+.main-content,
+#notLoggedIn,
+.menu, .score,
+.counter_body {
+    text-align: center;
+}
+
+/* Common border color var(--teal) */
+.game-window,
+.game_over .body {
+    border-color: var(--teal)
+}
+
+/* Common display flex */
+.Game, 
+.game_over .content
+.game_over .buttons
+#notLoggedIn .button {
+    display: flex;
+}
+
+/* Common solid border */
+.game-window,
+.counter_body,
+.game_over .body {
+    border: solid;
+}
+
+/* Common var(--teal) color */
+.game-window,
+.options,
+.menu, .score,
+.counter_body,
+.game_over .title, 
+.Message, 
+#GameOverScore,
+.timerAttack_sec {
+    color: var(--teal);  
+}
+
+/* Main content css */
 .main-content{
     display: block;
     padding-top: 2%;
     padding-bottom: 5%;
-    text-align: center;
 }
 
-#notLoggedIn  {
-    text-align: center;
+/* Not Logged-in Window CSS */
+#notLoggedIn {
     color: rgb(253, 210, 191);
     font-size: xx-large;
-    display: none;
 }
-
+/* Not loggedin button css */
 #notLoggedIn .button {
-    display: flex;
     margin-top: 5%;
     padding-left: 20%;
 }
 
+/* Sign in button css */
 .button #signin_btn  {
     left: 0;
     padding-left: 10%;
     padding-right: 18%;
 }
 
+/* overall button css */
 button {
     background-color: var(--teal);
     color: var(--darkblue);
@@ -33,29 +87,25 @@ button {
     font-size: 35px;
     border-radius: 12px;
 }
-
+/* hover button css */
 button:hover {
     background-color: var(--navy);
     color:  var(--teal);
 }
 
+/* window game css */
 .game-window{
-    display: none;
-    border: solid;
-    border-color: var(--teal);
     border-radius: 5px;
     width: 100vh;
     height: 50vh;
-    color: var(--teal);
 }
 
+/* level css */
 .options {
-    display: none;
     text-align: left;
     padding-top: 3%;
     font-family: Georgia, serif;
     font-size: 25px;
-    color: var(--teal);
     margin-left: 95vh;
 }
 
@@ -65,37 +115,27 @@ button:hover {
     height: 20px;
 }
 
+/* options button css */
 .options button {
     margin-top: 2%;
 }
 
-.Game {
-    display: flex;
-}
-
+/* common menu and score css */
 .menu, .score {
-    display: none;
-    color: var(--teal);
-    text-align: center;
     width: 25%;
     padding-top: 4.5%;
     font-size: 30px;
 }
 
+/* menu button css */
 .menu button {
     margin-top: 2%;
     font-size: x-large;
 }
 
-.countdown_class{
-    display: none;
-} 
-
+/* counter body CSS */
 .counter_body{
-    color: var(--teal);
-    text-align: center;
     font-size: 45px;
-    border: solid;
     background-color: var(--navy); 
     margin-top: 5%;
     margin-left: 10%;
@@ -112,7 +152,6 @@ button:hover {
     width: 25%;
     
 }
-
 .left_side_picture {
     padding-left: 3%;
 }
@@ -120,31 +159,22 @@ button:hover {
     padding-right: 3%;
 }
 
-.game_over {
-    display: none;
-
-}
+/* title for game over css */
 .game_over .title {
     font-size: 45px;
 }
-
+/* game over title, message and score css */
 .game_over .title, .Message, #GameOverScore {
     position: relative;
     width: auto;
     height: auto;
-    color: var(--teal);
 }
+/* game over CSS */
 .game_over .Message, #GameOverScore {
     font-size: 35px;
 }
-
-.game_over .content{
-    display: flex;
-}
-
+/* game body CSS */
 .game_over .body {
-    border: solid;
-    border-color: var(--teal);
     background-color: var(--navy); 
     border-radius: 12px;
     width: 50%;
@@ -152,30 +182,18 @@ button:hover {
     padding-top: 1.5%;
 }
 
+/* game over button class css */
 .game_over .buttons {
     padding-left: 5%;
-    display: flex;
     padding-right: 5%;
 }
-
+/* game over button css */
 .game_over button {
     margin: 2%;
     font-size: 30px;
 }
-/* .game_over .buttons #level_change{
-    width:fit-content;
-} */
 
-#oldHighScore, #newHighScore{
-    display: none;
-}
-
-.timerAttack_sec{
-    display: none;
-    color: var(--teal);
-}
-
+/* rules messages css */
 #beginnerRules, #normalRules, #time_AttackRules{
-    display: none;
     font-size: 15px;
 }

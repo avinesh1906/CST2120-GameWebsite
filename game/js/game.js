@@ -290,7 +290,7 @@ function timeover()
     pause_btn.style.display = "none";
     
     // countdown timer 1 sec
-    let count = setInterval(function(){
+    setInterval(function(){
         // decrement timeleft
         timer_sec -= 1;
         // display the timeleft
