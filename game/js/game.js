@@ -71,6 +71,9 @@ GameOverLevel_change.onclick = change_level;
 // score
 let score = 0;
 
+// speed
+let speed;
+
 // keyboard ARROWS value
 const LEFT_ARROW = 37;
 const RIGHT_ARROW = 39;
@@ -383,30 +386,7 @@ function navigate_Snake(keyDetails)
     }
 }
 
-// function to change the speed
-function setSpeed(score){
-    let speed;
-    if (score > 10) {
-        speed = 150;
-    } 
-    if (score > 50) {
-        speed = 140;
-    } 
-    if (score > 100) {
-        speed = 130;
-    } 
-    if (score > 150) {
-        speed = 120;
-    } 
-    if (score > 200) {
-        speed = 110;
-    } 
-    if (score > 250) {
-        speed = 100;
-    }
-    console.log(speed);
-    return speed;
-}
+
 
 // function to determine if game has ended or not
 function die(snakeOOP){
@@ -469,6 +449,32 @@ function beginnerLevel()
 
 }
 
+// function to change the speed
+function setVelocity(){
+    console.log("uhmm");
+    // let speed;
+    // if (score > 0) {
+    //     speed = 150;
+    // } 
+    // if (score > 50) {
+    //     speed = 140;
+    // } 
+    // if (score > 100) {
+    //     speed = 130;
+    // } 
+    // if (score > 150) {
+    //     speed = 120;
+    // } 
+    // if (score > 200) {
+    //     speed = 110;
+    // } 
+    // if (score > 250) {
+    //     speed = 100;
+    // }
+    // return speed;
+    return true;
+}
+
 // Normal Level function 
 function normalLevel()
 {
@@ -486,15 +492,12 @@ function normalLevel()
         // call gameOver
         gameOver();
     }
-     
+    
     // reset the changing position to false
     snakeChangingPos  = false;
 
     // check if pause or not
     if (paused) return;
-
-    // change the speed depending on the score
-    let speed = 150;
 
     setTimeout(function(){
         // draw a new canvas
@@ -505,12 +508,11 @@ function normalLevel()
         score = snakeOOP.snakeMovement(foodOPP);
         // Display the score
         score_num.innerHTML = score;
-        speed = setSpeed(score);
         // draw the snake
         snakeOOP.drawSnake();
         // re call the function to have a loop
         beginnerLevel();
-    }, speed);
+    }, 50);
 
 }
 
