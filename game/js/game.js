@@ -47,6 +47,9 @@ let canvasOPP= new Canvas(context, 0, 0, gameWindow.width, gameWindow.height, co
 // start counter 
 let counterleft = 5;
 
+// start counter 
+let timer_sec = 30;
+
 // play button during level choice
 let play_btn = document.getElementById("play_btn");
 play_btn.onclick = assignLevel;
@@ -281,21 +284,14 @@ function exit()
 function timeover()
 {
     pause_btn.style.display = "none";
-    // countdown timer 1 sec
-    let count = setInterval(function(){
-        // decrement timeleft
-        timer_sec -= 1;
-
-        // display the timeleft
-        timer_id.innerHTML = timer_sec;
-
-        // check if timeleft is equal to zero
-        if (timer_sec == 0){
-            // close the counter
-            clearInterval(count);
-            gameOver();
-        }
-    }, 1000);
+    // decrement timeleft
+    timer_sec -= 1;
+    // display the timeleft
+    timer_id.innerHTML = timer_sec;
+    // check if timeleft is equal to zero
+    if (timer_sec == 0){
+        gameOver();
+    }
 }
 
 
