@@ -109,6 +109,10 @@ snake = [
     {xPos:110, yPos:70}
 ]
 
+if (sessionStorage.level = "time-attack"){
+    timeover();
+
+}
 // set up snakes
 // snake = new Snake(context, snake_pos, snakeColour(), "#89B5AF");
 
@@ -584,6 +588,7 @@ function gameOver()
 // Time Attack Level function 
 function timeAttackLevel()
 {
+
     // context, snake and snake-border color 
     context_background_color = "#345B63";
     snake_color = snakeColour();
@@ -600,8 +605,6 @@ function timeAttackLevel()
 
     if (paused) return;
 
-    timeover();
-
     setTimeout(function(){
     
         // clear the canvas for new snake
@@ -613,7 +616,7 @@ function timeAttackLevel()
         // draw the snake
         drawSnake();
         // call the beginnerLevel to have a loop
-        normalLevel();
+        timeAttackLevel();
 
     }, 150);
 
@@ -633,7 +636,7 @@ function timeover()
         // check if timeleft is equal to zero
         if (timer_sec == 0){
             // close the counter
-            clearInterval(count);
+            // clearInterval(count);
             gameOver();
         }
     }, 1000);
