@@ -20,6 +20,9 @@ let oldHighScore = document.getElementById("oldHighScore");
 let newHighScore = document.getElementById("newHighScore");
 let GameOverScore = document.getElementById("GameOverScore");
 let timer_id = document.getElementById("timerID_sec");
+let beginnerRules = document.getElementById("beginnerRules");
+let normalRules = document.getElementById("normalRules");
+let time_AttackRules = document.getElementById("time_AttackRules");
 
 // local storage variables
 let users = JSON.parse(localStorage.users);
@@ -42,7 +45,7 @@ let foodBorderColor;
 let canvasOPP= new Canvas(context, 0, 0, gameWindow.width, gameWindow.height, context_background_color, border_color);
 
 // start counter 
-let counterleft = 3;
+let counterleft = 5;
 
 // play button during level choice
 let play_btn = document.getElementById("play_btn");
@@ -183,12 +186,22 @@ function level(){
 function counter() {
     // display the counter window
     counter_details.style.display = "flex";
+
+    // check the level name and display the required div
+    if (sessionStorage.level == "beginner") {
+        beginnerRules.style.display = "block";
+    } else if (sessionStorage.level == "normal") {
+        normalRules.style.display = "block";
+    } else if (sessionStorage.level == "time-attack") {
+        time_AttackRules.style.display = "block";
+    } 
+
     // Hide the non-required windows
     game_level.style.display = "none";
     gameWindow.style.display = "none";
     score_details.style.display = "none";
     menu_class.style.display = "none";
-    
+
     // countdown timer 1 sec
     let count = setInterval(function(){
         // decrement timeleft

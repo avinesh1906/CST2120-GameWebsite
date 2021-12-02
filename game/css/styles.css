@@ -174,3 +174,8 @@ button:hover {
     display: none;
     color: var(--teal);
 }
+
+#beginnerRules, #normalRules, #time_AttackRules{
+    display: none;
+    font-size: 15px;
+}
