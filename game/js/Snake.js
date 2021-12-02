@@ -1,12 +1,15 @@
 // Entire script will be in script mode
 "use strict";
 
+// import class from other modules
 import {Canvas} from './Canvas.js';
 
 // sound effects
 let eat = new Audio('./sound/eat.mp3');
 
+// Snake class 
 export class Snake{
+    // constructor functions
     constructor(context, snakeColor, borderColor, position, xPosStep, yPosStep, gameWindow, score){
         this.context = context;
         this.snakeColor = snakeColor;
@@ -19,11 +22,16 @@ export class Snake{
         this.nextY = this.position[0].yPos;
         this.score = score;
 
+        // functions to draw snake
         this.drawSnake = function() {
+            // loop through positions
             this.position.forEach((element,index) => {
+                // check for first index
                 if (index ==0){
+                    // set the head color to red
                     let snakeOOP = new Canvas(this.context, element.xPos, element.yPos, 10, 10, "red", this.borderColor);
                     snakeOOP.draw();
+                // generate random colors for body
                 } else {
                     let snakeOOP = new Canvas(this.context, element.xPos, element.yPos, 10, 10, this.snakeColor, this.borderColor);
                     snakeOOP.draw();
@@ -43,6 +51,7 @@ export class Snake{
     To move the snake vertically, we should only modify the y-coordinate of 
     the head to prevent the snake to shift upside down. */
     snakeMovement(foodOPP) {
+        // calculate new position for snake head
         let snakeHead = {
             xPos: this.position[0].xPos + this.xPosStep,
             yPos: this.position[0].yPos + this.yPosStep
@@ -53,12 +62,13 @@ export class Snake{
         // Add the head to the beginning
         this.position.unshift(snakeHead);
 
+        // check if ate food
         FoodEaten = foodOPP.eatingFood(this.position);
 
+        // if aet food
         if (FoodEaten){
             // play eat
             eat.play();
-            console.log("uh");
             // increase score
             this.score += 10;
             // generate a new food location
@@ -67,10 +77,13 @@ export class Snake{
             // Remove the last element of the snake
             this.position.pop();
         }
+        // return the score
         return this.score;
     }
 
+    // function if snake can pass through wall
     noWall() {
+        // calculate new snake position
         for (let i = 0; i < this.position.length; i++){
             if (this.position[i].xPos < 0) {
                 this.position[i].xPos = this.position[i].xPos + this.gameWindow.width;
@@ -87,6 +100,7 @@ export class Snake{
         }
     }
 
+    // function if bump with wall
     touchWall() {
         // detect whether snake hits the wall
         let TOPWALLHIT = this.nextY < 0;
@@ -97,6 +111,7 @@ export class Snake{
         return (LEFTWALLHIT || RIGHTWALLHIT || TOPWALLHIT || BOTTONWALLHIT);
     }
 
+    // check if ate body
     ownDeath() {
         for (let i = 1; i < this.position.length; i++){
             if (this.position[0].xPos == this.position[i].xPos && this.position[0].yPos == this.position[i].yPos){
