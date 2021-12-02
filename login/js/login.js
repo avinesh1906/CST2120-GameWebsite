@@ -80,12 +80,12 @@ function validateLoginForm(){
                 sessionStorage.loggedUser = users[i].username;
                 // redirect to home page
                 window.location.href="../index.php";
-            // error messages
-            } else {
-                details.innerHTML = '*username/password incorrect';
-                details.style.color = "#FDD2BF";
             }
         }
+        // error messages
+        details.innerHTML = '*username/password incorrect';
+        details.style.color = "#FDD2BF";
+        
     }
 }
 
