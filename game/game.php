@@ -48,7 +48,26 @@
     <div class="counter_body">
         Naagin Starting In:
         <div id="counter_num">
-            3
+            5
+        </div>
+        <div class="gameRules">
+            <div id="beginnerRules">
+                * You can pass through walls *
+                <br>
+                * You should not eat your own tails *
+            </div>
+            <div id="normalRules">
+                * You cannot pass through walls *
+                <br>
+                * You should not eat your own tails *                
+            </div>
+            <div id="time_AttackRules">
+                * You cannot pass through walls *
+                <br>
+                * You should not eat your own tails *   
+                <br>
+                * This is a 30 secs play *  
+            </div>
         </div>
     </div>
     <!-- Right side Gif -->
