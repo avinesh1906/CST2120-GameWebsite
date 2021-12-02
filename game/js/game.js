@@ -450,29 +450,26 @@ function beginnerLevel()
 }
 
 // function to change the speed
-function setVelocity(){
-    console.log("uhmm");
-    // let speed;
-    // if (score > 0) {
-    //     speed = 150;
-    // } 
-    // if (score > 50) {
-    //     speed = 140;
-    // } 
-    // if (score > 100) {
-    //     speed = 130;
-    // } 
-    // if (score > 150) {
-    //     speed = 120;
-    // } 
-    // if (score > 200) {
-    //     speed = 110;
-    // } 
-    // if (score > 250) {
-    //     speed = 100;
-    // }
-    // return speed;
-    return true;
+function setSpeed(){
+    if (score > 0) {
+        speed = 150;
+    } 
+    if (score > 50) {
+        speed = 140;
+    } 
+    if (score > 100) {
+        speed = 130;
+    } 
+    if (score > 150) {
+        speed = 120;
+    } 
+    if (score > 200) {
+        speed = 110;
+    } 
+    if (score > 250) {
+        speed = 100;
+    }
+    return speed;
 }
 
 // Normal Level function 
@@ -491,8 +488,11 @@ function normalLevel()
     if (die(snakeOOP)){
         // call gameOver
         gameOver();
+        return;
     }
     
+    speed = setSpeed();
+
     // reset the changing position to false
     snakeChangingPos  = false;
 
@@ -511,8 +511,8 @@ function normalLevel()
         // draw the snake
         snakeOOP.drawSnake();
         // re call the function to have a loop
-        beginnerLevel();
-    }, 50);
+        normalLevel();
+    }, speed);
 
 }
 
@@ -556,7 +556,7 @@ function timeAttackLevel()
         // draw the snake
         snakeOOP.drawSnake();
         // re call the function to have a loop
-        beginnerLevel();
+        timeAttackLevel();
     }, 150);
 
 }
