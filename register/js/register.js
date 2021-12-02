@@ -38,7 +38,7 @@ function usernameValidation() {
     }
 
     //  loop through the JS object
-    for (i = 0; i < users.length; i++){
+    for (let i = 0; i < users.length; i++){
         //  check if username alread exist
         if (users[i].username == usr.value){
             btn.disabled = true;
