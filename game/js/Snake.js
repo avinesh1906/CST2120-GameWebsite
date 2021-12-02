@@ -3,6 +3,9 @@
 
 import {Canvas} from './Canvas.js';
 
+// sound effects
+let eat = new Audio('./sound/eat.mp3');
+
 export class Snake{
     constructor(context, snakeColor, borderColor, position, xPosStep, yPosStep, gameWindow, score){
         this.context = context;
@@ -53,9 +56,11 @@ export class Snake{
         FoodEaten = foodOPP.eatingFood(this.position);
 
         if (FoodEaten){
+            // play eat
+            eat.play();
+            console.log("uh");
             // increase score
             this.score += 10;
-            
             // generate a new food location
             foodOPP.generateFoodLocationRandom(this.position);
         } else {

@@ -106,6 +106,9 @@ let snakeChangingPos = false;
 // pause
 let paused = false;
 
+// Sound effects
+let dead = new Audio('./sound/dead.wav');
+let bump = new Audio('./sound/bump.mp3');
 
 // snake start position
 let snakePos = [
@@ -409,6 +412,8 @@ function navigate_Snake(keyDetails)
 function die(snakeOOP){
     //Autophagy Death
     if (snakeOOP.ownDeath()){
+        // play sound dead
+        dead.play();
         return true;
     }
     // check if beginner level or not
@@ -417,6 +422,8 @@ function die(snakeOOP){
     } else {
         // not normal level: if hit wall, game over
         if (snakeOOP.touchWall()){
+            // play sound bump
+            bump.play();
             return true;
         }
         return false;
