@@ -523,7 +523,7 @@ function normalLevel()
         // call the beginnerLevel to have a loop
         normalLevel();
 
-    }, 150);
+    }, 100);
 
 }
 
