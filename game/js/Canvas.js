@@ -17,6 +17,7 @@ export class Canvas{
     // border colr
     borderColor;
 
+    // constructor functions
     constructor(context, x, y, width, height, color, borderColor){
         this.context = context;
         this.x = x;
@@ -26,7 +27,8 @@ export class Canvas{
         this.color = color;
         this.borderColor = borderColor;
     }
-
+    
+    // functions to draw the canvas
     draw()
     {
         // color
