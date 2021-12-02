@@ -48,7 +48,7 @@
     <div class="counter_body">
         Naagin Starting In:
         <div id="counter_num">
-            3
+            5
         </div>
         <div class="gameRules">
             <div id="beginnerRules">

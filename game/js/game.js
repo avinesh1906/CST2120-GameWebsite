@@ -130,10 +130,6 @@ let yPosStep = 0;
 // Event Listener for key down
 document.addEventListener("keydown", navigate_Snake);
 
-if (sessionStorage.level = "time-attack"){
-    timeover();
-}
-
 // function verifyLogin 
 function verifyLogin() 
 {   
@@ -184,6 +180,7 @@ function level(){
     } else if (sessionStorage.level == "normal") {
         normalLevel();
     } else if (sessionStorage.level == "time-attack") {
+        timeover();
         timeAttackLevel();
     } 
 }
@@ -210,14 +207,15 @@ function counter() {
 
     // countdown timer 1 sec
     let count = setInterval(function(){
-        // decrement timeleft
-        counterleft -= 1;
-
         // display the timeleft
         counter_num.innerHTML = counterleft;
 
+        // decrement timeleft
+        counterleft -= 1;
+
+
         // check if timeleft is equal to zero
-        if (counterleft == 0){
+        if (counterleft < 0){
             // close the counter
             clearInterval(count);
 
@@ -287,14 +285,18 @@ function exit()
 function timeover()
 {
     pause_btn.style.display = "none";
-    // decrement timeleft
-    timer_sec -= 1;
-    // display the timeleft
-    timer_id.innerHTML = timer_sec;
-    // check if timeleft is equal to zero
-    if (timer_sec == 0){
-        gameOver();
-    }
+    
+    // countdown timer 1 sec
+    let count = setInterval(function(){
+        // decrement timeleft
+        timer_sec -= 1;
+        // display the timeleft
+        timer_id.innerHTML = timer_sec;
+        // check if timeleft is equal to zero
+        if (timer_sec < 0){
+            gameOver();
+        }
+    },1000);
 }
 
 
