@@ -132,7 +132,7 @@ let xPosStep = 10;
 let yPosStep = 0;
 
 // Event Listener for key down
-document.addEventListener("keydown", navigate_Snake);
+document.addEventListener("keydown", navigateSnake);
 
 // function verifyLogin 
 function verifyLogin() 
@@ -370,7 +370,7 @@ function getRandomRed() {
 }
 
 // function to change the snake direction
-function navigate_Snake(keyDetails)
+function navigateSnake(keyDetails)
 {   
     // retrieve the keyboard key press code
     let KeyPressedCode = keyDetails.keyCode;
