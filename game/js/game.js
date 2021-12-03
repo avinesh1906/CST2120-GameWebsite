@@ -23,6 +23,7 @@ let timer_id = document.getElementById("timerID_sec");
 let beginnerRules = document.getElementById("beginnerRules");
 let normalRules = document.getElementById("normalRules");
 let time_AttackRules = document.getElementById("time_AttackRules");
+let scoreTitle = document.getElementById("scoreTitle");
 
 // local storage variables
 let users = JSON.parse(localStorage.users);
@@ -190,6 +191,11 @@ function level(){
 
 // function counter
 function counter() {
+    for (let i = 0; i < users.length; i++){
+        if (users[i].username == sessionStorage.loggedUser) {
+            sessionStorage.highscore = users[i].score;
+        }
+    }
     // display the counter window
     counter_details.style.display = "flex";
 
@@ -532,6 +538,10 @@ function normalLevel()
         foodOPP.drawFood();
         // move the snake's coordinates
         score = snakeOOP.snakeMovement(foodOPP);
+        if (score > sessionStorage.highscore){
+            scoreTitle.innerHTML = "New Highscore";
+            scoreTitle.style.color = getRandomRed(); 
+        }
         // Display the score
         score_num.innerHTML = score;
         // draw the snake

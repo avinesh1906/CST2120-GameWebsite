@@ -77,7 +77,9 @@
 </div>
 <div class="Game">
     <div class="score" id="score_Details">
-        Score
+        <div id="scoreTitle">
+            Score
+        </div>
         <div id="score_num">
             0
         </div>
