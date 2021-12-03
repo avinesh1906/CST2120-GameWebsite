@@ -27,8 +27,8 @@
 
 /* Common display flex */
 .Game, 
-.game_over .content
-.game_over .buttons
+.game_over .content,
+.game_over .buttons,
 #notLoggedIn .button {
     display: flex;
 }
