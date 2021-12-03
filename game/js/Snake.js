@@ -33,8 +33,8 @@ export class Snake{
                     snakeOOP.draw();
                 // generate random colors for body
                 } else {
-                    let snakeOOP = new Canvas(this.context, element.xPos, element.yPos, 10, 10, this.snakeColor, this.borderColor);
-                    snakeOOP.draw();
+                    let snakeCanvas = new Canvas(this.context, element.xPos, element.yPos, 10, 10, this.snakeColor, this.borderColor);
+                    snakeCanvas.draw();
                 }
 
             })

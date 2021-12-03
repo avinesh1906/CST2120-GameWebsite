@@ -18,8 +18,8 @@ export class Food{
 
         // draw food function
         this.drawFood = function(){
-            let foodOPP = new Canvas(context, this.foodPos.x, this.foodPos.y, 10, 10, foodColor, foodBorderColor);
-            foodOPP.draw();
+            let foodCanvas = new Canvas(context, this.foodPos.x, this.foodPos.y, 10, 10, foodColor, foodBorderColor);
+            foodCanvas.draw();
         };
         this.drawFood();
     }
