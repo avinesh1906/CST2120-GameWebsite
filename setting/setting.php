@@ -42,7 +42,7 @@
         <div class="form-content">
             <!-- Current Password -->
             <div class="form_details">
-                <label for="current_password" class="form-label"> Currrent </label>
+                <label for="current_password" class="form-label"> Current </label>
                 <div class="form-input">
                     <input autocomplete="off" type="password" id="current_password" onkeyup="oldPassword()">
                 </div>
