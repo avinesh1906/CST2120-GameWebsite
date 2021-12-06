@@ -175,7 +175,7 @@ function validateRegisterForm() {
             score: 0
         }
 
-        //  convert JSON(html local storage) into JS objects
+        //  convert existing JSON(html local storage) into JS objects
         let users = JSON.parse(localStorage.users);
         // append the new object to user object
         users.push(newUsr); 
