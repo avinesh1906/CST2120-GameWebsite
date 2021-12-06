@@ -140,7 +140,7 @@ function validateSettingForm() {
             return false;
         }
         btn.disabled = false;
-        console.log("uhmm");
+
         for (i = 0; i < users.length; i++){
             if (users[i].username == sessionStorage.loggedUser) {
                 users[i].password =  confirm_pwd.value;
