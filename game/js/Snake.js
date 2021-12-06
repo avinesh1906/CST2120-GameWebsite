@@ -67,7 +67,7 @@ export class Snake{
 
         // if aet food
         if (FoodEaten){
-            // play eat
+            // play eat sound
             eat.play();
             // increase score
             this.score += 10;

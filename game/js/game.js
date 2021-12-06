@@ -539,7 +539,7 @@ function normalLevel()
         // move the snake's coordinates
         score = snakeOOP.snakeMovement(foodOPP);
         if (score > sessionStorage.highscore){
-            scoreTitle.innerHTML = "New Highscore";
+            scoreTitle.innerHTML = "New High Score";
             scoreTitle.style.color = getRandomRed(); 
         }
         // Display the score
