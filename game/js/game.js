@@ -141,8 +141,8 @@ function verifyLogin()
     let text_message = document.getElementById("notLoggedIn");
     // check if session storage is empty
     if (sessionStorage.loggedUser == undefined){
-        // hide the div text_message
-        text_message.style.display = "block";
+        // prompt the user to log in
+        text_message.style.display = "flex";
     } else {
         // display the level choice window
         if (sessionStorage.level == undefined) {

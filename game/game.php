@@ -11,18 +11,28 @@
     generateNavBar($pageName);
 ?>
 <div id="notLoggedIn">
-    <div class="title">
-        Login Required
-        <br>
-        Create an account or login to enjoy Naagin for free.
+    <!-- Left side Gif -->
+    <div class="left_side_picture">
+        <img class="side_picture" src="../common/img/serpent.gif" width="250" alt="side_picture" >
     </div>
-    <div class="button">
-        <div id="signin_btn">
-            <button onclick="window.location.href='../login/login.php'">Log In</button>
-        </div> 
-        <div id="register_btn">
-            <button  onclick='window.location.href="../register/register.php"'>Register</button>
-        </div> 
+    <div class ="login_Required">
+        <div class="title">
+            Login Required
+            <br>
+            Create an account or login to access Game.
+        </div>
+        <div class="loginRequired_btn">
+            <div id="signin_btn">
+                <button onclick="window.location.href='../login/login.php'">Log In</button>
+            </div> 
+            <div id="register_btn">
+                <button  onclick='window.location.href="../register/register.php"'>Register</button>
+            </div> 
+        </div>
+    </div>
+    <!-- Right side Gif -->
+    <div class="right_side_picture">
+        <img class="side_picture" src="../common/img/serpent.gif"  width="250" alt="side_picture" >
     </div>
 </div>
 <!-- Game Window -->
