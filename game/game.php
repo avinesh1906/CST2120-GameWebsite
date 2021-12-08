@@ -69,7 +69,9 @@
             <div id="normalRules">
                 * You cannot pass through walls *
                 <br>
-                * You should not eat your own tails *                
+                * You should not eat your own tails *   
+                <br>
+                * Snake's speed increases depending on the score *             
             </div>
             <div id="time_AttackRules">
                 * You cannot pass through walls *

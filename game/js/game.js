@@ -493,6 +493,10 @@ function beginnerLevel()
         foodOPP.drawFood();
         // move the snake's coordinates
         score = snakeOOP.snakeMovement(foodOPP);
+        if (score > sessionStorage.highscore){
+            scoreTitle.innerHTML = "New High Score";
+            scoreTitle.style.color = getRandomRed(); 
+        }
         // Display the score
         score_num.innerHTML = score;
         // draw the snake
@@ -586,6 +590,10 @@ function timeAttackLevel()
         foodOPP.drawFood();
         // move the snake's coordinates
         score = snakeOOP.snakeMovement(foodOPP);
+        if (score > sessionStorage.highscore){
+            scoreTitle.innerHTML = "New High Score";
+            scoreTitle.style.color = getRandomRed(); 
+        }
         // Display the score
         score_num.innerHTML = score;
         // draw the snake
