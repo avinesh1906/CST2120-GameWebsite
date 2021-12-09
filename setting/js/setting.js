@@ -25,7 +25,12 @@ function oldPassword() {
     // variables 
     let details = document.getElementById("currentPWD_details");
     let current_pwd = document.getElementById("current_password");
-
+    let user_password;
+    for (let i = 0; i < users.length; i++){
+        if (users[i].username == sessionStorage.loggedUser) {
+            user_password = users[i].password;
+        }
+    }
     //  check if the input field is empty
     if (current_pwd.value.length == 0) {
         // error message
@@ -33,29 +38,19 @@ function oldPassword() {
         details.style.color = "#FDD2BF";
         btn.disabled = true;
         return false;
+    } else if (user_password != current_pwd.value){
+        // error message
+        details.innerHTML = 'password does not match';
+        details.style.color = "#FDD2BF";
+        btn.disabled = true;
+        return false;
+    } else {
+        btn.disabled = false;
+        details.innerHTML = "Correct Current Password";
+        details.style.color = "#77D970";
+        return true;
     }
-
-    for (i = 0; i < users.length; i++){
-       if (users[i].username == sessionStorage.loggedUser) {
-           if (users[i].password != current_pwd.value){
-               // error message
-                details.innerHTML = 'password does not match';
-                details.style.color = "#FDD2BF";
-                btn.disabled = true;
-                return false;
-           } else {
-                details.innerHTML = "Correct Current Password";
-                details.style.color = "#77D970";
-                return true;
-           }
-       }
-    }    
-
-    // success message
-    btn.disabled = false;
-    details.innerHTML = "";
-    return true;
-    
+        
 }
 
 //  function to validate new password
@@ -141,7 +136,7 @@ function validateSettingForm() {
         }
         btn.disabled = false;
 
-        for (i = 0; i < users.length; i++){
+        for (let i = 0; i < users.length; i++){
             if (users[i].username == sessionStorage.loggedUser) {
                 users[i].password =  confirm_pwd.value;
             }
